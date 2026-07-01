@@ -2201,7 +2201,7 @@
   <nav>
     <a class="nav-logo" href="/"><img src="/ISC.png" alt="ISC Credit"></a>
     <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"></label>
-    <ul class="nav-links">
+<ul class="nav-links">
       <li class="nav-has-sub"><a href="/products/">Products</a>
         <ul class="nav-sublist">
           <li><a href="/products/trended-credit-reports/">Trended Credit Reports</a></li>
@@ -2216,6 +2216,7 @@
       <li><a href="/integrations/">Integrations</a></li>
       <li><a href="/insights/">ISC Insights</a></li>
       <li><a href="/lender-solutions/">Lender Solutions</a></li>
+      <li><a href="/why-isc/">Why Switch to ISC</a></li>
       <li><a href="/about/">About</a></li>
     </ul>
     <div class="nav-right">
@@ -2290,14 +2291,17 @@
     </div>
   </section>
 
-  <div class="trust-bar">
+<div class="trust-bar">
     <div class="ti">FCRA Compliant</div>
     <div class="td"></div>
     <div class="ti">GLBA Compliant</div>
     <div class="td"></div>
-    <div class="ti">Family-owned</div>
-    <div class="td"></div>
-    <div class="ti">U.S.-based Support</div>
+    <!-- INJECTED LOGOS FOR TASK 1.4 -->
+    <div style="display: flex; align-items: center; gap: 1.75rem; opacity: 0.65; filter: grayscale(100%);">
+      <img src="/assets/equinox-logo.png" alt="Equinox Finance" style="height: 22px; width: auto;">
+      <img src="/assets/ameritrust-logo.png" alt="Ameritrust Mortgage Corporation" style="height: 22px; width: auto;">
+      <img src="/assets/convoy-logo.png" alt="Convoy Home Loans" style="height: 22px; width: auto;">
+    </div>
     <div class="td"></div>
     <div class="ti">25+ LOS Integrations</div>
   </div>
@@ -2333,6 +2337,11 @@
           <div class="why-body">Not a private equity roll-up. Not a publicly traded company. A family-owned business
             focused on long-term client relationships, not quarterly targets.</div>
         </div>
+      </div>
+      <!-- INJECTED CTA FOR TASK 1.2 -->
+      <div style="text-align:center; margin-top: 3.5rem;">
+        <h3 style="font-family:var(--fd); font-size: 1.5rem; color: var(--navy); margin-bottom: 1rem;">Ready to see the difference?</h3>
+        <a class="btn-navy" href="/why-isc/" style="padding: 1rem 2.5rem; font-size: .95rem;">Read exactly why clients switch to ISC &rarr;</a>
       </div>
     </div>
   </section>
@@ -2766,7 +2775,42 @@
       </div>
     </div>
   </section>
-
+<!-- NEW CLIENT SUCCESS SECTION (TASK 1.3) -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-eyebrow">Client Success</div>
+      <h2 class="section-h2">See how we help lenders close faster.</h2>
+      <p class="section-sub">Don't just take our word for it. Hear directly from mortgage professionals who upgraded their credit reporting workflow.</p>
+      
+      <div class="support-wrap" style="margin-top: 2rem; align-items: center;">
+        <!-- Left: Video Embed (Standard 16:9 Widescreen Presentation) -->
+        <div style="width: 100%; border-radius: 12px; padding: 1rem; background: var(--off); border: 1px solid var(--sand);">
+          <div style="position: relative; width: 100%; padding-bottom: 56.25%; overflow: hidden; border-radius: 8px; box-shadow: var(--shadow-md); background: #000;">
+            <iframe 
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+              src="https://www.youtube.com/embed/CqwOWLP6Kkk?si=42CmJx37euN1bEcB" 
+              title="Equinox Client Success Story" 
+              loading="lazy" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        
+        <!-- Right: Case Study Teaser & Exact CTAs -->
+        <div style="display: flex; flex-direction: column; justify-content: center;">
+          <div class="sr-heading" style="color: var(--muted); margin-bottom: 0.5rem;">Featured Case Study</div>
+          <h3 style="font-family:var(--fd); font-size:1.75rem; color:var(--navy); margin-bottom:.85rem; line-height:1.2;">Equinox Finance</h3>
+          <p class="support-quote">"ISC was able to help obtain what was needed the same day, allowing the file to move forward and close on time."</p>
+          <p style="font-size:.85rem; color:var(--warm); line-height:1.78; margin-bottom: 1.5rem;">Equinox needed more than a low-cost vendor—they needed a responsive partner to help their team move faster and troubleshoot time-sensitive credit rescore opportunities.</p>
+          <div style="display: flex; flex-direction: column; gap: 0.85rem; align-items: flex-start;">
+            <a href="/client-success/equinox-mortgage-credit-reporting/" class="btn-navy">Watch full video & read case study &rarr;</a>
+            <a href="/contact/" class="btn-outline">Work With ISC Credit or Request Account Setup</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="section section-dark">
     <div class="section-inner">
       <div
