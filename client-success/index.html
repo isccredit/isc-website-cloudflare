@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mortgage Credit Resources & Guides | ISC Credit</title>
-  <meta name="description" content="Download free guides, checklists, and technical resources to optimize your mortgage credit reporting workflow.">
+  <title>Client Success Stories | ISC Credit</title>
+  <meta name="description" content="See why mortgage professionals across the country trust ISC Credit for faster trade turnarounds and dedicated credit reporting support.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
   
- <style>
+    <style>
     * {
       margin: 0;
       padding: 0;
@@ -2177,110 +2177,119 @@
         color: var(--navy) !important;
       }
     }
-
-    .resource-header {
+ 
+    .success-header {
       background: var(--navy);
       padding: 5rem 2.5rem;
       text-align: center;
       color: var(--white);
     }
-    .resource-header h1 {
+    .success-header h1 {
       font-family: var(--fd);
       font-size: 2.75rem;
       margin-bottom: 1rem;
     }
-    .resource-header p {
+    .success-header p {
       color: rgba(255, 255, 255, 0.7);
       max-width: 600px;
       margin: 0 auto;
       font-size: 1.05rem;
     }
-    .resource-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
+    .success-container {
       max-width: 1100px;
-      margin: -2rem auto 4rem;
+      margin: 4rem auto;
       padding: 0 2.5rem;
-      position: relative;
-      z-index: 10;
     }
-    .res-card {
+    
+    /* FEATURED CASE STUDY */
+    .feat-case {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
       background: var(--white);
       border: 1px solid var(--sand);
       border-radius: 12px;
-      padding: 2rem 1.5rem;
+      padding: 3rem;
       box-shadow: var(--shadow-sm);
+      margin-bottom: 4rem;
+      align-items: center;
+      transition: all 0.2s;
+    }
+    .feat-case:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--gold);
+    }
+    .feat-img-box {
+      background: var(--off);
+      border-radius: 8px;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      min-height: 250px;
+      border: 1px solid var(--sand);
+    }
+    .feat-content h2 {
+      font-family: var(--fd);
+      font-size: 2rem;
+      color: var(--navy);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .feat-content p {
+      color: var(--warm);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    /* SNAPSHOT GRID */
+    .snapshot-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    .snap-card {
+      background: var(--off);
+      border-radius: 12px;
+      padding: 2.5rem;
+      border: 1px solid var(--sand);
       display: flex;
       flex-direction: column;
-      transition: all 0.2s ease;
     }
-    .res-card:hover {
-      border-color: var(--gold);
-      box-shadow: var(--shadow-md);
-      transform: translateY(-3px);
+    .snap-logo {
+      height: 30px;
+      width: auto;
+      margin-bottom: 1.5rem;
+      filter: grayscale(100%);
+      opacity: 0.7;
     }
-    .res-tag {
-      font-size: 0.65rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 0.25rem 0.6rem;
-      border-radius: 4px;
-      display: inline-block;
-      margin-bottom: 1rem;
-      align-self: flex-start;
-    }
-    .tag-gated {
-      background: var(--navy);
-      color: var(--gold);
-    }
-    .tag-open {
-      background: var(--green-bg);
-      color: var(--green);
-    }
-    .res-title {
+    .snap-quote {
       font-family: var(--fd);
       font-size: 1.25rem;
       color: var(--navy);
-      margin-bottom: 0.75rem;
-      line-height: 1.3;
-    }
-    .res-desc {
-      font-size: 0.85rem;
-      color: var(--warm);
+      font-style: italic;
+      line-height: 1.6;
       margin-bottom: 1.5rem;
       flex-grow: 1;
     }
-    .res-btn {
-      width: 100%;
-      text-align: center;
-      padding: 0.75rem;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      transition: all 0.2s;
+    .snap-quote::before {
+      content: '\201C';
+      color: var(--gold);
+      font-size: 2rem;
+      line-height: 0;
+      vertical-align: bottom;
+      margin-right: 0.2rem;
     }
-    .btn-gated {
-      background: var(--gold);
-      color: var(--navy);
-      border: 1px solid var(--gold);
+
+    @media (max-width: 900px) {
+      .feat-case { grid-template-columns: 1fr; padding: 2rem; }
+      .snapshot-grid { grid-template-columns: 1fr; }
     }
-    .btn-gated:hover { background: var(--gold2); }
-    .btn-open {
-      background: transparent;
-      color: var(--navy);
-      border: 1px solid var(--navy);
-    }
-    .btn-open:hover { background: var(--off); }
-    
-    @media (max-width: 1024px) { .resource-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 600px) { .resource-grid { grid-template-columns: 1fr; margin-top: 2rem; } }
   </style>
 </head>
 <body>
 
-  <!-- GLOBAL NAV (Make sure to paste your updated nav here) -->
   <nav>
     <a class="nav-logo" href="/"><img src="/ISC.png" alt="ISC Credit"></a>
     <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"></label>
@@ -2310,86 +2319,68 @@
     </div>
   </nav>
 
-  <header class="resource-header">
-    <h1>Mortgage Credit Resources</h1>
-    <p>Actionable guides, technical checklists, and best practices to help your team navigate credit reporting, compliance, and score optimization.</p>
+
+  <header class="success-header">
+    <h1>Client Success Stories</h1>
+    <p>Discover how mortgage teams across the country are moving files faster and securing better terms for their borrowers with ISC Credit.</p>
   </header>
 
-<main class="resource-grid">
-    <!-- GATED PROSPECT GUIDE -->
-    <div class="res-card">
-      <span class="res-tag tag-gated">Premium Guide</span>
-      <h2 class="res-title">DU & LPA Technical Provider Selection Guide</h2>
-      <p class="res-desc">A comprehensive walkthrough for lenders configuring their technical providers within Fannie Mae DU and Freddie Mac LPA environments.</p>
-      <a href="/resources/du-lpa-technical-provider-selection-guide/" class="res-btn btn-gated">Get the Guide &rarr;</a>
+  <main class="success-container">
+    
+    <!-- FEATURED: EQUINOX -->
+    <a href="/client-success/equinox-mortgage-credit-reporting/" style="text-decoration: none; color: inherit; display: block;">
+      <article class="feat-case">
+        <div class="feat-img-box">
+          <img src="/assets/equinox-logo.png" alt="Equinox Finance" style="max-width: 200px;">
+        </div>
+        <div class="feat-content">
+          <div style="font-size: 0.75rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Featured Video Case Study</div>
+          <h2>Why Equinox Chose ISC Credit</h2>
+          <p>"ISC was able to help obtain what was needed the same day, allowing the file to move forward and close on time."</p>
+          <span class="btn-navy" style="display: inline-block;">Watch the Video &rarr;</span>
+        </div>
+      </article>
+    </a>
+
+    <!-- SNAPSHOTS: AMERITRUST & CONVOY -->
+    <div class="snapshot-grid">
+      
+      <!-- Ameritrust Snapshot -->
+      <article class="snap-card">
+        <img src="/assets/ameritrust-logo.png" alt="Ameritrust Mortgage Corporation" class="snap-logo">
+        <p class="snap-quote">Having a dedicated support team that actually answers the phone has completely changed our processing speed. We no longer wait days for simple supplement updates.</p>
+        <div>
+          <strong style="display: block; font-size: 0.9rem; color: var(--navy);">Processing Team</strong>
+          <span style="font-size: 0.8rem; color: var(--muted);">Ameritrust Mortgage Corporation</span>
+        </div>
+      </article>
+
+      <!-- Convoy Snapshot -->
+      <article class="snap-card">
+        <img src="/assets/convoy-logo.png" alt="Convoy Home Loans" class="snap-logo">
+        <p class="snap-quote">The SmartSelect cascading pulls have saved us a massive amount of money on upfront inquiries without slowing down our initial qualification process.</p>
+        <div>
+          <strong style="display: block; font-size: 0.9rem; color: var(--navy);">Operations Management</strong>
+          <span style="font-size: 0.8rem; color: var(--muted);">Convoy Home Loans</span>
+        </div>
+      </article>
+
     </div>
 
-    <!-- UNGATED SUPPORT GUIDE (Fixed: Now points to SEO landing page) -->
-    <div class="res-card">
-      <span class="res-tag tag-open">Free Download</span>
-      <h2 class="res-title">Supplement Checklist</h2>
-      <p class="res-desc">Ensure your credit supplements are processed quickly by providing exactly what the bureaus require. Avoid common delays with this checklist.</p>
-      <a href="/resources/supplement-checklist/" class="res-btn btn-open">View Resource &rarr;</a>
+    <!-- BOTTOM CTA -->
+    <div style="background:var(--navy);border-radius:14px;padding:2rem 2.5rem;margin-top:4rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;position:relative;overflow:hidden">
+      <div style="position:absolute;top:0;left:0;bottom:0;width:4px;background:var(--gold)"></div>
+      <div style="flex:1;min-width:280px;padding-left:1rem">
+        <div style="font-family:var(--fd);font-size:1.5rem;color:var(--white);line-height:1.3;margin-bottom:.35rem">Ready to upgrade your workflow?</div>
+        <p style="font-size:0.95rem;color:rgba(255,255,255,.7);margin-bottom:0">Get direct access to a dedicated support team and start closing loans faster.</p>
+      </div>
+      <a href="/contact/" style="background:var(--gold);color:var(--navy);font-size:.9rem;font-weight:700;padding:1rem 1.75rem;border-radius:6px;text-decoration:none;transition:all .2s;white-space:nowrap">Request Account Setup &rarr;</a>
     </div>
 
-    <!-- GATED PROSPECT GUIDE -->
-    <div class="res-card">
-      <span class="res-tag tag-gated">Premium Guide</span>
-      <h2 class="res-title">Rapid Rescore Guide</h2>
-      <p class="res-desc">Learn how to strategically utilize Rapid Rescores to help borrowers qualify for better rates and loan programs in a fraction of the time.</p>
-      <a href="/resources/rapid-rescore-guide/" class="res-btn btn-gated">Get the Guide &rarr;</a>
-    </div>
-
-    <!-- UNGATED SUPPORT GUIDE (Fixed: Now points to SEO landing page) -->
-    <div class="res-card">
-      <span class="res-tag tag-open">Free Download</span>
-      <h2 class="res-title">Frozen Bureau Pulls Guide</h2>
-      <p class="res-desc">A step-by-step walkthrough on how to handle and troubleshoot credit files when a borrower has a security freeze on their bureau data.</p>
-      <a href="/resources/frozen-bureau-pulls-guide/" class="res-btn btn-open">View Resource &rarr;</a>
-    </div>
-
-    <!-- GATED PROSPECT GUIDE -->
-    <div class="res-card">
-      <span class="res-tag tag-gated">Premium Guide</span>
-      <h2 class="res-title">VantageScore Guide</h2>
-      <p class="res-desc">Prepare your pipeline for the upcoming transition to VantageScore 4.0 and FICO 10T with our technical implementation breakdown.</p>
-      <a href="/resources/vantagescore-guide/" class="res-btn btn-gated">Get the Guide &rarr;</a>
-    </div>
-
-    <!-- UNGATED SUPPORT GUIDE (Fixed: Now points to SEO landing page) -->
-    <div class="res-card">
-      <span class="res-tag tag-open">Free Download</span>
-      <h2 class="res-title">How to Order a Supplement</h2>
-      <p class="res-desc">A quick-reference guide for processing teams on the exact steps required to order and track credit supplements efficiently.</p>
-      <a href="/resources/how-to-order-a-supplement/" class="res-btn btn-open">View Resource &rarr;</a>
-    </div>
-
-    <!-- GATED PROSPECT GUIDE -->
-    <div class="res-card">
-      <span class="res-tag tag-gated">Premium Guide</span>
-      <h2 class="res-title">SmartSelect Guide</h2>
-      <p class="res-desc">Discover how to implement cascading credit pulls to reduce unnecessary bureau costs while maintaining strict pipeline filtering.</p>
-      <a href="/resources/smartselect-guide/" class="res-btn btn-gated">Get the Guide &rarr;</a>
-    </div>
-
-    <!-- UNGATED SUPPORT GUIDE (Fixed: Now points to SEO landing page) -->
-    <div class="res-card">
-      <span class="res-tag tag-open">Free Download</span>
-      <h2 class="res-title">PowerProfile Plus Guide</h2>
-      <p class="res-desc">Technical documentation for understanding and utilizing the PowerProfile Plus tool within your existing LOS.</p>
-      <a href="/resources/powerprofile-plus-guide/" class="res-btn btn-open">View Resource &rarr;</a>
-    </div>
-
-    <!-- UNGATED SUPPORT GUIDE (Fixed: Now points to SEO landing page) -->
-    <div class="res-card">
-      <span class="res-tag tag-open">Free Download</span>
-      <h2 class="res-title">SmartPay Guide</h2>
-      <p class="res-desc">Instructions for setting up and managing borrower-paid credit report links directly through the SmartPay portal.</p>
-      <a href="/resources/smartpay-guide/" class="res-btn btn-open">View Resource &rarr;</a>
-    </div>
   </main>
 
-   <footer>
+  
+  <footer>
     <div class="footer-grid">
       <div>
         <a class="footer-logo" href="/">ISC<span>.</span></a>
