@@ -2344,40 +2344,47 @@
     </nav>
 
 <header class="lp-header">
-    <div style="font-size: 0.8rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Premium Resource</div>
+    <div style="font-size: 0.8rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">In-Depth Guide</div>
     <h1>SmartSelect Implementation Guide</h1>
-  </header>
+</header>
 
-  <div class="lp-container">
+<div class="lp-container">
     <div class="lp-content">
-      <p>For high-volume lenders, pulling a full tri-merge report on a prospect who fails initial credit filters results in massive, unnecessary data costs.</p>
-      
-      <h2>The Cascading Pull Strategy</h2>
-      <p>SmartSelect allows you to automate a "waterfall" logic within your LOS. You define the exact parameters, and the system executes the pulls sequentially.</p>
+        <p>For high-volume lenders, pulling a full tri-merge report on a prospect who fails initial credit filters results in massive, unnecessary data costs.</p>
+        
+        <h2>The Cascading Pull Strategy</h2>
+        <p>SmartSelect allows you to automate a "waterfall" logic within your LOS. You define the exact parameters, and the system executes the pulls sequentially.</p>
 
-      <ul style="list-style-type: square; margin-top: 1.5rem;">
-        <li><strong>Step 1:</strong> Pull a single bureau to establish a baseline score.</li>
-        <li><strong>Step 2:</strong> If the baseline meets your minimum requirements, automatically pull the remaining bureaus to complete the tri-merge.</li>
-        <li><strong>Step 3:</strong> If the baseline fails, the cascade stops immediately, saving you the cost of the additional bureau pulls.</li>
-      </ul>
-
-      <div style="background: var(--navy); color: var(--white); padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
-        <strong style="color: var(--gold); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;">Pro-Tip</strong>
-        <p style="margin-top: 0.5rem; margin-bottom: 0; color: rgba(255,255,255,0.8); font-size: 0.9rem;">SmartSelect will also automatically halt a cascade if the initial bureau returns a "Security Freeze" status, preventing dead-end inquiries.</p>
-      </div>
+        <div class="whats-inside-box" style="margin-top: 2rem; margin-bottom: 2.5rem; background: var(--off); border: 1px solid var(--sand); border-radius: 8px; padding: 1.5rem;">
+            <h3 style="font-family: var(--fd); font-size: 1.25rem; color: var(--navy); margin-bottom: 1rem;">What's Inside:</h3>
+            <ul style="list-style: none; padding: 0; margin-left: 0; color: var(--warm); font-size: 0.95rem;">
+                <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                    <span style="position: absolute; left: 0; color: var(--gold); font-weight: bold;">✓</span> 
+                    Step-by-step logic for cascading bureau pulls
+                </li>
+                <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                    <span style="position: absolute; left: 0; color: var(--gold); font-weight: bold;">✓</span> 
+                    Cost-saving configurations for initial pre-qualification
+                </li>
+                <li style="margin-bottom: 0; padding-left: 1.5rem; position: relative;">
+                    <span style="position: absolute; left: 0; color: var(--gold); font-weight: bold;">✓</span> 
+                    Automated handling of security freezes
+                </li>
+            </ul>
+        </div>
     </div>
 
     <div class="lp-form-box">
-      <h3>Download the Guide</h3>
-      <p>Enter your details below to access the full PDF immediately.</p>
-      <form id="resource-download-form" action="/api/subscribe" method="POST">
-        <input type="hidden" name="resource_tag" value="Resource Download - SmartSelect Guide">
-        <div class="mc-field-group"><label for="FNAME">First Name <span style="color: red;">*</span></label><input type="text" name="FNAME" id="FNAME" required></div>
-        <div class="mc-field-group"><label for="EMAIL">Email Address <span style="color: red;">*</span></label><input type="email" name="EMAIL" id="EMAIL" required></div>
-        <button type="submit" class="mc-submit">Get the Guide</button>
-      </form>
+        <h3>Download the Guide</h3>
+        <p>Enter your details below to access the full PDF immediately.</p>
+        <form id="resource-download-form" action="/api/subscribe" method="POST">
+            <input type="hidden" name="resource_tag" value="Resource Download - SmartSelect Guide">
+            <div class="mc-field-group"><label for="FNAME">First Name <span style="color: red;">*</span></label><input type="text" name="FNAME" id="FNAME" required></div>
+            <div class="mc-field-group"><label for="EMAIL">Email Address <span style="color: red;">*</span></label><input type="email" name="EMAIL" id="EMAIL" required></div>
+            <button type="submit" class="mc-submit">Get the Guide</button>
+        </form>
     </div>
-  </div>
+</div>
     <footer>
         <div class="footer-grid">
             <div>

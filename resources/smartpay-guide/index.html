@@ -2343,31 +2343,49 @@
         </div>
     </nav>
 
-<header class="lp-header" style="background: var(--off); color: var(--navy); border-bottom: 1px solid var(--sand);">
-    <div style="font-size: 0.8rem; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Free Support Resource</div>
-    <h1 style="color: var(--navy);">SmartPay Setup Guide</h1>
-  </header>
+<header class="lp-header">
+        <div style="font-size: 0.8rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Free Resource</div>
+        <h1>SmartPay Configuration Guide</h1>
+    </header>
 
-  <div class="lp-container">
-    <div class="lp-content">
-      <p>Shifting the cost of the initial credit pull to the borrower protects your bottom line, especially on early-stage applications.</p>
-      
-      <h2>Portal Configuration</h2>
-      <p>SmartPay allows you to securely generate payment links for borrowers to cover the cost of their credit pull before the report is generated.</p>
+    <div class="lp-container">
+        <div class="lp-content">
+            <p>Shifting the cost of the initial credit pull to the borrower protects your bottom line, especially on early-stage applications.</p>
+            
+            <h2>Portal Configuration</h2>
+            <p>SmartPay allows you to securely generate payment links for borrowers to cover the cost of their credit pull before the report is generated.</p>
 
-      <ul style="margin-top: 1.5rem;">
-        <li>How to generate and email secure payment links to borrowers.</li>
-        <li>How to track payment completions.</li>
-        <li>PCI-compliant data handling practices.</li>
-      </ul>
+            <!-- SEO WHAT'S INSIDE BLOCK -->
+            <div class="whats-inside-box" style="margin-top: 2rem; margin-bottom: 2.5rem; background: var(--off); border: 1px solid var(--sand); border-radius: 8px; padding: 1.5rem;">
+                <h3 style="font-family: var(--fd); font-size: 1.25rem; color: var(--navy); margin-bottom: 1rem;">What's Inside:</h3>
+                <ul style="list-style: none; padding: 0; margin-left: 0; color: var(--warm); font-size: 0.95rem;">
+                    <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                        <span style="position: absolute; left: 0; color: var(--gold); font-weight: bold;">✓</span> 
+                        How to generate and email secure payment links to borrowers
+                    </li>
+                    <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                        <span style="position: absolute; left: 0; color: var(--gold); font-weight: bold;">✓</span> 
+                        How to track payment completions
+                    </li>
+                    <li style="margin-bottom: 0; padding-left: 1.5rem; position: relative;">
+                        <span style="position: absolute; left: 0; color: var(--gold); font-weight: bold;">✓</span> 
+                        PCI-compliant data handling practices
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="lp-form-box">
+            <h3>Download the Guide</h3>
+            <p>Enter your details below to access the full PDF immediately.</p>
+            <form id="resource-download-form" action="/api/subscribe" method="POST">
+                <input type="hidden" name="resource_tag" value="Resource Download - SmartPay Guide">
+                <div class="mc-field-group"><label for="FNAME">First Name <span style="color: red;">*</span></label><input type="text" name="FNAME" id="FNAME" required></div>
+                <div class="mc-field-group"><label for="EMAIL">Email Address <span style="color: red;">*</span></label><input type="email" name="EMAIL" id="EMAIL" required></div>
+                <button type="submit" class="mc-submit">Get the Guide</button>
+            </form>
+        </div>
     </div>
-
-    <div class="lp-form-box" style="text-align: center; display: flex; flex-direction: column; justify-content: center;">
-      <h3>Ready for Download</h3>
-      <p>Click below to open or save the PDF file directly.</p>
-      <a href="/assets/smartpay-guide.pdf" target="_blank" class="mc-submit" style="display:block; text-decoration:none;">Download PDF Now &darr;</a>
-    </div>
-  </div>
     <footer>
         <div class="footer-grid">
             <div>
