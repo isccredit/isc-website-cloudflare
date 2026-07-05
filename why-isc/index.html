@@ -798,7 +798,7 @@
     }
 
     /* ============================================================ */
-    /* RESPONSIVE — full coverage: desktop, tablet, mobile, small    */
+    /* RESPONSIVE - full coverage: desktop, tablet, mobile, small    */
     /* ============================================================ */
 
     /* Universal safety: prevent image/video overflow site-wide */
@@ -974,7 +974,7 @@
       line-height: 1.45
     }
 
-    /* By the numbers — visual grouping with category accents */
+    /* By the numbers - visual grouping with category accents */
     .stats-categorized {
       margin-top: 1.5rem
     }
@@ -1088,7 +1088,7 @@
       }
     }
 
-    /* ----- TABLET / PHONE WIDE (<=768px) — NAV BECOMES HAMBURGER ----- */
+    /* ----- TABLET / PHONE WIDE (<=768px) - NAV BECOMES HAMBURGER ----- */
 
     .stats-cat-row {
       grid-template-columns: 1fr !important;
@@ -1290,7 +1290,7 @@
         display: none !important;
       }
 
-      /* Comparison table — much tighter on mobile */
+      /* Comparison table - much tighter on mobile */
       .comp-table {
         font-size: .72rem !important;
         line-height: 1.45 !important;
@@ -1409,7 +1409,7 @@
       }
     }
 
-    /* Products submenu — desktop: hidden; mobile (in open hamburger): indented list */
+    /* Products submenu - desktop: hidden; mobile (in open hamburger): indented list */
     .nav-sublist {
       display: none;
       list-style: none;
@@ -1486,7 +1486,7 @@
         grid-template-columns: 1fr !important;
       }
 
-      /* Hide the Source column on the benchmark table — every row is MeridianLink anyway */
+      /* Hide the Source column on the benchmark table - every row is MeridianLink anyway */
       .bm-table th:nth-child(5),
       .bm-table td:nth-child(5) {
         display: none !important;
@@ -1664,67 +1664,37 @@
     <div class="trust-item">5.0 Star Google Rating</div>
   </div>
 
-  <!-- SIX REASONS -->
 <section class="section section-off">
     <div class="section-inner">
-      <div class="section-eyebrow">Turnaround comparison</div>
-      <h2 class="section-h2">See how much pipeline waiting time ISC can eliminate.</h2>
-      <p class="section-sub">Compare ISC's trade turnaround against the MeridianLink industry benchmark. Adjust your monthly file volume to see how much waiting time gets recovered.</p>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0 1.5rem">
-        <div style="background:var(--white);border:1px solid var(--sand);border-radius:10px;padding:1.1rem 1.25rem">
-          <div style="font-size:.7rem;color:var(--warm);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.4rem">
-            ISC trade turnaround</div>
-          <div style="font-family:var(--fd);font-size:1.85rem;color:var(--navy);font-weight:700;line-height:1">1.0 <span style="font-size:1rem;font-weight:400">hours</span></div>
-          <div style="font-size:.72rem;color:var(--muted);margin-top:.3rem">MeridianLink, June 2026</div>
+      <div class="section-eyebrow">Why ISC</div>
+      <h2 class="section-h2">Why Mortgage Teams Switch to ISC</h2>
+      <p class="section-sub">Mortgage teams usually do not switch credit reporting partners because of one small issue. They switch when slow response times, unclear status updates, and inconsistent support start creating friction in their daily workflow.</p>
+      
+      <div class="who-grid" style="grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+        <div class="who-card">
+          <span class="wc-icon">⚡</span>
+          <div class="wc-title">Faster Trade Updates</div>
+          <div class="wc-body">In June 2026, ISC averaged a 1.0-hour trade turnaround compared to a 27.3-hour industry benchmark in MeridianLink’s Industry Benchmark dashboard.</div>
         </div>
-        <div style="background:var(--white);border:1px solid var(--sand);border-radius:10px;padding:1.1rem 1.25rem">
-          <div style="font-size:.7rem;color:var(--warm);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.4rem">
-            Industry average turnaround</div>
-          <div style="font-family:var(--fd);font-size:1.85rem;color:#e2504d;font-weight:700;line-height:1">27.3 <span style="font-size:1rem;font-weight:400">hours</span></div>
-          <div style="font-size:.72rem;color:var(--muted);margin-top:.3rem">MeridianLink, June 2026</div>
+        <div class="who-card">
+          <span class="wc-icon">👥</span>
+          <div class="wc-title">Responsive Human Support</div>
+          <div class="wc-body">Clients work with a support team that understands mortgage credit reporting, supplements, reissues, SmartPay, frozen bureaus, and time-sensitive file questions.</div>
         </div>
-      </div>
-
-      <div style="background:var(--white);border:1px solid var(--sand);border-radius:12px;padding:1.5rem 1.75rem">
-        <label for="vol-input" style="display:block;font-size:.85rem;font-weight:600;color:var(--navy);margin-bottom:.5rem">Estimated files processed per month</label>
-        <input id="vol-input" type="number" min="0" max="10000" step="1" value="25"
-          style="width:160px;font-family:var(--fb);font-size:1.1rem;padding:.6rem .8rem;border:1.5px solid var(--sand);border-radius:6px;color:var(--navy)" oninput="updateCalc()">
-        <p style="font-size:.78rem;color:var(--warm);margin-top:.45rem">Typical mortgage operations process trade updates on a significant portion of files.</p>
-
-        <div style="border-top:1px solid var(--sand);padding-top:1.5rem;margin-top:1.25rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.25rem">
-          <div>
-            <div style="font-size:.7rem;color:var(--warm);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem">Per trade</div>
-            <div style="font-family:var(--fd);font-size:2rem;color:var(--navy);font-weight:700;line-height:1.05">26.3
-              <span style="font-size:.95rem;font-weight:400">hrs faster</span></div>
-          </div>
-          <div>
-            <div style="font-size:.7rem;color:var(--warm);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem">Monthly volume</div>
-            <div style="font-family:var(--fd);font-size:2rem;color:var(--navy);font-weight:700;line-height:1.05"><span id="out-hours">658</span> <span style="font-size:.95rem;font-weight:400">hrs recovered</span></div>
-          </div>
-          <div>
-            <div style="font-size:.7rem;color:var(--warm);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem">Percentage faster</div>
-            <div style="font-family:var(--fd);font-size:2rem;color:var(--gold);font-weight:700;line-height:1.05">96.3%
-              <span style="font-size:.95rem;font-weight:400;color:var(--navy)">vs industry</span></div>
-          </div>
+        <div class="who-card">
+          <span class="wc-icon">🛠️</span>
+          <div class="wc-title">Practical Workflow Help</div>
+          <div class="wc-body">ISC helps mortgage teams navigate common credit reporting workflows, including supplement requests, rapid rescore guidance, DU/LPA reissues, borrower-paid options, and LOS questions.</div>
+        </div>
+        <div class="who-card">
+          <span class="wc-icon">🤝</span>
+          <div class="wc-title">Family-Owned Since 1989</div>
+          <div class="wc-body">ISC has supported mortgage professionals for decades with a focus on responsive service, practical guidance, and long-term client relationships.</div>
         </div>
       </div>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem;align-items:start">
-        <div style="background:var(--white);border:1px solid var(--sand);border-radius:10px;padding:1.25rem 1.4rem">
-          <div style="font-size:.78rem;color:var(--gold);text-transform:uppercase;letter-spacing:.06em;font-weight:700;margin-bottom:.5rem">What ISC helps reduce</div>
-          <ul style="list-style:none;padding:0;margin:0">
-            <li style="padding:.4rem 0;color:var(--text);font-size:.92rem;border-bottom:1px solid var(--sand)">&rarr; Time spent waiting on underwriting conditions</li>
-            <li style="padding:.4rem 0;color:var(--text);font-size:.92rem;border-bottom:1px solid var(--sand)">&rarr; Pipeline idle time between rate-lock and clear-to-close</li>
-            <li style="padding:.4rem 0;color:var(--text);font-size:.92rem;border-bottom:1px solid var(--sand)">&rarr; Closing delays from slow credit updates</li>
-            <li style="padding:.4rem 0;color:var(--text);font-size:.92rem">&rarr; Follow-up calls and emails to your credit vendor</li>
-          </ul>
-        </div>
-        <div style="font-size:.78rem;color:var(--warm);line-height:1.65;background:rgba(0,0,0,.02);border-left:3px solid var(--gold);padding:1rem 1.15rem;border-radius:0 6px 6px 0">
-          <strong style="color:var(--navy)">Assumptions, made visible:</strong><br>
-          Industry average is the MeridianLink benchmark across consumer reporting agencies for June 2026. ISC turnaround reflects June 2026 performance. Per-trade savings: 26.3 hours. Percentage faster: (27.3 - 1.0) / 27.3 = 96.3%.<br><br>
-          Results are estimates based on current benchmark data and your inputs, not a guarantee of any specific outcome on your files.
-        </div>
+      
+      <div style="margin-top: 2.5rem; text-align: center;">
+        <a href="/client-success/" class="btn-primary">See Client Success Stories</a>
       </div>
     </div>
   </section>
@@ -1783,97 +1753,6 @@
     </div>
   </section>
 
-  <!-- TURNAROUND COMPARISON CALCULATOR -->
-  <section class="section section-off">
-    <div class="section-inner">
-      <div class="section-eyebrow">Turnaround comparison</div>
-      <h2 class="section-h2">See how much pipeline waiting time ISC can eliminate.</h2>
-      <p class="section-sub">Compare ISC's supplement turnaround against the MeridianLink industry benchmark. Adjust
-        your monthly supplement volume to see how much waiting time gets recovered.</p>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0 1.5rem">
-        <div style="background:var(--white);border:1px solid var(--sand);border-radius:10px;padding:1.1rem 1.25rem">
-          <div
-            style="font-size:.7rem;color:var(--warm);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.4rem">
-            ISC supplement turnaround</div>
-          <div style="font-family:var(--fd);font-size:1.85rem;color:var(--navy);font-weight:700;line-height:1">1.5 <span
-              style="font-size:1rem;font-weight:400">hours</span></div>
-          <div style="font-size:.72rem;color:var(--muted);margin-top:.3rem">MeridianLink, May 2026</div>
-        </div>
-        <div style="background:var(--white);border:1px solid var(--sand);border-radius:10px;padding:1.1rem 1.25rem">
-          <div
-            style="font-size:.7rem;color:var(--warm);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.4rem">
-            Industry average turnaround</div>
-          <div style="font-family:var(--fd);font-size:1.85rem;color:#e2504d;font-weight:700;line-height:1">26.8 <span
-              style="font-size:1rem;font-weight:400">hours</span></div>
-          <div style="font-size:.72rem;color:var(--muted);margin-top:.3rem">MeridianLink, 12-month average</div>
-        </div>
-      </div>
-
-      <div style="background:var(--white);border:1px solid var(--sand);border-radius:12px;padding:1.5rem 1.75rem">
-        <label for="vol-input"
-          style="display:block;font-size:.85rem;font-weight:600;color:var(--navy);margin-bottom:.5rem">Estimated
-          supplements processed per month</label>
-        <input id="vol-input" type="number" min="0" max="10000" step="1" value="25"
-          style="width:160px;font-family:var(--fb);font-size:1.1rem;padding:.6rem .8rem;border:1.5px solid var(--sand);border-radius:6px;color:var(--navy)"
-          oninput="updateCalc()">
-        <p style="font-size:.78rem;color:var(--warm);margin-top:.45rem">Typical mortgage operations process supplements
-          on 15 to 30 percent of files.</p>
-
-        <div
-          style="border-top:1px solid var(--sand);padding-top:1.5rem;margin-top:1.25rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.25rem">
-          <div>
-            <div
-              style="font-size:.7rem;color:var(--warm);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem">
-              Per supplement</div>
-            <div style="font-family:var(--fd);font-size:2rem;color:var(--navy);font-weight:700;line-height:1.05">25.3
-              <span style="font-size:.95rem;font-weight:400">hrs faster</span></div>
-          </div>
-          <div>
-            <div
-              style="font-size:.7rem;color:var(--warm);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem">
-              Monthly volume</div>
-            <div style="font-family:var(--fd);font-size:2rem;color:var(--navy);font-weight:700;line-height:1.05"><span
-                id="out-hours">633</span> <span style="font-size:.95rem;font-weight:400">hrs recovered</span></div>
-          </div>
-          <div>
-            <div
-              style="font-size:.7rem;color:var(--warm);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem">
-              Percentage faster</div>
-            <div style="font-family:var(--fd);font-size:2rem;color:var(--gold);font-weight:700;line-height:1.05">94.4%
-              <span style="font-size:.95rem;font-weight:400;color:var(--navy)">vs industry</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem;align-items:start">
-        <div style="background:var(--white);border:1px solid var(--sand);border-radius:10px;padding:1.25rem 1.4rem">
-          <div
-            style="font-size:.78rem;color:var(--gold);text-transform:uppercase;letter-spacing:.06em;font-weight:700;margin-bottom:.5rem">
-            What ISC helps reduce</div>
-          <ul style="list-style:none;padding:0;margin:0">
-            <li style="padding:.4rem 0;color:var(--text);font-size:.92rem;border-bottom:1px solid var(--sand)">&rarr;
-              Time spent waiting on underwriting conditions</li>
-            <li style="padding:.4rem 0;color:var(--text);font-size:.92rem;border-bottom:1px solid var(--sand)">&rarr;
-              Pipeline idle time between rate-lock and clear-to-close</li>
-            <li style="padding:.4rem 0;color:var(--text);font-size:.92rem;border-bottom:1px solid var(--sand)">&rarr;
-              Closing delays from slow supplements</li>
-            <li style="padding:.4rem 0;color:var(--text);font-size:.92rem">&rarr; Follow-up calls and emails to your
-              credit vendor</li>
-          </ul>
-        </div>
-        <div
-          style="font-size:.78rem;color:var(--warm);line-height:1.65;background:rgba(0,0,0,.02);border-left:3px solid var(--gold);padding:1rem 1.15rem;border-radius:0 6px 6px 0">
-          <strong style="color:var(--navy)">Assumptions, made visible:</strong><br>
-          Industry average is the MeridianLink 12-month rolling benchmark across consumer reporting agencies. ISC
-          turnaround reflects May 2026 performance. Per-supplement savings: 25.3 hours. Percentage faster: (26.8 - 1.5)
-          / 26.8 = 94.4%.<br><br>
-          Results are estimates based on current benchmark data and your inputs, not a guarantee of any specific outcome
-          on your files.
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- FAQ -->
   <section class="section">
@@ -1989,16 +1868,6 @@
     </div>
   </footer>
 
-<script>
-    function updateCalc() {
-      var volEl = document.getElementById('vol-input');
-      var vol = parseFloat(volEl.value);
-      if (isNaN(vol) || vol < 0) vol = 0;
-      var perSupplementHours = 26.3;
-      var hours = vol * perSupplementHours;
-      document.getElementById('out-hours').textContent = Math.round(hours).toLocaleString();
-    }
-  </script>
 
 </body>
 
