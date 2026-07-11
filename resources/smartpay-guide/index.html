@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -131,6 +131,27 @@
             border-radius: 5px;
             border: 2px solid var(--navy);
             transition: all .2s
+        }
+
+        .btn-download {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy) !important;
+            font-size: .95rem;
+            font-weight: 700;
+            padding: .85rem 2rem;
+            border-radius: 6px;
+            border: 2px solid var(--gold);
+            transition: all .2s;
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        .btn-download:hover {
+            background: var(--gold2);
+            border-color: var(--gold2);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(240,185,66,.3);
         }
 
         .btn-outline {
@@ -2383,15 +2404,25 @@
             </div>
         </div>
 
-        <div class="lp-form-box">
-            <h3>Download the Guide</h3>
-            <p>Enter your details below to access the full PDF immediately.</p>
-            <form id="resource-download-form" action="/api/subscribe" method="POST">
-                <input type="hidden" name="resource_tag" value="Resource Download - SmartPay Guide">
-                <div class="mc-field-group"><label for="FNAME">First Name <span style="color: red;">*</span></label><input type="text" name="FNAME" id="FNAME" required></div>
-                <div class="mc-field-group"><label for="EMAIL">Email Address <span style="color: red;">*</span></label><input type="email" name="EMAIL" id="EMAIL" required></div>
-                <button type="submit" class="mc-submit">Get the Guide</button>
-</form>
+        <div class="lp-form-box" style="background: var(--off); border: 1px solid var(--sand); border-radius: 10px; padding: 2rem;">
+            <h3 style="font-family: var(--fd); color: var(--navy); margin-bottom: 1rem;">About SmartPay</h3>
+            <p style="color: var(--warm); margin-bottom: 1.5rem;">SmartPay is ISC&rsquo;s borrower-paid credit pull feature. It lets you generate a secure payment link so borrowers cover the cost of the initial credit report before it&rsquo;s ordered &mdash; protecting your bottom line on early-stage or uncertain applications.</p>
+
+            <h3 style="font-family: var(--fd); color: var(--navy); margin-bottom: 0.75rem; margin-top: 1.5rem;">Who It&rsquo;s For</h3>
+            <ul style="list-style: none; padding: 0; color: var(--warm); font-size: 0.95rem; margin-bottom: 1.5rem;">
+                <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: bold;">&#10003;</span> Loan Officers and Mortgage Brokers managing high-volume pipelines</li>
+                <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: bold;">&#10003;</span> Processors handling early-stage or pre-qualification applications</li>
+                <li style="padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: bold;">&#10003;</span> Teams looking to reduce costs on applications that may not close</li>
+            </ul>
+
+            <h3 style="font-family: var(--fd); color: var(--navy); margin-bottom: 0.75rem;">What This Guide Helps You Do</h3>
+            <ul style="list-style: none; padding: 0; color: var(--warm); font-size: 0.95rem; margin-bottom: 0.5rem;">
+                <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: bold;">&#10003;</span> Generate and send secure payment links to borrowers</li>
+                <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: bold;">&#10003;</span> Track payment completions within the portal</li>
+                <li style="padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--gold); font-weight: bold;">&#10003;</span> Understand PCI-compliant data handling practices</li>
+            </ul>
+
+            <a href="/assets/smartpay-guide.pdf" download class="btn-download">Download SmartPay Guide</a>
         </div>
     </div>
     <footer>
@@ -2452,60 +2483,7 @@
                     Use</a><a href="/consumer-assistance/">Consumer Assistance</a></div>
         </div>
     </footer>
-<script>
-    document.getElementById('resource-download-form').addEventListener('submit', async function(e) {
-      e.preventDefault(); // Stop page reload
-      
-      const form = e.target;
-      const submitBtn = form.querySelector('.mc-submit');
-      const originalText = submitBtn.innerText;
-      
-      // Update UI to loading state
-      submitBtn.innerText = "Processing...";
-      submitBtn.style.opacity = "0.7";
-      submitBtn.disabled = true;
 
-      try {
-        // Send data to our secure Cloudflare Function
-        const formData = new FormData(form);
-        const response = await fetch('/api/subscribe', {
-          method: 'POST',
-          body: formData
-        });
-
-        const result = await response.json();
-
-        if (result.success) {
-          // Success UI Update
-          submitBtn.innerText = "Success! Downloading...";
-          submitBtn.style.background = "var(--green)";
-          submitBtn.style.color = "#fff";
-          
-          // Trigger the actual PDF download
-          // Note: Update this filename to match the specific guide on this page!
-          const pdfUrl = '/assets/smartpay-guide.pdf'; 
-          
-          // Create an invisible link and click it to force download
-          const link = document.createElement('a');
-          link.href = pdfUrl;
-          link.download = ''; 
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-
-          // Optional: Clear form
-          form.reset();
-        } else {
-          throw new Error("API failed");
-        }
-      } catch (error) {
-        alert("Something went wrong. Please try again or contact support.");
-        submitBtn.innerText = originalText;
-        submitBtn.style.opacity = "1";
-        submitBtn.disabled = false;
-      }
-    });
-  </script>
 </body>
 
 </html>
