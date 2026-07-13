@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -2389,11 +2389,16 @@
       </div>
     </div>
 
-    <div class="lp-form-box" style="text-align: center; display: flex; flex-direction: column; justify-content: center;">
-      <h3>Ready for Download</h3>
-      <p>Click below to open or save the PDF file directly.</p>
-      <a href="/assets/powerprofile-plus-guide.pdf" target="_blank" class="mc-submit" style="display:block; text-decoration:none;">Download PDF Now &darr;</a>
-            </div>
+    <div class="lp-form-box">
+      <h3>Download the Guide</h3>
+      <p>Enter your details below to access the full PDF immediately.</p>
+      <form id="resource-download-form" action="/api/subscribe" method="POST">
+          <input type="hidden" name="resource_tag" value="Resource Download - PowerProfile Plus Guide">
+          <div class="mc-field-group"><label for="FNAME">First Name <span style="color: red;">*</span></label><input type="text" name="FNAME" id="FNAME" required></div>
+          <div class="mc-field-group"><label for="EMAIL">Email Address <span style="color: red;">*</span></label><input type="email" name="EMAIL" id="EMAIL" required></div>
+          <button type="submit" class="mc-submit">Get the Guide</button>
+      </form>
+    </div>
         </div>
     <footer>
         <div class="footer-grid">
