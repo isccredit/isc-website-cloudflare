@@ -29,8 +29,9 @@ nav{background:var(--white);border-bottom:1px solid var(--sand);padding:0 2.5rem
 .nav-logo{font-family:var(--fd);font-size:1.5rem;color:var(--navy);font-weight:700;text-decoration:none}
 .nav-logo span{color:var(--gold)}
 .nav-links{display:flex;gap:.15rem;list-style:none}
-.nav-links a{font-size:.82rem;font-weight:500;color:var(--warm);padding:.45rem .85rem;border-radius:5px;transition:all .18s;display:block;text-decoration:none}
-.nav-links a:hover{color:var(--navy);background:var(--off)}
+.nav-links a,.nav-links .nav-parent-label{font-size:.82rem;font-weight:500;color:var(--warm);padding:.45rem .85rem;border-radius:5px;transition:all .18s;display:block;text-decoration:none}
+.nav-links a:hover,.nav-links .nav-parent-label:hover,.nav-links .nav-parent-label:focus{color:var(--navy);background:var(--off)}
+.nav-parent-label{cursor:default}
 .nav-right{display:flex;align-items:center;gap:.85rem}
 .btn-primary{background:var(--navy);color:#fff !important;font-size:.8rem;font-weight:600;padding:.55rem 1.25rem;border-radius:5px;border:2px solid var(--navy);text-decoration:none}
 .hero{background:var(--navy);padding:4rem 2.5rem 3.5rem;position:relative;overflow:hidden}
@@ -127,7 +128,8 @@ img, video { max-width: 100%; height: auto; }
     list-style: none !important;
     border-top: 1px solid var(--sand) !important;
   }
-  nav .nav-links li a {
+  nav .nav-links li a,
+  nav .nav-links li .nav-parent-label {
     display: block !important;
     padding: .85rem 0 !important;
     border-radius: 0 !important;
@@ -267,7 +269,7 @@ img, video { max-width: 100%; height: auto; }
 
 
 /* Brand logo image in nav */
-.nav-logo img { display: block; height: 32px; width: auto; max-width: 100%; }
+.nav-logo img { flex-shrink: 0; display: block; height: 32px; width: auto; max-width: 100%; }
 @media (max-width: 600px) { .nav-logo img { height: 26px; } }
 
 /* Inline-grid override: catches divs that use inline style grid-template-columns instead of a class */
@@ -323,7 +325,8 @@ img, video { max-width: 100%; height: auto; }
 /* Desktop Products dropdown (hover-activated, hidden on mobile where hamburger handles it) */
 @media (min-width: 769px) {
   .nav-has-sub { position: relative; }
-  .nav-has-sub > a::after {
+  .nav-has-sub > a::after,
+  .nav-has-sub > span.nav-parent-label::after {
     content: ' \25BE';
     font-size: .65em;
     opacity: .7;
@@ -391,7 +394,7 @@ img, video { max-width: 100%; height: auto; }
       <li><a href="/integrations/">Integrations</a></li>
       <li><a href="/insights/">Insights</a></li>
       <li><a href="/lender-solutions/">Lender Solutions</a></li>
-      <li class="nav-has-sub"><a href="/why-isc/">Why ISC</a>
+      <li class="nav-has-sub"><span class="nav-parent-label" tabindex="0">Why ISC</span>
         <ul class="nav-sublist">
           <li><a href="/why-isc/">Why Clients Switch to ISC</a></li>
         </ul>
