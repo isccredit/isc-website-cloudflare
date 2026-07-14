@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -226,7 +226,7 @@ img, video { max-width: 100%; height: auto; }
 }
 
 /* ----- TABLET / PHONE WIDE (<=768px) - NAV BECOMES HAMBURGER ----- */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   /* Nav: flex-wrap, show hamburger, hide links/right by default */
   nav {
     height: auto !important;
@@ -283,6 +283,9 @@ img, video { max-width: 100%; height: auto; }
     display: flex !important;
   }
 
+}
+
+  @media (max-width: 768px) {
   /* Equal-split grids collapse */
   .dark-two, .benefit-grid, .bm-compare, .bm-section-grid {
     grid-template-columns: 1fr !important;
@@ -375,7 +378,7 @@ img, video { max-width: 100%; height: auto; }
 
 /* Products submenu - desktop: hidden; mobile (in open hamburger): indented list */
 .nav-sublist { display: none; list-style: none; }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   #nav-toggle:checked ~ nav .nav-sublist {
     display: block !important;
     padding-left: 1.25rem !important;
@@ -451,7 +454,7 @@ img, video { max-width: 100%; height: auto; }
 }
 
 /* Desktop Products dropdown (hover-activated, hidden on mobile where hamburger handles it) */
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
   .nav-has-sub { position: relative; }
   .nav-has-sub > a::after,
   .nav-has-sub > span.nav-parent-label::after {
