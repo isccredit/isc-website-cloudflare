@@ -79,6 +79,7 @@
         }
 
         .nav-logo {
+            flex-shrink: 0;
             font-family: var(--fd);
             font-size: 1.5rem;
             color: var(--navy);
@@ -95,7 +96,8 @@
             list-style: none
         }
 
-        .nav-links a {
+        .nav-links a,
+        .nav-links .nav-parent-label {
             font-size: .82rem;
             font-weight: 500;
             color: var(--warm);
@@ -105,10 +107,14 @@
             display: block
         }
 
-        .nav-links a:hover {
+        .nav-links a:hover,
+        .nav-links .nav-parent-label:hover,
+        .nav-links .nav-parent-label:focus {
             color: var(--navy);
             background: var(--off)
         }
+
+        .nav-parent-label { cursor: default; }
 
         .nav-right {
             display: flex;
@@ -1754,7 +1760,8 @@
                 border-top: 1px solid var(--sand) !important;
             }
 
-            nav .nav-links li a {
+            nav .nav-links li a,
+            nav .nav-links li .nav-parent-label {
                 display: block !important;
                 padding: .85rem 0 !important;
                 border-radius: 0 !important;
@@ -2054,6 +2061,7 @@
 
         /* Brand logo image in nav */
         .nav-logo img {
+            flex-shrink: 0;
             display: block;
             height: 32px;
             width: auto;
@@ -2162,7 +2170,8 @@
                 position: relative;
             }
 
-            .nav-has-sub>a::after {
+            .nav-has-sub>a::after,
+      .nav-has-sub>span.nav-parent-label::after {
                 content: ' \25BE';
                 font-size: .65em;
                 opacity: .7;
@@ -2356,7 +2365,7 @@
       <li><a href="/integrations/">Integrations</a></li>
       <li><a href="/insights/">Insights</a></li>
       <li><a href="/lender-solutions/">Lender Solutions</a></li>
-      <li class="nav-has-sub"><a href="/why-isc/">Why ISC</a>
+      <li class="nav-has-sub"><span class="nav-parent-label" tabindex="0">Why ISC</span>
         <ul class="nav-sublist">
           <li><a href="/why-isc/">Why Clients Switch to ISC</a></li>
         </ul>
