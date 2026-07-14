@@ -927,7 +927,7 @@
     }
 
     /* ----- TABLET / PHONE WIDE (<=768px) - NAV BECOMES HAMBURGER ----- */
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
 
       /* Nav: flex-wrap, show hamburger, hide links/right by default */
       nav {
@@ -992,6 +992,9 @@
         display: flex !important;
       }
 
+    }
+
+      @media (max-width: 768px) {
       /* Equal-split grids collapse */
       .dark-two,
       .benefit-grid,
@@ -1235,7 +1238,7 @@
       list-style: none;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       #nav-toggle:checked~nav .nav-sublist {
         display: block !important;
         padding-left: 1.25rem !important;
@@ -1367,7 +1370,7 @@
     }
 
     /* Desktop Products dropdown (hover-activated, hidden on mobile where hamburger handles it) */
-    @media (min-width: 769px) {
+    @media (min-width: 1025px) {
       .nav-has-sub {
         position: relative;
       }
