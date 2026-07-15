@@ -512,6 +512,133 @@ img, video { max-width: 100%; height: auto; }
       border-color: var(--navy2, #0f2040);
       text-decoration: none;
     }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy2);
+      padding: 4rem 2.5rem 2rem;
+      border-top: 1px solid rgba(255, 255, 255, .07)
+    }
+
+    .footer-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem
+    }
+
+    .footer-logo {
+      font-family: var(--fd);
+      font-size: 1.4rem;
+      color: #fff;
+      font-weight: 700;
+      display: block;
+      margin-bottom: .6rem
+    }
+
+    .footer-logo span {
+      color: var(--gold)
+    }
+
+    .footer-tagline {
+      font-size: .77rem;
+      color: rgba(255, 255, 255, .33);
+      line-height: 1.72;
+      margin-bottom: 1.1rem;
+      max-width: 240px
+    }
+
+    .footer-contact a,
+    .footer-contact span {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .4);
+      margin-bottom: .4rem;
+      line-height: 1.5
+    }
+
+    .footer-contact a:hover {
+      color: var(--gold)
+    }
+
+    .fc-title {
+      font-size: .63rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: rgba(255, 255, 255, .8);
+      font-weight: 700;
+      margin-bottom: 1.25rem
+    }
+
+    .fc-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: .85rem
+    }
+
+    .fc-col a {
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .4);
+      transition: color .2s
+    }
+
+    .fc-col a:hover {
+      color: var(--gold)
+    }
+
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(255, 255, 255, .07);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem
+    }
+
+    .footer-copy {
+      font-size: .69rem;
+      color: rgba(255, 255, 255, .22)
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 1.75rem
+    }
+
+    .footer-legal a {
+      font-size: .69rem;
+      color: rgba(255, 255, 255, .22);
+      transition: color .18s
+    }
+
+    .footer-legal a:hover {
+      color: var(--gold)
+    }
+
+    @media (max-width: 1024px) {
+      .footer-inner,
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2rem !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-inner,
+      .footer-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ33YXF0Y7"></script>
@@ -563,7 +690,7 @@ img, video { max-width: 100%; height: auto; }
   <div class="hero-inner">
     <div class="hero-eyebrow">LOS Integrations</div>
     <div class="hero-tag">25+ active integrations · Connect to the systems you already use</div>
-    <h1>ISC connects seamlessly with the LOS your team already uses</h1>
+    <h1>ISC connects directly with the LOS your team already uses</h1>
     <p class="hero-sub">ISC integrates with 25+ leading loan origination systems, helping mortgage professionals order credit reports, receive results, and keep files moving without disrupting their workflow.</p>
     <div class="hero-actions">
       <a class="btn-gold" href="/contact/">Get started today &rarr;</a>
@@ -575,7 +702,7 @@ img, video { max-width: 100%; height: auto; }
   <div class="trust-item">25+ LOS Integrations</div><div class="trust-div"></div>
   <div class="trust-item">Bi-directional</div><div class="trust-div"></div>
   <div class="trust-item">Direct Results Delivery</div><div class="trust-div"></div>
-  <div class="trust-item">No Manual Entry</div><div class="trust-div"></div>
+  <div class="trust-item">Reduced Manual Entry</div><div class="trust-div"></div>
   <div class="trust-item">Simple Setup</div>
 </div>
 <div class="page-body">
@@ -585,7 +712,7 @@ img, video { max-width: 100%; height: auto; }
     <div class="card-grid-3">
       <div class="p-card featured"><span class="p-card-tag tag-gold">Most used</span><h3>Encompass by ICE</h3><p>Full bi-directional integration with Encompass Partner Connect (EPC). Order all ISC products directly within Encompass, tri-merge, soft pull, supplements, verifications, with results returned automatically to the borrower's file. Milestone-based ordering available.</p></div>
       <div class="p-card"><span class="p-card-tag tag-blue">Popular</span><h3>Floify</h3><p>Seamless integration for mortgage brokers on the Floify platform. Pull credit reports and receive results without leaving the Floify borrower portal workflow.</p></div>
-      <div class="p-card"><span class="p-card-tag tag-blue">Popular</span><h3>MeridianLink Mortgage</h3><p>Full integration with MeridianLink Mortgage LOS. ISC is an approved vendor in the MeridianLink ecosystem, your credentials connect instantly.</p></div>
+      <div class="p-card"><span class="p-card-tag tag-blue">Popular</span><h3>MeridianLink Mortgage</h3><p>Full integration with MeridianLink Mortgage LOS. ISC is an approved vendor in the MeridianLink ecosystem, connection setup is fast.</p></div>
       <div class="p-card"><span class="p-card-tag tag-green">GSE Direct</span><h3>Fannie Mae Desktop Underwriter</h3><p>Direct integration with DU. Submit credit data for automated underwriting directly from your ISC order without re-entering borrower information.</p></div>
       <div class="p-card"><span class="p-card-tag tag-green">GSE Direct</span><h3>Freddie Mac Loan Product Advisor</h3><p>Direct integration with LPA. Streamline the AUS submission process with direct data flow from ISC credit reports.</p></div>
       <div class="p-card"><span class="p-card-tag tag-blue">Enterprise</span><h3>Black Knight / Empower</h3><p>Integration with the Black Knight Empower LOS for enterprise lenders. Full credit and verification ordering within the Empower workflow.</p></div>
@@ -607,7 +734,7 @@ img, video { max-width: 100%; height: auto; }
       <div class="step-item"><div class="step-num">1</div><div class="step-content"><h4>Complete ISC onboarding</h4><p>Following your onsite inspection (required by the credit bureaus), your ISC account is activated, typically within 1 business day. Your dedicated rep handles all onboarding paperwork and bureau credentialing.</p></div></div>
       <div class="step-item"><div class="step-num">2</div><div class="step-content"><h4>Locate ISC in your LOS vendor directory</h4><p>Most LOS platforms have ISC pre-configured as an approved credit reporting vendor. Search for "Information Searching Company" or "ISC Credit" in your vendor or integration directory.</p></div></div>
       <div class="step-item"><div class="step-num">3</div><div class="step-content"><h4>Enter your ISC credentials</h4><p>Your ISC support team provides your login credentials and walks you through any LOS-specific setup steps. This typically takes 5–15 minutes. Your rep stays on the call until your first test order is confirmed.</p></div></div>
-      <div class="step-item"><div class="step-num">4</div><div class="step-content"><h4>Place your first order and confirm delivery</h4><p>Pull a test report directly from your LOS and confirm results are delivered correctly to the borrower file. Most integrations are fully live within minutes of credential entry.</p></div></div>
+      <div class="step-item"><div class="step-num">4</div><div class="step-content"><h4>Place your first order and confirm delivery</h4><p>Pull a test report directly from your LOS and confirm results are delivered correctly to the borrower file. Most integrations can be set up quickly after credential entry.</p></div></div>
     </div>
   </section>
 
@@ -636,48 +763,60 @@ img, video { max-width: 100%; height: auto; }
   </section>
 </div>
 
-<footer>
-  <div class="footer-inner">
-    <div>
-      <span class="footer-logo">ISC<span>.</span></span>
-      <p class="footer-tagline">Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. Costa Mesa, California.</p>
-      <div class="footer-contact">
-        <a href="tel:+18002902801">800-290-2801</a>
-        <a href="mailto:support@isccredit.com">support@isccredit.com</a>
-        <a href="https://www.google.com/maps?cid=850364998172701238" target="_blank" rel="noopener">1503 South Coast Drive, Suite 205, Costa Mesa, CA 92626</a>
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <a class="footer-logo" href="/">ISC<span>.</span></a>
+        <p class="footer-tagline">Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. Costa
+          Mesa, California.</p>
+        <div class="footer-contact">
+          <a href="tel:+18002902801">📞 800-290-2801</a>
+          <a href="mailto:support@isccredit.com">✉️ support@isccredit.com</a>
+          <a href="https://www.google.com/maps?cid=850364998172701238" target="_blank" rel="noopener">📍 1503 South
+            Coast Drive Suite 205, Costa Mesa, CA 92626</a>
+          <span>🕐 Mon&ndash;Fri &middot; 9:00 AM&ndash;5:00 PM Pacific Time</span>
+        </div>
+      </div>
+      <div class="fc-col">
+        <p class="fc-title"><a href="/products/" style="color:inherit;text-decoration:none">Products</a></p>
+        <ul>
+          <li><a href="/products/aus-soft-pull/">AUS Soft Pull</a></li>
+          <li><a href="/products/trended-credit-reports/">Mortgage Credit Reports</a></li>
+          <li><a href="/products/smartselect/">SmartSelect</a></li>
+          <li><a href="/products/rapid-rescore/">Rapid Rescore</a></li>
+          <li><a href="/products/credit-supplements/">Supplements</a></li>
+          <li><a href="/products/score-optimization/">Score Optimization</a></li>
+          <li><a href="/products/borrower-verifications/">Verifications</a></li>
+        </ul>
+      </div>
+      <div class="fc-col">
+        <p class="fc-title">Company</p>
+        <ul>
+          <li><a href="/about/">About ISC</a></li>
+          <li><a href="/why-isc/">Why Switch to ISC</a></li>
+          <li><a href="/integrations/">Integrations</a></li>
+          <li><a href="/insights/">Insights</a></li>
+          <li><a href="/lender-solutions/">Lender Solutions</a></li>
+          <li><a href="/client-support/">Client Support</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="https://iscsite.meridianlink.com/custom/login.aspx" target="_blank" rel="noopener">Client Login</a></li>
+        </ul>
+      </div>
+      <div class="fc-col">
+        <p class="fc-title">Help &amp; Legal</p>
+        <ul>
+          <li><a href="/consumer-assistance/">Consumer Assistance</a></li>
+          <li><a href="/borrower-credit-education/">Borrower Credit Education</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/terms-of-use/">Terms of Use</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer-col"><p class="footer-col-title"><a href="/products/" style="color:inherit;text-decoration:none">Products</a></p><ul>
-      <li><a href="/products/trended-credit-reports/">Mortgage Credit Reports</a></li>
-      <li><a href="/products/aus-soft-pull/">AUS Soft Pull</a></li>
-      <li><a href="/products/rapid-rescore/">Rapid Rescore</a></li>
-      <li><a href="/products/credit-supplements/">Credit Supplements</a></li>
-      <li><a href="/products/score-optimization/">Score Optimization</a></li>
-      <li><a href="/products/borrower-verifications/">Verifications</a></li>
-    </ul></div>
-    <div class="footer-col"><p class="footer-col-title">Company</p><ul>
-      <li><a href="/about/">About ISC</a></li>
-      <li><a href="/why-isc/">Why Switch to ISC</a></li>
-      <li><a href="/integrations/">LOS Integrations</a></li>
-      <li><a href="/insights/">Insights</a></li>
-      <li><a href="/lender-solutions/">Lender Solutions</a></li>
-      <li><a href="/client-support/">Client Support</a></li>
-      <li><a href="/contact/">Contact Us</a></li>
-      <li><a href="https://iscsite.meridianlink.com/custom/login.aspx" target="_blank" rel="noopener">Client Login</a></li>
-    </ul></div>
-    <div class="footer-col"><p class="footer-col-title">Resources</p><ul>
-      <li><a href="/insights/">Insights</a></li>
-      <li><a href="/consumer-assistance/">Consumer Assistance</a></li>
-    </ul></div>
-  </div>
-  <div class="footer-bottom">
-    <p class="footer-copy">&copy; 2026 Information Searching Company &middot; Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. &middot; Costa Mesa, CA 92626</p>
-    <div class="footer-legal">
-      <a href="/privacy-policy/">Privacy Policy</a>
-      <a href="/terms-of-use/">Terms of Use</a>
-      <a href="/consumer-assistance/">Consumer Assistance</a>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Information Searching Company &middot; Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. &middot; Costa Mesa, CA 92626</p>
+      <div class="footer-legal"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-use/">Terms of Use</a><a
+          href="/consumer-assistance/">Consumer Assistance</a></div>
     </div>
-  </div>
-</footer>
+  </footer>
 </body>
 </html>
