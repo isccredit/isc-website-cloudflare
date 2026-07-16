@@ -2304,6 +2304,7 @@
             transition: background 0.2s;
         }
 
+        .cf-turnstile { max-width: 100%; overflow: hidden; }
         .mc-submit:hover {
             background: var(--gold2);
         }
@@ -2330,6 +2331,7 @@
     </style>
   <link rel="canonical" href="https://www.isccredit.com/resources/powerprofile-plus-guide/">
     <meta name="robots" content="noindex, nofollow">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 
 <body>
@@ -2412,6 +2414,7 @@
           <input type="hidden" name="resource_tag" value="Resource Download - PowerProfile Plus Guide">
           <div class="mc-field-group"><label for="FNAME">First Name <span style="color: red;">*</span></label><input type="text" name="FNAME" id="FNAME" required></div>
           <div class="mc-field-group"><label for="EMAIL">Email Address <span style="color: red;">*</span></label><input type="email" name="EMAIL" id="EMAIL" required></div>
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAADio6TUkoqDiiCF-" data-theme="dark" style="margin-bottom: 15px;"></div>
           <button type="submit" class="mc-submit">Get the Guide</button>
       </form>
     </div>

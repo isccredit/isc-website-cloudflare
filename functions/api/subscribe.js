@@ -7,17 +7,32 @@ export async function onRequestPost(context) {
     const email = formData.get('EMAIL');
     const firstName = formData.get('FNAME');
     const tag = formData.get('resource_tag');
+    const token = formData.get('cf-turnstile-response');
 
-    // 2. Load Environment Variables (Set in Cloudflare Dashboard later)
+    // 2. Protect with Cloudflare Turnstile CAPTCHA
+    if (!token) {
+      return new Response(JSON.stringify({ success: false, error: 'Missing Security Verification Token' }), { status: 400 });
+    }
+
+    const turnstileVerify = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `secret=${context.env.TURNSTILE_SECRET_KEY}&response=${token}`
+    });
+
+    const turnstileResult = await turnstileVerify.json();
+    if (!turnstileResult.success) {
+      return new Response(JSON.stringify({ success: false, error: 'Security Verification Failed' }), { status: 400 });
+    }
+
+    // 3. Load Environment Variables (Set in Cloudflare Dashboard later)
     const API_KEY = context.env.MAILCHIMP_API_KEY;
     const LIST_ID = context.env.MAILCHIMP_LIST_ID;
     const DATACENTER = context.env.MAILCHIMP_DATACENTER; // Usually something like 'us20'
 
-    // 3. Local Development Bypass
-    // If we don't have Brian's keys yet, log it and return success so we can test the UI.
+    // 4. Validate Environment Variables
     if (!API_KEY || !LIST_ID || !DATACENTER) {
-      console.log('Local Test Mode - Keys Missing. Captured Data:', { email, firstName, tag });
-      return new Response(JSON.stringify({ success: true, message: "Local mock success" }), { status: 200 });
+      return new Response(JSON.stringify({ success: false, error: "Mailchimp is not configured yet." }), { status: 500 });
     }
 
     // 4. Construct the Mailchimp API Payload
