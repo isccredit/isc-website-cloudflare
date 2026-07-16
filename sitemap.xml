@@ -3,106 +3,170 @@
   <!-- Core Pages -->
   <url>
     <loc>https://www.isccredit.com/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.isccredit.com/about/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.isccredit.com/why-isc/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.isccredit.com/insights/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.isccredit.com/contact/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.9</priority>
   </url>
 
   <!-- Products & Solutions -->
   <url>
     <loc>https://www.isccredit.com/products/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.isccredit.com/products/aus-soft-pull/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.isccredit.com/products/borrower-verifications/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.isccredit.com/products/credit-supplements/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.isccredit.com/products/rapid-rescore/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.isccredit.com/products/score-optimization/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.isccredit.com/products/smartselect/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.isccredit.com/products/trended-credit-reports/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.isccredit.com/lender-solutions/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.isccredit.com/integrations/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.8</priority>
+  </url>
+
+  <!-- Client Success -->
+  <url>
+    <loc>https://www.isccredit.com/client-success/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.isccredit.com/client-success/equinox-mortgage-credit-reporting/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Resources -->
+  <url>
+    <loc>https://www.isccredit.com/resources/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.isccredit.com/resources/du-lpa-technical-provider-selection-guide/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.isccredit.com/resources/frozen-bureau-pulls-guide/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.isccredit.com/resources/how-to-order-a-supplement/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.isccredit.com/resources/powerprofile-plus-guide/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.isccredit.com/resources/rapid-rescore-guide/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.isccredit.com/resources/smartpay-guide/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.isccredit.com/resources/smartselect-guide/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.isccredit.com/resources/supplement-checklist/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.isccredit.com/resources/vantagescore-guide/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.6</priority>
   </url>
 
   <!-- Support & Legal Pages -->
   <url>
     <loc>https://www.isccredit.com/client-support/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.isccredit.com/consumer-assistance/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.isccredit.com/borrower-credit-education/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.isccredit.com/privacy-policy/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.isccredit.com/terms-of-use/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>0.5</priority>
   </url>
 </urlset>
