@@ -2107,10 +2107,17 @@
 
     /* Bottom CTA button: prevent overflow and allow text wrap on mobile */
     @media (max-width: 600px) {
+      .cs-bottom-cta {
+        padding: 1.5rem 1rem !important;
+      }
       a.cta-bottom-btn {
-        max-width: 100%;
-        text-align: center;
-        box-sizing: border-box;
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        white-space: normal !important;
+        box-sizing: border-box !important;
+        padding: .85rem 1rem !important;
       }
     }
 
@@ -2326,6 +2333,7 @@
 </head>
 <body>
 
+  <input type="checkbox" id="nav-toggle" hidden>
   <nav>
     <a class="nav-logo" href="/"><img src="/ISC.png" alt="ISC Credit"></a>
     <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"></label>
@@ -2405,13 +2413,13 @@
     </div>
 
     <!-- BOTTOM CTA -->
-    <div style="background:var(--navy);border-radius:14px;padding:2rem 2.5rem;margin-top:4rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;position:relative;overflow:hidden">
+    <div class="cs-bottom-cta" style="background:var(--navy);border-radius:14px;padding:2rem 2.5rem;margin-top:4rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;position:relative;overflow:hidden">
       <div style="position:absolute;top:0;left:0;bottom:0;width:4px;background:var(--gold)"></div>
       <div style="flex:1;min-width:280px;padding-left:1rem">
         <div style="font-family:var(--fd);font-size:1.5rem;color:var(--white);line-height:1.3;margin-bottom:.35rem">Ready to upgrade your workflow?</div>
         <p style="font-size:0.95rem;color:rgba(255,255,255,.7);margin-bottom:0">Get direct access to a dedicated support team.</p>
       </div>
-      <a href="/contact/" class="cta-bottom-btn" style="background:var(--gold);color:var(--navy);font-size:.9rem;font-weight:700;padding:1rem 1.75rem;border-radius:6px;text-decoration:none;transition:all .2s">Get direct access to a dedicated support team.&rarr;</a>
+      <a href="/contact/" class="cta-bottom-btn" style="background:var(--gold);color:var(--navy);font-size:.9rem;font-weight:700;padding:1rem 1.75rem;border-radius:6px;text-decoration:none;transition:all .2s">Get Started &rarr;</a>
     </div>
 
   </main>

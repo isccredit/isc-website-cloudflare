@@ -2126,8 +2126,13 @@
       }
       
       .cf-turnstile {
-        max-width: 100%;
-        overflow: hidden;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        display: flex !important;
+        justify-content: center !important;
+      }
+      .cf-turnstile iframe {
+        max-width: 100% !important;
       }
 
       .data-table,
