@@ -2325,6 +2325,12 @@
             transition: background 0.2s;
         }
 
+        .mc-submit {
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            white-space: normal;
+        }
         .mc-submit:hover {
             background: var(--gold2);
         }
@@ -2337,15 +2343,30 @@
             line-height: 1.4;
         }
 
-        @media (max-width: 900px) {
+        @media (max-width: 1024px) {
             .lp-container {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-                margin: 2rem auto;
+                grid-template-columns: 1fr !important;
+                gap: 2.5rem !important;
+                margin: 2rem auto !important;
             }
 
             .lp-form-box {
-                position: static;
+                position: static !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .lp-container {
+                padding: 0 1rem !important;
+                margin: 1.5rem auto !important;
+            }
+
+            .lp-form-box {
+                padding: 1.5rem 1rem !important;
+            }
+
+            .whats-inside-box {
+                padding: 1.25rem 1rem !important;
             }
         }
     </style>

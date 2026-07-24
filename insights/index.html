@@ -446,7 +446,29 @@ img, video { max-width: 100%; height: auto; }
   }
 }
 
-    .cf-turnstile { max-width: 100%; overflow: hidden; }
+    .cf-turnstile {
+      max-width: 100% !important;
+      overflow: hidden !important;
+      display: flex !important;
+      justify-content: center !important;
+    }
+    .cf-turnstile iframe {
+      max-width: 100% !important;
+    }
+    @media (max-width: 600px) {
+      .hero {
+        padding: 2.5rem 1rem !important;
+      }
+      .signup-card {
+        padding: 1.25rem 1rem !important;
+      }
+      .sc-btn {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        white-space: normal !important;
+      }
+    }
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ33YXF0Y7"></script>
