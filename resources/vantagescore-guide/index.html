@@ -2223,6 +2223,9 @@
             gap: 4rem;
             align-items: start;
         }
+        @media (max-width: 820px) {
+            .lp-container { grid-template-columns: 1fr !important; }
+        }
 
         .lp-content h2 {
             font-family: var(--fd);
@@ -2365,6 +2368,7 @@
 </head>
 
 <body>
+  <input type="checkbox" id="nav-toggle" hidden>
   <nav>
     <a class="nav-logo" href="/"><img src="/ISC.png" alt="ISC Credit"></a>
     <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"></label>
