@@ -626,14 +626,16 @@ img, video { max-width: 100%; height: auto; }
   }
 }
 
-    .cf-turnstile {
-      max-width: 100% !important;
-      overflow: hidden !important;
-      display: flex !important;
-      justify-content: center !important;
-      min-width: 0;
-      width: 100%;
-    }
+/* 1. Main Turnstile Container Setup */
+.cf-turnstile {
+  align-self: center !important; /* Breaks free from the parent form's stretch */
+  min-width: 300px !important;   /* Forces the exact width of the Cloudflare iframe */
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  overflow: visible !important;
+}
+
     @media (max-width: 600px) {
       .hero {
         padding: 2.5rem 1rem !important;
@@ -652,6 +654,15 @@ img, video { max-width: 100%; height: auto; }
         white-space: normal !important;
       }
     }
+
+/* 2. Responsive Auto-Scaling for very narrow mobile screens (< 380px) */
+@media (max-width: 380px) {
+  .cf-turnstile {
+    transform: scale(0.85);
+    transform-origin: center center;
+    /* Negative margins are entirely removed so it scales dead center */
+  }
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ33YXF0Y7"></script>
