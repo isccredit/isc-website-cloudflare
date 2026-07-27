@@ -60,7 +60,7 @@ nav{background:var(--white);border-bottom:1px solid var(--sand);padding:0 2.5rem
 .sc-label{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.35);margin-bottom:.85rem}
 .sc-title{font-family:var(--fd);font-size:1.1rem;color:#fff;margin-bottom:.5rem;line-height:1.25}
 .sc-sub{font-size:.77rem;color:rgba(255,255,255,.45);margin-bottom:1.1rem;line-height:1.6}
-.sc-form{display:flex;flex-direction:column;gap:.55rem}
+.sc-form{display:flex;flex-direction:column;gap:.55rem;min-width:0}
 .sc-input{background:rgba(255,255,255,.09);border:1.5px solid rgba(255,255,255,.15);border-radius:6px;padding:.6rem .85rem;font-size:.83rem;color:#fff;font-family:var(--fb);outline:none;transition:border-color .2s}
 .sc-input::placeholder{color:rgba(255,255,255,.3)}
 .sc-input:focus{border-color:rgba(240,185,66,.5)}
@@ -631,6 +631,8 @@ img, video { max-width: 100%; height: auto; }
       overflow: hidden !important;
       display: flex !important;
       justify-content: center !important;
+      min-width: 0;
+      width: 100%;
     }
     .cf-turnstile iframe {
       max-width: 100% !important;
