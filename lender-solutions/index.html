@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lender Solutions | High-Volume Lender Program | ISC Credit</title>
   <meta name="description"
-    content="ISC Credit supports qualified high-volume lenders with direct access to lender-specific mortgage credit products and preferred pricing on select products."
+    content="ISC Credit supports qualified high-volume lenders with direct access to lender-specific mortgage credit products and preferred pricing on select products.">
     <link rel="canonical" href="https://www.isccredit.com/lender-solutions/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ISC Credit">
@@ -86,6 +86,7 @@
     }
 
     .nav-logo {
+      flex-shrink: 0;
       font-family: var(--fd);
       font-size: 1.5rem;
       color: var(--navy);
@@ -102,7 +103,8 @@
       list-style: none
     }
 
-    .nav-links a {
+    .nav-links a,
+    .nav-links .nav-parent-label {
       font-size: .82rem;
       font-weight: 500;
       color: var(--warm);
@@ -113,10 +115,14 @@
     }
 
     .nav-links a:hover,
-    .nav-links a.active {
+    .nav-links a.active,
+    .nav-links .nav-parent-label:hover,
+    .nav-links .nav-parent-label:focus {
       color: var(--navy);
       background: var(--off)
     }
+
+    .nav-parent-label { cursor: default; }
 
     .nav-right {
       display: flex;
@@ -595,6 +601,9 @@
       gap: 3rem;
       align-items: start
     }
+    @media (max-width: 820px) {
+      .form-grid { grid-template-columns: 1fr !important; }
+    }
 
     .form-left h3 {
       font-family: var(--fd);
@@ -842,7 +851,7 @@
     }
 
     /* ============================================================ */
-    /* RESPONSIVE — full coverage: desktop, tablet, mobile, small    */
+    /* RESPONSIVE - full coverage: desktop, tablet, mobile, small    */
     /* ============================================================ */
 
     /* Universal safety: prevent image/video overflow site-wide */
@@ -920,8 +929,8 @@
       }
     }
 
-    /* ----- TABLET / PHONE WIDE (<=768px) — NAV BECOMES HAMBURGER ----- */
-    @media (max-width: 768px) {
+    /* ----- TABLET / PHONE WIDE (<=768px) - NAV BECOMES HAMBURGER ----- */
+    @media (max-width: 1024px) {
 
       /* Nav: flex-wrap, show hamburger, hide links/right by default */
       nav {
@@ -956,7 +965,8 @@
         border-top: 1px solid var(--sand) !important;
       }
 
-      nav .nav-links li a {
+      nav .nav-links li a,
+      nav .nav-links li .nav-parent-label {
         display: block !important;
         padding: .85rem 0 !important;
         border-radius: 0 !important;
@@ -985,6 +995,9 @@
         display: flex !important;
       }
 
+    }
+
+      @media (max-width: 768px) {
       /* Equal-split grids collapse */
       .dark-two,
       .benefit-grid,
@@ -1103,7 +1116,7 @@
         display: none !important;
       }
 
-      /* Comparison table — much tighter on mobile */
+      /* Comparison table - much tighter on mobile */
       .comp-table {
         font-size: .72rem !important;
         line-height: 1.45 !important;
@@ -1222,13 +1235,13 @@
       }
     }
 
-    /* Products submenu — desktop: hidden; mobile (in open hamburger): indented list */
+    /* Products submenu - desktop: hidden; mobile (in open hamburger): indented list */
     .nav-sublist {
       display: none;
       list-style: none;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       #nav-toggle:checked~nav .nav-sublist {
         display: block !important;
         padding-left: 1.25rem !important;
@@ -1256,6 +1269,7 @@
 
     /* Brand logo image in nav */
     .nav-logo img {
+      flex-shrink: 0;
       display: block;
       height: 32px;
       width: auto;
@@ -1299,7 +1313,7 @@
         grid-template-columns: 1fr !important;
       }
 
-      /* Hide the Source column on the benchmark table — every row is MeridianLink anyway */
+      /* Hide the Source column on the benchmark table - every row is MeridianLink anyway */
       .bm-table th:nth-child(5),
       .bm-table td:nth-child(5) {
         display: none !important;
@@ -1359,12 +1373,13 @@
     }
 
     /* Desktop Products dropdown (hover-activated, hidden on mobile where hamburger handles it) */
-    @media (min-width: 769px) {
+    @media (min-width: 1025px) {
       .nav-has-sub {
         position: relative;
       }
 
-      .nav-has-sub>a::after {
+      .nav-has-sub>a::after,
+      .nav-has-sub>span.nav-parent-label::after {
         content: ' \25BE';
         font-size: .65em;
         opacity: .7;
@@ -1405,7 +1420,28 @@
         color: var(--navy) !important;
       }
     }
-  </style>
+  
+    .cf-turnstile {
+      max-width: 100% !important;
+      overflow: hidden !important;
+      display: flex !important;
+      justify-content: center !important;
+    }
+    .cf-turnstile iframe {
+      max-width: 100% !important;
+    }
+    @media (max-width: 600px) {
+      .form-outer {
+        padding: 1.5rem 1rem !important;
+      }
+      .btn-submit {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        white-space: normal !important;
+      }
+    }
+</style>
+    <meta name="robots" content="noindex, nofollow">
 </head>
 
 <body>
@@ -1429,15 +1465,21 @@
         </ul>
       </li>
       <li><a href="/integrations/">Integrations</a></li>
-      <li><a href="/insights/">ISC Insights</a></li>
+      <li><a href="/insights/">Insights</a></li>
       <li><a href="/lender-solutions/">Lender Solutions</a></li>
+      <li class="nav-has-sub"><span class="nav-parent-label" tabindex="0">Why ISC</span>
+        <ul class="nav-sublist">
+          <li><a href="/why-isc/">Why Clients Switch to ISC</a></li>
+        </ul>
+      </li>
+      <li><a href="/client-success/">Client Success</a></li>
+      <li><a href="/resources/">Resources</a></li>
       <li><a href="/about/">About</a></li>
     </ul>
     <div class="nav-right">
       <a href="tel:+18002902801" style="font-size:.78rem;font-weight:600;color:var(--navy)">800-290-2801</a>
-      <a href="https://iscsite.meridianlink.com/custom/login.aspx" target="_blank"
-        style="font-size:.78rem;font-weight:600;color:var(--navy)">Client Login</a>
-      <a class="btn-primary" href="/contact/">Get started</a>
+      <a href="https://iscsite.meridianlink.com/custom/login.aspx" target="_blank" style="font-size:.78rem;font-weight:600;color:var(--navy)">Client Login</a>
+      <a class="btn-primary" href="/contact/">Get Started</a>
     </div>
   </nav>
 
@@ -1445,7 +1487,7 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-eyebrow">High-Volume Lender Program</div>
-      <span class="hero-pill">🏆 MeridianLink Industry Benchmark: #1 Trade Turnaround for 12 Consecutive Months</span>
+      <span class="hero-pill">🏆 MeridianLink Industry Benchmark: #1 Trade Turnaround every month since June 2025</span>
       <h1>Lender-specific products for high-volume mortgage operations.</h1>
       <p class="hero-sub">ISC Credit supports qualified lenders with direct access to lender-specific mortgage products
         for high-volume operations, backed by the same team and turnaround performance that mortgage professionals have
@@ -1503,12 +1545,15 @@
           <div class="ps-heading">Why ISC</div>
           <div class="ps-item">
             <div class="ps-icon">📅</div>
-            <div class="ps-text"><strong>Since 1989</strong><span>37 years serving the mortgage industry</span></div>
+            <div class="ps-text">
+              <strong>Since 1989</strong>
+              <span>Serving the mortgage industry</span>
+            </div>
           </div>
           <div class="ps-item">
             <div class="ps-icon">⚡</div>
             <div class="ps-text"><strong>#1 trade turnaround</strong><span>MeridianLink Industry Benchmark data ranked
-                ISC #1 in trade turnaround for 12 consecutive months.</span></div>
+                ISC #1 in trade turnaround every month since June 2025.</span></div>
           </div>
           <div class="ps-item">
             <div class="ps-icon" style="color:var(--gold,#f0b942)">&#9733;</div>
@@ -1521,8 +1566,7 @@
           </div>
           <div class="ps-item">
             <div class="ps-icon">🔒</div>
-            <div class="ps-text"><strong>FCRA &amp; GLBA compliant</strong><span>Strict controls and audit-ready
-                operations since 1989</span></div>
+            <div class="ps-text"><strong>FCRA and GLBA safeguards</strong><span>ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. Strict controls support audit-ready lender workflows.</span></div>
           </div>
         </div>
       </div>
@@ -1582,7 +1626,7 @@
           <div class="pc-item">Flood determinations</div>
           <div class="pc-item">AVM products</div>
           <div class="pc-item">MERS</div>
-          <div class="pc-item">UDN / Undisclosed Debt Monitoring</div>
+          <div class="pc-item">UDM / Undisclosed Debt Monitoring</div>
         </div>
         <div class="product-cat">
           <div class="pc-icon">🛡️</div>
@@ -1611,7 +1655,8 @@
           <div style="flex:1;color:#ffffff">
             <div
               style="display:block;font-size:.95rem;color:#ffffff;font-weight:700;margin-bottom:.35rem;line-height:1.35">
-              37 years in the mortgage industry</div>
+              Serving the mortgage industry since 1989
+            </div>
             <div style="display:block;font-size:.85rem;color:#ffffff;opacity:.85;line-height:1.55">ISC has served
               mortgage professionals exclusively since 1989. Not a recent entrant. Not a broad credit data company with
               a mortgage division.</div>
@@ -1627,7 +1672,7 @@
               style="display:block;font-size:.95rem;color:#ffffff;font-weight:700;margin-bottom:.35rem;line-height:1.35">
               Benchmark-backed trade turnaround</div>
             <div style="display:block;font-size:.85rem;color:#ffffff;opacity:.85;line-height:1.55">ISC ranked #1 in
-              trade turnaround for 12 consecutive months, based on MeridianLink Industry Benchmark data.</div>
+              trade turnaround every month since June 2025, based on MeridianLink Industry Benchmark data.</div>
           </div>
         </div>
         <div
@@ -1652,9 +1697,7 @@
             <div
               style="display:block;font-size:.95rem;color:#ffffff;font-weight:700;margin-bottom:.35rem;line-height:1.35">
               Compliance-focused processes</div>
-            <div style="display:block;font-size:.85rem;color:#ffffff;opacity:.85;line-height:1.55">FCRA and GLBA
-              compliant. Borrower data handled with care. Strict access controls maintained throughout our operating
-              history. Built for the compliance demands of lender operations.</div>
+            <div style="display:block;font-size:.85rem;color:#ffffff;opacity:.85;line-height:1.55">ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. Borrower data is handled with strict access controls and lender-focused workflow safeguards.</div>
           </div>
         </div>
         <div
@@ -1703,7 +1746,7 @@
             <div class="form-trust">
               <div class="ft-item">Mortgage-focused support from day one</div>
               <div class="ft-item">Direct support, no call centers or automated systems</div>
-              <div class="ft-item">FCRA and GLBA compliant</div>
+              <div class="ft-item">Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information.</div>
               <div class="ft-item">Serving the mortgage industry since 1989</div>
             </div>
             <div class="form-disclaimer">Preferred pricing is available for select lender-specific products and depends
@@ -1736,7 +1779,7 @@
                     <option>Correspondent lender</option>
                     <option>Wholesale lender</option>
                     <option>Brokerage with lender-level volume</option>
-                     <option>Other</option>
+                    <option>Other</option>
                   </select>
                 </div>
               </div>
@@ -1755,7 +1798,7 @@
               </div>
               <div class="form-row full">
                 <div class="form-group"><label class="form-label">Products needed</label><input class="form-input"
-                    type="text" name="products-needed" placeholder="e.g. VOE, flood, fraud reports, UDN&hellip;"></div>
+                    type="text" name="products-needed" placeholder="e.g. VOE, flood, fraud reports, UDM&hellip;"></div>
               </div>
               <div class="form-row">
                 <div class="form-group"><label class="form-label">Target start date</label><input class="form-input"
@@ -1769,10 +1812,13 @@
                 </div>
               </div>
 
-               <div class="cf-turnstile" data-sitekey="0x4AAAAAADio6TUkoqDiiCF-" data-theme="dark" style="margin-bottom: 15px;"></div>
+              <div class="cf-turnstile" data-sitekey="0x4AAAAAADio6TUkoqDiiCF-" data-theme="dark"
+                style="margin-bottom: 15px;"></div>
 
 
               <button class="btn-submit" type="submit">Request lender program info &rarr;</button>
+<p style="font-size: 0.8rem; color: var(--warm); margin-top: 1rem; line-height: 1.4;">By submitting this form, you consent to receive communications from ISC Credit. Your information is kept secure and never sold. Read our Privacy Policy for more details.</p>
+
               <div class="form-note">Required fields marked <span style="color:var(--gold)">*</span>. ISC will respond
                 within one business day.</div>
             </form>
@@ -1781,12 +1827,17 @@
       </div>
     </div>
   </section>
+  <section class="section" style="padding:1.5rem 2.5rem;background:var(--cream)">
+    <div class="section-inner">
+      <p style="font-size:.9rem;color:var(--warm)">Related: <a href="/resources/du-lpa-technical-provider-selection-guide/" style="color:var(--navy);text-decoration:underline">Step-by-step guide to configuring ISC as your DU &amp; LPA technical provider</a> &middot; <a href="/resources/powerprofile-plus-guide/" style="color:var(--navy);text-decoration:underline">PowerProfile Plus technical reference guide</a></p>
+    </div>
+  </section>
 
   <footer>
     <div class="footer-grid">
       <div>
         <a class="footer-logo" href="/">ISC<span>.</span></a>
-        <p class="footer-tagline">Family-owned mortgage credit reporting since 1989. FCRA &amp; GLBA compliant. Costa
+        <p class="footer-tagline">Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. Costa
           Mesa, California.</p>
         <div class="footer-contact">
           <a href="tel:+18002902801">📞 800-290-2801</a>
@@ -1814,7 +1865,7 @@
           <li><a href="/about/">About ISC</a></li>
           <li><a href="/why-isc/">Why Switch to ISC</a></li>
           <li><a href="/integrations/">Integrations</a></li>
-          <li><a href="/insights/">ISC Insights</a></li>
+          <li><a href="/insights/">Insights</a></li>
           <li><a href="/lender-solutions/">Lender Solutions</a></li>
           <li><a href="/client-support/">Client Support</a></li>
           <li><a href="/contact/">Contact</a></li>
@@ -1831,8 +1882,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">&copy; 2026 Information Searching Company &middot; FCRA &amp; GLBA Compliant &middot;
-        Family-owned Since 1989 &middot; Costa Mesa, CA 92626</p>
+      <p class="footer-copy">&copy; 2026 Information Searching Company &middot; Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. &middot; Costa Mesa, CA 92626</p>
       <div class="footer-legal"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-use/">Terms of Use</a><a
           href="/consumer-assistance/">Consumer Assistance</a></div>
     </div>
@@ -1840,3 +1890,4 @@
 </body>
 
 </html>
+

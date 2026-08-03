@@ -1,29 +1,19 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ISC Credit | Mortgage Credit Reporting Since 1989</title>
-  <meta name="description"
-    content="ISC Credit: mortgage credit reports, soft pulls, supplements, rescores, and verifications. 5.0-star Google rating with 200+ reviews. Family-owned since 1989.">
-    <link rel="canonical" href="https://www.isccredit.com/">
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="ISC Credit">
-  <meta property="og:url" content="https://www.isccredit.com/">
-  <meta property="og:title" content="ISC Credit | Mortgage Credit Reporting Since 1989">
-  <meta property="og:description"
-    content="ISC Credit: mortgage credit reports, soft pulls, supplements, rescores, and verifications. 5.0-star Google rating with 200+ reviews. Family-owned since 1989.">
+  <title>Mortgage Credit Guides & Downloads | ISC Credit</title>
+  <meta name="description" content="Free guides and checklists for supplements, rescores, frozen bureaus, SmartPay, DU/LPA setup, and mortgage credit workflows.">
+  <link rel="canonical" href="https://www.isccredit.com/resources/">
+  <meta property="og:title" content="Mortgage Credit Guides &amp; Downloads | ISC Credit">
+  <meta property="og:description" content="Free guides and checklists for supplements, rescores, frozen bureaus, SmartPay, DU/LPA setup, and mortgage credit workflows.">
+  <meta property="og:url" content="https://www.isccredit.com/resources/">
   <meta property="og:image" content="https://www.isccredit.com/ISC.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ISC Credit | Mortgage Credit Reporting Since 1989">
-  <meta name="twitter:description"
-    content="ISC Credit: mortgage credit reports, soft pulls, supplements, rescores, and verifications. 5.0-star Google rating with 200+ reviews. Family-owned since 1989.">
-  <meta name="twitter:image" content="https://www.isccredit.com/ISC.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  
+  <!-- PASTE YOUR GLOBAL CSS HERE -->
   <style>
     * {
       margin: 0;
@@ -210,6 +200,9 @@
       align-items: center;
       position: relative;
       z-index: 1
+    }
+    @media (max-width: 820px) {
+      .hero-inner { grid-template-columns: 1fr !important; }
     }
 
     .hero-eyebrow {
@@ -1803,10 +1796,6 @@
         gap: 1.5rem !important;
       }
 
-      .form-wrap {
-        padding: 1.75rem 1.25rem !important;
-      }
-
       /* Tables overflow protection */
       table {
         display: block;
@@ -2128,15 +2117,6 @@
         overflow-x: hidden;
         max-width: 100vw;
       }
-      
-      .cf-turnstile {
-        max-width: 100% !important;
-        overflow: hidden !important;
-        display: flex !important;
-        justify-content: center !important;
-        min-width: 0;
-        width: 100%;
-      }
 
       .data-table,
       .comp-table,
@@ -2218,10 +2198,122 @@
         color: var(--navy) !important;
       }
     }
+
+    /* RESOURCES HUB SPECIFIC CSS */
+    .resources-header {
+      background: var(--navy);
+      padding: 6rem 2.5rem;
+      text-align: center;
+      color: var(--white);
+    }
+    .resources-header h1 {
+      font-family: var(--fd);
+      font-size: 2.75rem;
+      margin-bottom: 1rem;
+    }
+    .resources-header p {
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .resources-grid {
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 0 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .resource-card {
+      background: var(--white);
+      border: 1px solid var(--sand);
+      border-radius: 12px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s;
+      box-shadow: var(--shadow-sm);
+    }
+    .resource-card:hover {
+      border-color: var(--gold);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+    .resource-tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--navy);
+      background: var(--gold3);
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      align-self: flex-start;
+      margin-bottom: 1rem;
+    }
+    .resource-card h3 {
+      font-family: var(--fd);
+      font-size: 1.35rem;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+    .resource-card p {
+      font-size: 0.9rem;
+      color: var(--warm);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+    .btn-download {
+      background: var(--off);
+      color: var(--navy);
+      border: 1px solid var(--sand);
+      padding: 0.75rem 1rem;
+      text-align: center;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+      margin-top: auto;
+    }
+    .resource-card:hover .btn-download {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+
+    .resources-cta {
+      background: var(--off);
+      max-width: 900px;
+      margin: 0 auto 5rem auto;
+      padding: 3rem;
+      text-align: center;
+      border-radius: 12px;
+      border: 1px solid var(--sand);
+    }
+    .resources-cta h2 {
+      font-family: var(--fd);
+      font-size: 1.75rem;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .resources-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .resources-grid { grid-template-columns: 1fr; }
+      .resources-header h1 { font-size: 2rem; }
+    }
   </style>
+  <link rel="canonical" href="https://www.isccredit.com/resources/">
     <meta name="robots" content="noindex, nofollow">
 </head>
-
 <body>
   <input type="checkbox" id="nav-toggle" hidden>
   <nav>
@@ -2258,727 +2350,95 @@
     </div>
   </nav>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <div>
-        <div class="hero-eyebrow">Mortgage credit reporting since 1989</div>
-        <h1>More than credit reports, a team that helps keep your files moving.</h1>
-        <p class="hero-sub">Mortgage credit reports, soft pulls, supplements, rescores, and verifications from one
-          mortgage-focused team. Serving mortgage professionals since 1989.</p>
-        <div class="hero-actions">
-          <a class="btn-gold" href="/contact/">Get started today &rarr;</a>
-          <a class="btn-ghost" href="tel:+18002902801">Call 800-290-2801</a>
-        </div>
-        <div class="review-badge">
-          <div class="rb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <div>
-            <div><span class="rb-score">5.0</span><span class="rb-count">&middot; 200+ reviews</span></div>
-            <div class="rb-claim">5.0-star Google rating with 200+ reviews</div>
-            <div class="rb-google"><span class="g-b">G</span><span class="g-r">o</span><span class="g-y">o</span><span
-                class="g-b">g</span><span class="g-g">l</span><span class="g-r">e</span> &middot; <a
-                href="https://www.google.com/maps?cid=850364998172701238" target="_blank" rel="noopener"
-                style="color:inherit;text-decoration:underline;text-underline-offset:2px">Information Searching
-                Company</a></div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="stats-label">At a glance</div>
-        <div class="stats-3">
-          <div class="hs">
-    <div class="hs-num">1989</div>
-    <div class="hs-label">Year established<span class="hs-sub">Family-owned & operated</span></div>
-</div>
-          <div class="hs">
-            <div class="hs-num">10,000+</div>
-            <div class="hs-label">Professionals served<span class="hs-sub">Since 1989</span></div>
-          </div>
-          <div class="hs">
-            <div class="hs-num">25+</div>
-            <div class="hs-label">LOS integrations<span class="hs-sub">Plugs into your workflow</span></div>
-          </div>
-        </div>
-<div class="bm-strip">
-          <div class="bm-strip-label">Latest benchmark</div>
-          <div class="bm-compare">
-            <div class="bm-box bm-box-isc">
-              <div class="bm-box-title">ISC Credit</div>
-              <div class="bm-box-num">1.0<span style="font-size:.85rem;font-weight:400"> hrs</span></div>
-              <div class="bm-box-sub">Average trade turnaround</div>
-            </div>
-            <div class="bm-box bm-box-ind">
-              <div class="bm-box-title">Industry Average</div>
-              <div class="bm-box-num">27.3<span style="font-size:.85rem;font-weight:400"> hrs</span></div>
-              <div class="bm-box-sub">MeridianLink benchmark</div>
-            </div>
-          </div>
-          <div class="bm-footer">
-            <div class="bm-footer-text">Source: MeridianLink Industry Benchmark, trade turnaround, June 2026</div>
-            <a class="bm-badge" href="/insights/"
-              style="text-transform:none;letter-spacing:.02em;text-decoration:none">View benchmark history &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-<div class="trust-bar">
-    <div class="ti">FCRA Compliant</div>
-    <div class="td"></div>
-    <div class="ti">GLBA Compliant</div>
-    <div class="td"></div>
-    <div class="ti">Family-owned</div>
-    <div class="td"></div>
-    <div class="ti">U.S.-based Support</div>
-    <div class="td"></div>
-    <div class="ti">25+ LOS Integrations</div>
-  </div>
 
-  <section class="section section-off">
-    <div class="section-inner">
-      <div class="section-eyebrow">Why ISC</div>
-      <h2 class="section-h2">Mortgage credit support should be fast, human, and dependable.</h2>
-      <p class="section-sub">ISC has been getting this right for mortgage professionals since 1989. Many client
-        relationships span years, not months.</p>
-      <div class="why-grid">
-        <div class="why-card dark">
-          <span class="why-icon">⚡</span>
-          <div class="why-title">Fast when it counts.</div>
-          <div class="why-body">MeridianLink Industry Benchmark data ranked ISC #1 in trade turnaround every month since June 2025.</div>
-        </div>
-        <div class="why-card">
-          <span class="why-icon">👤</span>
-          <div class="why-title">A real team on your account.</div>
-          <div class="why-body">Every ISC client works with a dedicated support team, not a ticket system or an
-            automated phone line. When you call, someone who knows your account picks up.</div>
-        </div>
-        <div class="why-card">
-          <span class="why-icon">🔒</span>
-          <div class="why-title">Borrower data is sensitive. We treat it that way.</div>
-          <div class="why-body">ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information.</div>
-        </div>
-        <div class="why-card">
-          <span class="why-icon">🏠</span>
-          <div class="why-title">Family-owned since 1989.</div>
-          <div class="why-body">Not a private equity roll-up. Not a publicly traded company. A family-owned business
-            focused on long-term client relationships, not quarterly targets.</div>
-        </div>
-      </div>
-      <!-- INJECTED CTA FOR TASK 1.2 -->
-      <div style="text-align:center; margin-top: 3.5rem;">
-        <h3 style="font-family:var(--fd); font-size: 1.5rem; color: var(--navy); margin-bottom: 1rem;">Ready to see the difference?</h3>
-        <a class="btn-navy" href="/why-isc/" style="padding: 1rem 2.5rem; font-size: .95rem;">Read exactly why clients switch to ISC &rarr;</a>
-      </div>
-    </div>
+
+  <header class="resources-header">
+    <h1>Mortgage Credit Guides & Downloads</h1>
+    <p>Free guides and checklists for supplements, rescores, frozen bureaus, SmartPay, DU/LPA setup, and mortgage credit workflows.</p>
+  </header>
+
+  <main class="resources-grid">
+    
+    <!-- Guide 1 -->
+    <article class="resource-card">
+      <span class="resource-tag">In-Depth Guide</span>
+      <h3>How to Order a Supplement</h3>
+      <p>A step-by-step walkthrough on submitting proper documentation for fast, accurate credit supplements. Delivered by email.</p>
+      <a href="/resources/how-to-order-a-supplement/" class="btn-download">Get the Guide &rarr;</a>
+    </article>
+
+    <!-- Guide 2 -->
+    <article class="resource-card">
+      <span class="resource-tag">In-Depth Guide</span>
+      <h3>Supplement Checklist</h3>
+      <p>Ensure your loan file has all the necessary verified documents before submitting a supplement request to avoid delays. Delivered by email.</p>
+      <a href="/resources/supplement-checklist/" class="btn-download">Get the Checklist &rarr;</a>
+    </article>
+
+    <!-- Guide 3 -->
+    <article class="resource-card">
+      <span class="resource-tag">In-Depth Guide</span>
+      <h3>Rapid Rescore Guide</h3>
+      <p>Learn how to submit verified credit updates for bureau review when proper documentation is available. Delivered by email.</p>
+      <a href="/resources/rapid-rescore-guide/" class="btn-download">Get the Guide &rarr;</a>
+    </article>
+
+    <!-- Guide 4 -->
+    <article class="resource-card">
+      <span class="resource-tag">In-Depth Guide</span>
+      <h3>Frozen Bureau Pulls Guide</h3>
+      <p>Navigate the process of pulling credit when a borrower has a freeze or lock on one or more of their bureau files. Delivered by email.</p>
+      <a href="/resources/frozen-bureau-pulls-guide/" class="btn-download">Get the Guide &rarr;</a>
+    </article>
+
+    <!-- Guide 5 -->
+    <article class="resource-card">
+      <span class="resource-tag">In-Depth Guide</span>
+      <h3>DU/LPA Technical Setup</h3>
+      <p>Instructions for selecting and configuring your technical provider settings within Fannie Mae DU and Freddie Mac LPA. Delivered by email.</p>
+      <a href="/resources/du-lpa-technical-provider-selection-guide/" class="btn-download">Get the Guide &rarr;</a>
+    </article>
+
+    <!-- Guide 6 -->
+    <article class="resource-card">
+      <span class="resource-tag">In-Depth Guide</span>
+      <h3>SmartSelect Overview</h3>
+      <p>Understand how our cascading pull technology helps reduce upfront credit report costs on initial pre-qualifications. Delivered by email.</p>
+      <a href="/resources/smartselect-guide/" class="btn-download">Get the Guide &rarr;</a>
+    </article>
+    <!-- Guide 7 -->
+    <article class="resource-card">
+      <span class="resource-tag">Free Download</span>
+      <h3>SmartPay Guide</h3>
+      <p>Learn how to manage borrower credit card payments and maintain compliance for credit reporting fees.</p>
+      <a href="/resources/smartpay-guide/" class="btn-download">Get the Guide &rarr;</a>
+    </article>
+
+    <!-- Guide 8 -->
+    <article class="resource-card">
+      <span class="resource-tag">In-Depth Guide</span>
+      <h3>PowerProfile Plus</h3>
+      <p>Maximize your credit reporting insights with advanced profile configurations and data breakdowns. Delivered by email.</p>
+      <a href="/resources/powerprofile-plus-guide/" class="btn-download">Get the Guide &rarr;</a>
+    </article>
+
+    <!-- Guide 9 -->
+    <article class="resource-card">
+      <span class="resource-tag">In-Depth Guide</span>
+      <h3>VantageScore Guide</h3>
+      <p>Understand the upcoming transition to VantageScore and exactly how it impacts your mortgage origination workflows. Delivered by email.</p>
+      <a href="/resources/vantagescore-guide/" class="btn-download">Get the Guide &rarr;</a>
+    </article>
+
+  </main>
+
+  <section class="resources-cta">
+    <h2>Need help choosing the right resource?</h2>
+    <p style="color: var(--warm); margin-bottom: 2rem;">Contact ISC and we’ll point you in the right direction.</p>
+    <a href="/contact/" class="btn-primary" style="padding: 1rem 2rem; font-size: 1rem;">Contact ISC Support</a>
   </section>
 
-  <section class="section">
-    <div class="section-inner">
-      <div class="section-eyebrow">Who ISC is for</div>
-      <h2 class="section-h2">ISC is a strong fit if you are&hellip;</h2>
-      <p class="section-sub">If any of these sound familiar, ISC was built for your workflow.</p>
-      <div class="who-grid">
-        <div class="who-card">
-          <div class="who-icon">📋</div>
-          <div>
-            <div class="who-title">A mortgage broker dealing with slow supplements or rescores</div>
-          <div class="who-body">If you are waiting days for supplement updates, most supplement requests are completed the same hour they are worked on. Timelines may vary by file.</div>
-          </div>
-        </div>
-        <div class="who-card">
-          <div class="who-icon">🏛️</div>
-          <div>
-            <div class="who-title">A lender who needs responsive credit support without multiple vendors</div>
-            <div class="who-body">ISC provides the full range of mortgage credit products on one account, one invoice,
-              with a support team that understands lender workflows.</div>
-          </div>
-        </div>
-        <div class="who-card">
-          <div class="who-icon">📞</div>
-          <div>
-            <div class="who-title">A team that wants real people, not ticket queues</div>
-            <div class="who-body">When a file is stuck, you should not have to wait behind a ticket number. ISC clients
-              get direct access to a dedicated team from day one.</div>
-          </div>
-        </div>
-        <div class="who-card">
-          <div class="who-icon">💰</div>
-          <div>
-            <div class="who-title">A broker or lender who wants to control credit pull costs</div>
-            <div class="who-body">ISC's SmartSelect cascading pulls and soft pull options help your team review
-              borrowers earlier while controlling unnecessary pull costs.</div>
-          </div>
-        </div>
-      </div>
-      <div
-        style="background:var(--navy);border-radius:14px;padding:1.65rem 2rem;margin-top:2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;position:relative;overflow:hidden">
-        <div style="position:absolute;top:0;left:0;bottom:0;width:4px;background:var(--gold)"></div>
-        <div style="flex:1;min-width:280px;padding-left:.5rem">
-          <div style="font-family:var(--fd);font-size:1.3rem;color:var(--gold);line-height:1.3;margin-bottom:.35rem">
-            Think ISC may be a fit?</div>
-          <p style="font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:0">Talk with our team and see how ISC compares to your current credit provider. 
-  <a href="/why-isc/" class="text-link">See why mortgage teams switch to ISC &rarr;</a>
-</p>
-        </div>
-        <a href="/contact/"
-          style="display:inline-block;background:var(--gold);color:var(--navy);font-size:.88rem;font-weight:700;padding:.85rem 1.5rem;border-radius:6px;border:2px solid var(--gold);text-decoration:none;transition:all .2s;white-space:nowrap">Compare
-          my setup &rarr;</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-off">
-    <div class="section-inner">
-      <div class="section-eyebrow">Products &amp; Services</div>
-      <h2 class="section-h2">Everything your pipeline needs, from one team.</h2>
-      <p class="section-sub" style="max-width:none">One account. One invoice. One support team that knows your workflow.
-        Flexible, cost-conscious pricing built around your volume.</p>
-      <div class="products-grid">
-        <div class="prod-card featured">
-          <span class="prod-tag tag-gold">&#9733; Top seller</span>
-          <span class="prod-icon">🔍</span>
-          <div class="prod-title">AUS Soft Pull</div>
-          <div class="prod-benefit">Review borrower credit earlier with a soft inquiry, no hard inquiry, no impact to
-            the borrower's credit score, and support for AUS workflows where available.</div>
-          <div class="prod-bestfor">Best for: Early pipeline qualification, pre-screening, AUS review</div>
-          <a class="prod-link" href="/products/aus-soft-pull/">Learn more &rarr;</a>
-        </div>
-        <div class="prod-card">
-          <span class="prod-tag tag-blue">Instant</span>
-          <span class="prod-icon">📊</span>
-          <div class="prod-title">Trended Mortgage Credit Reports</div>
-          <div class="prod-benefit">Tri-merge reports ready for Fannie Mae DU and Freddie Mac LP. VantageScore 4.0
-            opt-in available where supported.</div>
-          <div class="prod-bestfor">Best for: Full application underwriting</div>
-          <a class="prod-link" href="/products/trended-credit-reports/">Learn more &rarr;</a>
-        </div>
-        <div class="prod-card">
-          <span class="prod-tag tag-green">Cost-efficient</span>
-          <span class="prod-icon">🎯</span>
-          <div class="prod-title">SmartSelect Cascading Pulls</div>
-          <div class="prod-benefit">Start with one bureau. Only pull the rest if the borrower passes your filters.
-            Cascade stops on frozen bureaus, no wasted cost.</div>
-          <div class="prod-bestfor">Best for: High-volume pipelines, cost control</div>
-          <a class="prod-link" href="/products/smartselect/">Learn more &rarr;</a>
-        </div>
-        <div class="prod-card">
-          <span class="prod-tag tag-amber">Standard: 2&ndash;5 business days</span>
-          <span class="prod-icon">&#9889;</span>
-          <div class="prod-title">Rapid Rescore</div>
-          <div class="prod-benefit">ISC helps submit verified credit updates to the bureaus for review. Standard
-            turnaround is 2-5 business days, with a 24-hour rush option available for time-sensitive files.</div>
-          <div class="prod-bestfor">Best for: Borderline files, rate lock deadlines</div>
-          <a class="prod-link" href="/products/rapid-rescore/">Learn more &rarr;</a>
-        </div>
-        <div class="prod-card">
-          <span class="prod-tag tag-blue">Supplement support</span>
-          <span class="prod-icon">📋</span>
-          <div class="prod-title">Credit Supplements</div>
-          <div class="prod-benefit">Credit supplements handled quickly, clearly, and by people who know mortgage files. Supplement timelines depend on creditor response times, documentation, bureau availability, and file complexity.</div>
-          <div class="prod-bestfor">Best for: Underwriting documentation updates</div>
-          <a class="prod-link" href="/products/credit-supplements/">Learn more &rarr;</a>
-        </div>
-        <div class="prod-card">
-          <span class="prod-tag tag-green">Score optimization</span>
-          <span class="prod-icon">🧮</span>
-          <div class="prod-title">Score Optimization</div>
-          <div class="prod-benefit">Model potential score outcomes before spending rescore fees, using credit simulation
-            tools.</div>
-          <div class="prod-bestfor">Best for: Borderline scores, rescore strategy</div>
-          <a class="prod-link" href="/products/score-optimization/">Learn more &rarr;</a>
-        </div>
-        <div class="prod-card">
-          <span class="prod-tag tag-blue">Instant to 4&ndash;5 days</span>
-          <span class="prod-icon">✅</span>
-          <div class="prod-title">Borrower Verifications</div>
-          <div class="prod-benefit">The verification products your team needs, without juggling multiple vendors. VOI,
-            VOE, SSA-89, Tax Transcripts, flood, and more.</div>
-          <div class="prod-bestfor">Best for: Full underwriting verification stack</div>
-          <a class="prod-link" href="/products/borrower-verifications/">Learn more &rarr;</a>
-        </div>
-        <div class="prod-card">
-          <span class="prod-tag tag-amber">Pipeline protection</span>
-          <span class="prod-icon">🔔</span>
-          <div class="prod-title">Undisclosed Debt Monitoring</div>
-          <div class="prod-benefit">Know the moment a borrower opens new credit between application and close, before it
-            derails your closing.</div>
-          <div class="prod-bestfor">Best for: Application-to-close pipeline protection</div>
-          <a class="prod-link" href="/products/borrower-verifications/">Learn more &rarr;</a>
-        </div>
-        <div class="prod-card">
-          <span class="prod-tag tag-green">Client retention</span>
-          <span class="prod-icon">📈</span>
-          <div class="prod-title">Post-Close Monitoring</div>
-          <div class="prod-benefit">Get alerted when a past client shows signs of being in the market again, so you can
-            reach out before someone else does.</div>
-          <div class="prod-bestfor">Best for: Client retention and recapture</div>
-          <a class="prod-link" href="/products/borrower-verifications/">Learn more &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<section class="section" style="background:var(--gold)">
-    <div class="section-inner">
-<div style="margin-bottom:2rem">
-        <div class="section-eyebrow" style="color:#6b4e0a">MeridianLink benchmark</div>
-        <h2 class="section-h2">Ranked #1 in trade turnaround every month since June 2025.</h2>
-        <p class="section-sub" style="color:#5c4715;max-width:580px">Based on MeridianLink Industry Benchmark data from
-          July 2025 through June 2026.</p>
-      </div>
-      <div class="bm-section-wrap">
-        <div class="bm-section-grid">
-          <div class="bm-left">
-            <div class="section-eyebrow" style="color:rgba(240,185,66,.6);margin-bottom:.85rem"><span
-                style="width:18px;height:1px;background:var(--gold);display:inline-block;margin-right:.5rem;vertical-align:middle;opacity:.6"></span>MeridianLink
-              Industry Benchmarks</div>
-            <h3>How ISC compares</h3>
-            <p>MeridianLink benchmarks trade turnaround times across credit reporting agencies and updates the data
-              monthly. The latest figures are shown here. The full month-by-month history lives on ISC Insights.</p>
-            <div class="bm-source">Source: MeridianLink Industry Benchmark, Trade Turnaround. Updated monthly.<br><a
-                href="/insights/"
-                style="display:inline-block;margin-top:.7rem;background:var(--gold);color:var(--navy);font-size:.7rem;font-weight:700;padding:.45rem .95rem;border-radius:999px;text-decoration:none;letter-spacing:.02em">View
-                benchmark history →</a></div>
-          </div>
-          <div class="bm-visual" id="bm-anim">
-            <div class="bm-bars-title">6-month trend</div>
-            <div style="position:relative;z-index:0">
-              <div style="position:absolute;left:72px;right:124px;top:0;bottom:0;z-index:0;pointer-events:none">
-                <div style="position:absolute;top:0;bottom:0;left:0%;width:1px;background:rgba(255,255,255,.14)"></div>
-                <div style="position:absolute;top:0;bottom:0;left:14.286%;width:1px;background:rgba(255,255,255,.09)"></div>
-                <div style="position:absolute;top:0;bottom:0;left:28.571%;width:1px;background:rgba(255,255,255,.09)"></div>
-                <div style="position:absolute;top:0;bottom:0;left:42.857%;width:1px;background:rgba(255,255,255,.09)"></div>
-                <div style="position:absolute;top:0;bottom:0;left:57.143%;width:1px;background:rgba(255,255,255,.09)"></div>
-                <div style="position:absolute;top:0;bottom:0;left:71.429%;width:1px;background:rgba(255,255,255,.09)"></div>
-                <div style="position:absolute;top:0;bottom:0;left:85.714%;width:1px;background:rgba(255,255,255,.09)"></div>
-                <div style="position:absolute;top:0;bottom:0;left:100%;width:1px;background:rgba(255,255,255,.14)"></div>
-              </div>
-              <div style="display:flex;align-items:center;gap:12px;margin:0 0 9px;position:relative;z-index:1">
-                <div style="width:60px;font-size:12px;color:rgba(255,255,255,.55);flex-shrink:0">Jun 2026</div>
-                <div style="flex:1;position:relative;height:20px">
-                  <div data-ind="67.000" style="position:absolute;left:0;top:0;height:100%;width:0;background:#e2504d;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
-                  <div data-isc="3.750" style="position:absolute;left:0;top:0;height:100%;width:0;min-width:4px;background:#f0b942;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
-                </div>
-                <div style="width:112px;text-align:right;font-size:12px;flex-shrink:0"><span style="color:#f0b942;font-weight:500">1.0 hr</span><span style="color:rgba(255,255,255,.3)"> / </span><span style="color:#ff7d7d;font-weight:500">27.3 hrs</span></div>
-              </div>
-
-              <div style="display:flex;align-items:center;gap:12px;margin:0 0 9px;position:relative;z-index:1">
-                <div style="width:60px;font-size:12px;color:rgba(255,255,255,.55);flex-shrink:0">May 2026</div>
-                <div style="flex:1;position:relative;height:20px">
-                  <div data-ind="68.250" style="position:absolute;left:0;top:0;height:100%;width:0;background:#e2504d;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
-                  <div data-isc="2.500" style="position:absolute;left:0;top:0;height:100%;width:0;min-width:4px;background:#f0b942;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
-                </div>
-                <div style="width:112px;text-align:right;font-size:12px;flex-shrink:0"><span style="color:#f0b942;font-weight:500">1.5 hrs</span><span style="color:rgba(255,255,255,.3)"> / </span><span style="color:#ff7d7d;font-weight:500">26.8 hrs</span></div>
-              </div>
-              <div style="display:flex;align-items:center;gap:12px;margin:0 0 9px;position:relative;z-index:1">
-                <div style="width:60px;font-size:12px;color:rgba(255,255,255,.55);flex-shrink:0">Apr 2026</div>
-                <div style="flex:1;position:relative;height:20px">
-                  <div data-ind="65.250" style="position:absolute;left:0;top:0;height:100%;width:0;background:#e2504d;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
-                  <div data-isc="2.250" style="position:absolute;left:0;top:0;height:100%;width:0;min-width:4px;background:#f0b942;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
-                </div>
-                <div style="width:112px;text-align:right;font-size:12px;flex-shrink:0"><span style="color:#f0b942;font-weight:500">0.9 hrs</span><span style="color:rgba(255,255,255,.3)"> / </span><span style="color:#ff7d7d;font-weight:500">26.1 hrs</span></div>
-              </div>
-              <div style="display:flex;align-items:center;gap:12px;margin:0 0 9px;position:relative;z-index:1">
-                <div style="width:60px;font-size:12px;color:rgba(255,255,255,.55);flex-shrink:0">Mar 2026</div>
-                <div style="flex:1;position:relative;height:20px">
-                  <div data-ind="70.500" style="position:absolute;left:0;top:0;height:100%;width:0;background:#e2504d;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
-                  <div data-isc="2.500" style="position:absolute;left:0;top:0;height:100%;width:0;min-width:4px;background:#f0b942;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
-                </div>
-                <div style="width:112px;text-align:right;font-size:12px;flex-shrink:0"><span style="color:#f0b942;font-weight:500">1.0 hrs</span><span style="color:rgba(255,255,255,.3)"> / </span><span style="color:#ff7d7d;font-weight:500">28.2 hrs</span></div>
-              </div>
-              <div style="display:flex;align-items:center;gap:12px;margin:0 0 9px;position:relative;z-index:1">
-                <div style="width:60px;font-size:12px;color:rgba(255,255,255,.55);flex-shrink:0">Feb 2026</div>
-                <div style="flex:1;position:relative;height:20px">
-                  <div data-ind="68.000" style="position:absolute;left:0;top:0;height:100%;width:0;background:#e2504d;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
-                  <div data-isc="3.000" style="position:absolute;left:0;top:0;height:100%;width:0;min-width:4px;background:#f0b942;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
-                </div>
-                <div style="width:112px;text-align:right;font-size:12px;flex-shrink:0"><span style="color:#f0b942;font-weight:500">1.2 hrs</span><span style="color:rgba(255,255,255,.3)"> / </span><span style="color:#ff7d7d;font-weight:500">27.2 hrs</span></div>
-              </div>
-              <div style="display:flex;align-items:center;gap:12px;margin:0 0 9px;position:relative;z-index:1">
-                <div style="width:60px;font-size:12px;color:rgba(255,255,255,.55);flex-shrink:0">Jan 2026</div>
-                <div style="flex:1;position:relative;height:20px">
-                  <div data-ind="68.250" style="position:absolute;left:0;top:0;height:100%;width:0;background:#e2504d;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
-                  <div data-isc="1.000" style="position:absolute;left:0;top:0;height:100%;width:0;min-width:4px;background:#f0b942;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
-                </div>
-                <div style="width:112px;text-align:right;font-size:12px;flex-shrink:0"><span style="color:#f0b942;font-weight:500"></span>0.4 hrs</span><span style="color:rgba(255,255,255,.3)"> / </span><span style="color:#ff7d7d;font-weight:500">27.3 hrs</span></div>
-              </div>
-              <div style="display:flex;align-items:center;gap:12px;margin:0 0 9px;position:relative;z-index:1;padding-top:13px;border-top:1px solid rgba(255,255,255,.12)">
-                <div style="width:60px;font-size:12px;color:rgba(255,255,255,.9);font-weight:500;flex-shrink:0;line-height:1.25">6-month<br>average</div>
-                <div style="flex:1;position:relative;height:22px">
-                  <div data-ind="67.875" style="position:absolute;left:0;top:0;height:100%;width:0;background:#e2504d;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
-                  <div data-isc="2.500" style="position:absolute;left:0;top:0;height:100%;width:0;min-width:4px;background:#f0b942;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
-                </div>
-                <div style="width:112px;text-align:right;font-size:12px;flex-shrink:0"><span style="color:#f0b942;font-weight:500">1.0 hrs</span><span style="color:rgba(255,255,255,.3)"> / </span><span style="color:#ff7d7d;font-weight:500">27.1 hrs</span></div>
-              </div>
-            </div>
-            <div style="display:flex;gap:12px;margin-top:5px">
-              <div style="width:60px;flex-shrink:0"></div>
-              <div style="flex:1;position:relative;height:15px;font-size:11px;color:rgba(255,255,255,.4)"><span style="position:absolute;left:0%">0</span><span style="position:absolute;left:25%;transform:translateX(-50%)">10</span><span style="position:absolute;left:50%;transform:translateX(-50%)">20</span><span style="position:absolute;left:75%;transform:translateX(-50%)">30</span><span style="position:absolute;left:100%;transform:translateX(-100%)">40</span></div>
-              <div style="width:112px;flex-shrink:0;font-size:11px;color:rgba(255,255,255,.35);text-align:right">hours</div>
-            </div>
-            <div style="display:flex;gap:20px;margin-top:16px;padding-top:13px;border-top:1px solid rgba(255,255,255,.1);font-size:12px;color:rgba(255,255,255,.6)">
-              <span><span style="display:inline-block;width:11px;height:11px;border-radius:3px;background:#f0b942;vertical-align:-1px;margin-right:6px"></span>ISC average</span><span><span style="display:inline-block;width:11px;height:11px;border-radius:3px;background:#e2504d;vertical-align:-1px;margin-right:6px"></span>Industry average</span>
-            </div>
-            <script>(function () { var root = document.getElementById("bm-anim"); if (!root) return; function setW(a) { var g = [].slice.call(root.querySelectorAll("[data-isc]")); var r = [].slice.call(root.querySelectorAll("[data-ind]")); if (!a) { g.forEach(function (e) { e.style.transition = "none"; e.style.width = e.getAttribute("data-isc") + "%"; }); r.forEach(function (e) { e.style.transition = "none"; e.style.width = e.getAttribute("data-ind") + "%"; }); return; } g.forEach(function (el, i) { setTimeout(function () { el.style.width = el.getAttribute("data-isc") + "%"; }, 250 + i * 140); }); var rs = 250 + g.length * 140 + 450; r.forEach(function (el, i) { setTimeout(function () { el.style.width = el.getAttribute("data-ind") + "%"; }, rs + i * 140); }); } function start() { if (matchMedia("(prefers-reduced-motion: reduce)").matches) { setW(false); return; } if ("IntersectionObserver" in window) { var done = false; var io = new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting && !done) { done = true; setW(true); io.disconnect(); } }); }, { threshold: 0.3 }); io.observe(root); } else { setW(true); } } if (document.readyState !== "loading") setTimeout(start, 60); else document.addEventListener("DOMContentLoaded", function () { setTimeout(start, 60); }); })();</script>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-off">
-    <div class="section-inner">
-      <div class="support-wrap">
-        <div class="support-left">
-          <div class="section-eyebrow">Real support</div>
-          <h3 style="font-family:var(--fd);font-size:1.75rem;color:var(--navy);margin-bottom:.5rem;line-height:1.2">We
-            pick up the phone.</h3>
-          <p class="support-quote">When a file is stuck, you should not have to wait behind a ticket number.</p>
-          <p style="font-size:.85rem;color:var(--warm);line-height:1.78;margin-bottom:1.25rem">ISC clients work with a
-            dedicated support team from day one. No hold queues. No ticket runaround. A knowledgeable person who
-            understands mortgage files answers when you call during business hours.</p>
-          <div class="sp-item">Dedicated support team on every account</div>
-          <div class="sp-item">Direct access, no call center runaround</div>
-          <div class="sp-item">A live person when you call during business hours</div>
-          <div class="sp-item">Real U.S.-based people who understand mortgage files</div>
-          <div style="margin-top:1.5rem"><a href="/about/" style="font-size:.82rem;font-weight:600;color:#1a4fd6">Meet
-              the team &rarr;</a></div>
-        </div>
-        <div class="support-right">
-          <div class="sr-heading">What that looks like in practice</div>
-          <div class="sr-item">
-            <div class="sr-icon">&#9889;</div>
-            <div class="sr-text"><strong>Fast trade updates</strong><span>MeridianLink Industry Benchmark data ranked
-                ISC #1 in trade turnaround every month since June 2025.</span></div>
-          </div>
-          <div class="sr-item">
-            <div class="sr-icon">📞</div>
-            <div class="sr-text"><strong>Real U.S.-based support</strong><span>Reach a support team that understands
-                mortgage files and knows your account.</span></div>
-          </div>
-          <div class="sr-item">
-            <div class="sr-icon">🏠</div>
-            <div class="sr-text">
-    <strong>Mortgage credit experience</strong>
-    <span>Family-owned and serving mortgage professionals since 1989.</span>
-</div>
-          </div>
-          <div class="sr-item">
-            <div class="sr-icon">🧩</div>
-            <div class="sr-text"><strong>Flexible solutions for different teams</strong><span>Credit reports, soft
-                pulls, supplements, rescores, verifications, integrations, and lender programs under one roof.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-inner">
-      <div class="section-eyebrow">How ISC Compares</div>
-      <h2 class="section-h2">The difference is clear.</h2>
-      <p class="section-sub" style="max-width:none">You do not need us to name competitors. The numbers and the service
-        model speak for themselves.</p>
-      <div class="comp-wrap">
-        <table class="comp-table">
-          <thead>
-            <tr>
-              <th style="width:170px">What matters</th>
-              <th>Many large national vendors</th>
-              <th class="gold-col" style="font-size:.82rem;letter-spacing:.04em">&#9733; ISC Credit</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="factor">Support model</td>
-              <td class="comp-bad">Ticket systems, call queues, and layered support</td>
-              <td class="comp-isc comp-good" style="background:rgba(240,185,66,.07);font-weight:500">✓ A dedicated team
-                that knows your account and picks up when you call</td>
-            </tr>
-            <tr>
-              <td class="factor">Trade turnaround</td>
-              <td class="comp-bad">12-month industry average for trade turnaround, based on MeridianLink benchmark data
-              </td>
-              <td class="comp-isc comp-good" style="background:rgba(240,185,66,.07);font-weight:500">✓ Ranked #1 in
-                trade turnaround every month since June 2025</td>
-            </tr>
-            <tr>
-              <td class="factor">Relationship</td>
-              <td class="comp-bad">Large vendor model, often one account among thousands</td>
-              <td class="comp-isc comp-good" style="background:rgba(240,185,66,.07);font-weight:500">✓ Family-owned
-                since 1989, built around long-term relationships</td>
-            </tr>
-            <tr>
-              <td class="factor">Mortgage focus</td>
-              <td class="comp-bad">Broad credit and data services across multiple industries</td>
-              <td class="comp-isc comp-good" style="background:rgba(240,185,66,.07);font-weight:500">✓ Mortgage-focused
-                products and support built for loan originators</td>
-            </tr>
-            <tr>
-              <td class="factor">Client ratings</td>
-              <td class="comp-bad">Public review history may vary by company and location</td>
-              <td class="comp-isc comp-good" style="background:rgba(240,185,66,.07);font-weight:500">✓ 5.0-star Google
-                rating with 200+ reviews</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div
-        style="background:var(--navy);border-radius:14px;padding:1.65rem 2rem;margin-top:2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;position:relative;overflow:hidden">
-        <div style="position:absolute;top:0;left:0;bottom:0;width:4px;background:var(--gold)"></div>
-        <div style="flex:1;min-width:280px;padding-left:.5rem">
-          <div style="font-family:var(--fd);font-size:1.3rem;color:var(--gold);line-height:1.3;margin-bottom:.35rem">
-            Want to see the difference in your current setup?</div>
-          <p style="font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:0">Compare support,
-            turnaround, pricing, and workflow fit with a team that understands mortgage credit.</p>
-        </div>
-        <a href="/contact/"
-          style="display:inline-block;background:var(--gold);color:var(--navy);font-size:.88rem;font-weight:700;padding:.85rem 1.5rem;border-radius:6px;border:2px solid var(--gold);text-decoration:none;transition:all .2s;white-space:nowrap">Compare
-          your provider &rarr;</a>
-      </div>
-    </div>
-  </section>
-<!-- NEW CLIENT SUCCESS SECTION (TASK 1.3) -->
-  <section class="section">
-    <div class="section-inner">
-      <div class="section-eyebrow">Client Success</div>
-      <h2 class="section-h2">See how we help mortgage teams keep files moving.</h2>
-      <p class="section-sub">Don't just take our word for it. Hear directly from mortgage professionals who upgraded their credit reporting workflow.</p>
-      
-      <div class="support-wrap" style="margin-top: 2rem; align-items: center;">
-        <!-- Left: Video Embed (Standard 16:9 Widescreen Presentation) -->
-        <div style="width: 100%; border-radius: 12px; padding: 1rem; background: var(--off); border: 1px solid var(--sand);">
-          <div style="position: relative; width: 100%; padding-bottom: 56.25%; overflow: hidden; border-radius: 8px; box-shadow: var(--shadow-md); background: #000;">
-            <iframe 
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-              src="https://www.youtube.com/embed/CqwOWLP6Kkk?si=42CmJx37euN1bEcB" 
-              title="Equinox Client Success Story" 
-              loading="lazy" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              allowfullscreen>
-            </iframe>
-          </div>
-        </div>
-        
-        <!-- Right: Case Study Teaser & Exact CTAs -->
-        <div style="display: flex; flex-direction: column; justify-content: center;">
-          <div class="sr-heading" style="color: var(--muted); margin-bottom: 0.5rem;">Featured Case Study</div>
-          <h3 style="font-family:var(--fd); font-size:1.75rem; color:var(--navy); margin-bottom:.85rem; line-height:1.2;">Equinox Finance</h3>
-          <p class="support-quote">"ISC was able to help obtain what was needed the same day, allowing the file to move forward and close on time."</p>
-          <p style="font-size:.85rem; color:var(--warm); line-height:1.78; margin-bottom: 1.5rem;">Equinox needed more than a low-cost vendor - they needed a responsive partner to help their team move faster and troubleshoot time-sensitive credit rescore opportunities.</p>
-          <div style="display: flex; flex-direction: column; gap: 0.85rem; align-items: flex-start;">
-            <a href="/client-success/equinox-mortgage-credit-reporting/" class="btn-navy">Watch full video & read case study &rarr;</a>
-            <a href="/contact/" class="btn-outline">Work With ISC Credit or Request Account Setup</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section section-dark">
-    <div class="section-inner">
-      <div
-        style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:.5rem">
-        <div>
-          <div class="section-eyebrow">Client reviews</div>
-          <h2 class="section-h2" style="margin-bottom:0">Rated 5.0 stars on Google by 200+ reviewers.</h2>
-          <p style="font-size:.85rem;color:rgba(255,255,255,.55);margin:.6rem 0 0">Google reviews for Information
-            Searching Company.</p>
-        </div>
-        <div style="display:flex;align-items:center;gap:1rem">
-          <div style="font-family:var(--fd);font-size:2.5rem;color:var(--gold);line-height:1">5.0</div>
-          <div>
-            <div style="color:var(--gold);font-size:.95rem">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <div style="font-size:.73rem;color:rgba(255,255,255,.45)">200+ Google reviews</div>
-            <a href="https://www.google.com/maps?cid=850364998172701238" target="_blank" rel="noopener"
-              style="font-size:.65rem;color:rgba(255,255,255,.45);text-decoration:none"><span class="g-b">G</span><span
-                class="g-r">o</span><span class="g-y">o</span><span class="g-b">g</span><span class="g-g">l</span><span
-                class="g-r">e</span> &middot; Information Searching Company</a>
-          </div>
-        </div>
-      </div>
-      <div class="reviews-grid">
-        <div class="rv-card">
-          <div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <div class="rv-text">Our company has done business with ISC for over 15 years. The staff is incredibly amazing
-            to work with, very professional and will assist with your credit needs in a timely manner. Best credit
-            company to work with.</div>
-          <div class="rv-author">Jacqueline Guerra</div>
-          <div class="rv-company">Lending Key, Inc.</div>
-          <div class="rv-time">1 year ago</div>
-        </div>
-        <div class="rv-card">
-          <div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <div class="rv-text">Brian and the ISC team have been awesome to work with. Super responsive and always quick
-            to jump on any questions or issues. They're the best credit company I've worked with in the last 7 years.
-          </div>
-          <div class="rv-author">Anton Guerrero</div>
-          <div class="rv-company">Mortgage Professional</div>
-          <div class="rv-time">9 months ago</div>
-        </div>
-        <div class="rv-card">
-          <div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <div class="rv-text">Always receive great service from the ISC team. Fast turnaround on credit reports and
-            their team is always available and helpful. The report formatting saves a lot of time explaining things to
-            borrowers.</div>
-          <div class="rv-author">Louis West</div>
-          <div class="rv-company">8-year ISC client</div>
-          <div class="rv-time">6 months ago</div>
-        </div>
-        <div class="rv-card">
-          <div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <div class="rv-text">ISC has been great to work with, very responsive, great price, and Vaughn has been
-            amazing. Their system is very easy to work with. Highly recommend to anyone looking for a credit reporting
-            agency.</div>
-          <div class="rv-author">Alice Y.</div>
-          <div class="rv-company">Mortgage Broker</div>
-          <div class="rv-time">1 year ago</div>
-        </div>
-        <div class="rv-card">
-          <div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <div class="rv-text">Been with ISC Credit for 8 years. Reasonable prices and great customer service. They
-            always go above and beyond to make sure everything is handled quickly and correctly.</div>
-          <div class="rv-author">George Loakes</div>
-          <div class="rv-company">8-year ISC client</div>
-          <div class="rv-time">8 months ago</div>
-        </div>
-        <div class="rv-card">
-          <div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <div class="rv-text">Very efficient and professional. Great attention to detail and quick to respond to any
-            requests. The team at ISC makes the credit process smooth and stress-free.</div>
-          <div class="rv-author">Ryan Wang</div>
-          <div class="rv-company">Mortgage Professional</div>
-          <div class="rv-time">3 months ago</div>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1)">
-        <div style="font-size:.95rem;color:rgba(255,255,255,.85);margin-bottom:1rem;font-weight:500">Worked with ISC?
-          We'd appreciate your review.</div>
-        <a class="btn-gold"
-          href="https://www.google.com/search?q=information+searching+company#lrd=0x80dcd8a6b021b073:0xbcd1a75dd827236,3,,,,"
-          target="_blank" rel="noopener">Leave us a Google review &rarr;</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-off">
-    <div class="section-inner">
-      <div class="section-eyebrow">LOS Integrations</div>
-      <h2 class="section-h2">Works with the LOS your team already uses.</h2>
-      <p class="section-sub" style="max-width:none">ISC connects with 25+ loan origination systems. Order reports,
-        receive results, and keep files moving without switching screens or entering data twice.</p>
-      <div class="los-grid">
-        <div class="los-chip feat">Encompass</div>
-        <div class="los-chip feat">Blend</div>
-        <div class="los-chip feat">Arive</div>
-        <div class="los-chip feat">LendingPad</div>
-        <div class="los-chip feat">CalyxPoint</div>
-        <div class="los-chip">Loan Quest</div>
-        <div class="los-chip">MortgagebotLOS</div>
-        <div class="los-chip">MortgagebotPOS</div>
-        <div class="los-chip">Blue Sage</div>
-        <div class="los-chip">Loan Producer</div>
-        <div class="los-chip">LodaSoft</div>
-        <div class="los-chip">PowerLender</div>
-        <div class="los-chip">Empower</div>
-        <div class="los-chip">LendingSpace</div>
-        <div class="los-chip">Creative Visions</div>
-        <div class="los-chip">Enterprise Lending Ctr</div>
-        <div class="los-chip">MOSO v1.9.3</div>
-        <div class="los-chip">ProLender</div>
-        <div class="los-chip">Path</div>
-        <div class="los-chip">Intelligent Mortgage</div>
-        <div class="los-chip">DestinyLOS</div>
-        <div class="los-chip">EPIC</div>
-        <div class="los-chip">NextSpring</div>
-        <div class="los-chip">LenderAssist</div>
-        <div class="los-chip">FinConnect</div>
-      </div>
-      <div style="text-align:center;margin-top:1.25rem"><a href="/integrations/"
-          style="font-size:.82rem;font-weight:600;color:#1a4fd6">View full integration guide &rarr;</a></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-inner">
-      <div class="form-wrap">
-        <div class="form-grid">
-          <div class="form-left">
-            <div class="section-eyebrow" style="color:rgba(240,185,66,.6);margin-bottom:.85rem"><span
-                style="width:18px;height:1px;background:var(--gold);display:inline-block;margin-right:.5rem;vertical-align:middle;opacity:.6"></span>Get
-              started with ISC</div>
-            <h3>Let's find out if ISC is the right fit for your team.</h3>
-            <p>Tell us a bit about your business and an ISC team member will be in touch within one business day.</p>
-            <div class="ft-item">Mortgage-focused support team from day one</div>
-            <div class="ft-item">Smooth onboarding once compliance requirements are complete</div>
-            <div class="ft-item">25+ LOS integrations</div>
-            <div class="ft-item">Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information.</div>
-            <div class="ft-item">Serving mortgage professionals since 1989</div>
-          </div>
-          <div>
-            <form id="home-contact-form" action="/api/submit" method="POST">
-
-              <div class="form-row">
-                <div class="form-group"><label class="form-label">Name<span class="req">*</span></label><input
-                    class="form-input" type="text" name="name" placeholder="Full name" required></div>
-                <div class="form-group"><label class="form-label">Email<span class="req">*</span></label><input
-                    class="form-input" type="email" name="email" placeholder="you@company.com" required></div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group"><label class="form-label">Phone</label><input class="form-input" type="tel"
-                    name="phone" placeholder="(555) 000-0000 (optional)"></div>
-                <div class="form-group"><label class="form-label">Company</label><input class="form-input" type="text"
-                    name="company" placeholder="Company name (optional)"></div>
-              </div>
-
-              <div class="form-row full">
-                <div class="form-group"><label class="form-label">How did you hear about ISC?</label>
-                  <select class="form-input" name="referral-source">
-                    <option value="" disabled selected>Select one (optional)</option>
-                    <option>Google search</option>
-                    <option>Referral from a colleague</option>
-                    <option>LOS partner</option>
-                    <option>Industry event</option>
-                    <option>Social media</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-row full">
-                <div class="form-group"><label class="form-label">Message</label><textarea class="form-input"
-                    name="message" rows="4"
-                    placeholder="Tell us a bit about what you&rsquo;re looking for (optional)"></textarea></div>
-              </div>
-
-              <div class="cf-turnstile" data-sitekey="0x4AAAAAADio6TUkoqDiiCF-" data-theme="dark" data-size="flexible" style="margin-bottom: 15px;"></div>
-
-              <button class="btn-submit" type="submit">Get started today &rarr;</button>
-<p style="font-size: 0.8rem; color: var(--warm); margin-top: 1rem; line-height: 1.4;">By submitting this form, you consent to receive communications from ISC Credit. Your information is kept secure and never sold. Read our Privacy Policy for more details.</p>
-
-              <div class="form-note">Required fields marked <span style="color:var(--gold)">*</span>. ISC will respond
-                within one business day.</div>
-
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-strip">
-    <h2>Ranked #1 in trade turnaround on MeridianLink every month since June 2025.</h2>
-    <p>Join the 10,000+ mortgage professionals ISC has served since 1989, and see why we have a 5.0-star Google rating
-      from 200+ reviewers.</p>
-    <a class="btn-navy" href="/contact/">Get started today &rarr;</a>
-    <div class="cta-row">
-      <div class="ctr">Family-owned since 1989</div>
-      <div class="ctr">Benchmark-backed turnaround</div>
-      <div class="ctr">ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information.</div>
-      <div class="ctr">Smooth onboarding process</div>
-    </div>
-  </section>
-
-  <footer>
+    <footer>
     <div class="footer-grid">
       <div>
         <a class="footer-logo" href="/">ISC<span>.</span></a>
@@ -3033,6 +2493,7 @@
           href="/consumer-assistance/">Consumer Assistance</a></div>
     </div>
   </footer>
-</body>
 
+
+</body>
 </html>

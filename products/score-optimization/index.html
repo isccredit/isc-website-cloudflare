@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Score Optimization | Credit Simulation Tools | ISC Credit</title>
-<meta name="description" content="ISC uses credit simulation tools (CreditXpert, Score Navigator, FICO Mortgage Score Simulator) to model potential score outcomes before a rapid rescore."
-<link rel="canonical" href="https://www.isccredit.com/products/score-optimization/">
+<meta name="description" content="ISC uses credit simulation tools (CreditXpert, Score Navigator, FICO Mortgage Score Simulator) to model potential score outcomes before a rapid rescore.">
+    <link rel="canonical" href="https://www.isccredit.com/products/score-optimization/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ISC Credit">
 <meta property="og:url" content="https://www.isccredit.com/products/score-optimization/">
@@ -36,11 +36,12 @@ a:hover{text-decoration:underline}
 
 /* NAV */
 nav{background:var(--white);border-bottom:1px solid var(--sand);padding:1.1rem 2.5rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 1px 6px rgba(10,22,40,.06)}
-.nav-logo{font-family:var(--fd);font-size:1.45rem;color:var(--navy);font-weight:700;text-decoration:none;display:flex;align-items:center;gap:.4rem}
+.nav-logo{flex-shrink:0;font-family:var(--fd);font-size:1.45rem;color:var(--navy);font-weight:700;text-decoration:none;display:flex;align-items:center;gap:.4rem}
 .logo-dot{width:7px;height:7px;background:var(--gold);border-radius:50%;margin-bottom:.4rem}
 .nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{font-size:.82rem;font-weight:500;color:var(--warm);text-decoration:none;transition:color .18s}
-.nav-links a:hover{color:var(--navy)}
+.nav-links a,.nav-links .nav-parent-label{font-size:.82rem;font-weight:500;color:var(--warm);text-decoration:none;transition:color .18s}
+.nav-links a:hover,.nav-links .nav-parent-label:hover,.nav-links .nav-parent-label:focus{color:var(--navy)}
+.nav-parent-label{cursor:default}
 .nav-right{display:flex;gap:.75rem;align-items:center}
 .nav-phone{font-size:.78rem;font-weight:600;color:var(--navy)}
 .nav-cta{background:var(--navy);color:var(--white);font-size:.8rem;font-weight:600;padding:.6rem 1.3rem;border-radius:5px;text-decoration:none}
@@ -110,8 +111,8 @@ section.cs h2{font-family:var(--fd);font-size:1.55rem;color:var(--navy);margin-b
 section.cs h3{font-family:var(--fb);font-size:.96rem;font-weight:600;color:var(--navy);margin:1.5rem 0 .5rem;letter-spacing:0}
 section.cs p{font-size:.88rem;color:#4a3c2a;line-height:1.82;margin-bottom:.85rem}
 section.cs ul{margin:.5rem 0 1rem 0;display:flex;flex-direction:column;gap:.48rem}
-section.cs li{font-size:.86rem;color:#4a3c2a;line-height:1.7;display:flex;align-items:flex-start;gap:.5rem}
-section.cs li::before{content:'→';color:var(--blue);font-weight:700;flex-shrink:0;margin-top:.05rem}
+section.cs li{font-size:.86rem;color:#4a3c2a;line-height:1.7;position:relative;padding-left:1.1rem}
+section.cs li::before{content:'→';color:var(--blue);font-weight:700;position:absolute;left:0;top:0}
 section.cs strong{color:var(--navy);font-weight:600}
 
 /* CALLOUTS */
@@ -188,7 +189,7 @@ footer{background:var(--navy2);padding:2.5rem 2.5rem;border-top:1px solid rgba(2
 .footer-legal a:hover{color:var(--gold)}
 
 /* ============================================================ */
-/* RESPONSIVE — full coverage: desktop, tablet, mobile, small    */
+/* RESPONSIVE - full coverage: desktop, tablet, mobile, small    */
 /* ============================================================ */
 
 /* Universal safety: prevent image/video overflow site-wide */
@@ -225,8 +226,8 @@ img, video { max-width: 100%; height: auto; }
   }
 }
 
-/* ----- TABLET / PHONE WIDE (<=768px) — NAV BECOMES HAMBURGER ----- */
-@media (max-width: 768px) {
+/* ----- TABLET / PHONE WIDE (<=768px) - NAV BECOMES HAMBURGER ----- */
+@media (max-width: 1024px) {
   /* Nav: flex-wrap, show hamburger, hide links/right by default */
   nav {
     height: auto !important;
@@ -256,7 +257,8 @@ img, video { max-width: 100%; height: auto; }
     list-style: none !important;
     border-top: 1px solid var(--sand) !important;
   }
-  nav .nav-links li a {
+  nav .nav-links li a,
+  nav .nav-links li .nav-parent-label {
     display: block !important;
     padding: .85rem 0 !important;
     border-radius: 0 !important;
@@ -282,6 +284,9 @@ img, video { max-width: 100%; height: auto; }
     display: flex !important;
   }
 
+}
+
+  @media (max-width: 768px) {
   /* Equal-split grids collapse */
   .dark-two, .benefit-grid, .bm-compare, .bm-section-grid {
     grid-template-columns: 1fr !important;
@@ -326,7 +331,7 @@ img, video { max-width: 100%; height: auto; }
   .trust-bar .ti, .ti { font-size: .68rem !important; }
   .trust-bar .td, .trust-div { display: none !important; }
 
-  /* Comparison table — much tighter on mobile */
+  /* Comparison table - much tighter on mobile */
   .comp-table { font-size: .72rem !important; line-height: 1.45 !important; }
   .comp-table th[style*="width:170px"],
   .comp-table .factor {
@@ -372,9 +377,9 @@ img, video { max-width: 100%; height: auto; }
   .comp-table th[style*="width:170px"], .comp-table .factor { width: 70px !important; font-size: .66rem !important; }
 }
 
-/* Products submenu — desktop: hidden; mobile (in open hamburger): indented list */
+/* Products submenu - desktop: hidden; mobile (in open hamburger): indented list */
 .nav-sublist { display: none; list-style: none; }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   #nav-toggle:checked ~ nav .nav-sublist {
     display: block !important;
     padding-left: 1.25rem !important;
@@ -396,7 +401,7 @@ img, video { max-width: 100%; height: auto; }
 
 
 /* Brand logo image in nav */
-.nav-logo img { display: block; height: 32px; width: auto; max-width: 100%; }
+.nav-logo img { flex-shrink: 0; display: block; height: 32px; width: auto; max-width: 100%; }
 @media (max-width: 600px) { .nav-logo img { height: 26px; } }
 
 /* Inline-grid override: catches divs that use inline style grid-template-columns instead of a class */
@@ -426,7 +431,7 @@ img, video { max-width: 100%; height: auto; }
   [style*="grid-template-columns: repeat(2"] {
     grid-template-columns: 1fr !important;
   }
-  /* Hide the Source column on the benchmark table — every row is MeridianLink anyway */
+  /* Hide the Source column on the benchmark table - every row is MeridianLink anyway */
   .bm-table th:nth-child(5),
   .bm-table td:nth-child(5) { display: none !important; }
   /* And tighten the bm-table on mobile */
@@ -450,9 +455,10 @@ img, video { max-width: 100%; height: auto; }
 }
 
 /* Desktop Products dropdown (hover-activated, hidden on mobile where hamburger handles it) */
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
   .nav-has-sub { position: relative; }
-  .nav-has-sub > a::after {
+  .nav-has-sub > a::after,
+  .nav-has-sub > span.nav-parent-label::after {
     content: ' \25BE';
     font-size: .65em;
     opacity: .7;
@@ -489,36 +495,189 @@ img, video { max-width: 100%; height: auto; }
     color: var(--navy) !important;
   }
 }
+
+    .btn-primary {
+      background: var(--navy, #0a1628);
+      color: #fff !important;
+      font-size: .8rem;
+      font-weight: 600;
+      padding: .55rem 1.25rem;
+      border-radius: 5px;
+      border: 2px solid var(--navy, #0a1628);
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s ease;
+    }
+    .btn-primary:hover {
+      background: var(--navy2, #0f2040);
+      border-color: var(--navy2, #0f2040);
+      text-decoration: none;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy2);
+      padding: 4rem 2.5rem 2rem;
+      border-top: 1px solid rgba(255, 255, 255, .07)
+    }
+
+    .footer-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem
+    }
+
+    .footer-logo {
+      font-family: var(--fd);
+      font-size: 1.4rem;
+      color: #fff;
+      font-weight: 700;
+      display: block;
+      margin-bottom: .6rem
+    }
+
+    .footer-logo span {
+      color: var(--gold)
+    }
+
+    .footer-tagline {
+      font-size: .77rem;
+      color: rgba(255, 255, 255, .33);
+      line-height: 1.72;
+      margin-bottom: 1.1rem;
+      max-width: 240px
+    }
+
+    .footer-contact a,
+    .footer-contact span {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .4);
+      margin-bottom: .4rem;
+      line-height: 1.5
+    }
+
+    .footer-contact a:hover {
+      color: var(--gold)
+    }
+
+    .fc-title {
+      font-size: .63rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: rgba(255, 255, 255, .8);
+      font-weight: 700;
+      margin-bottom: 1.25rem
+    }
+
+    .fc-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: .85rem
+    }
+
+    .fc-col a {
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .4);
+      transition: color .2s
+    }
+
+    .fc-col a:hover {
+      color: var(--gold)
+    }
+
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(255, 255, 255, .07);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem
+    }
+
+    .footer-copy {
+      font-size: .69rem;
+      color: rgba(255, 255, 255, .22)
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 1.75rem
+    }
+
+    .footer-legal a {
+      font-size: .69rem;
+      color: rgba(255, 255, 255, .22);
+      transition: color .18s
+    }
+
+    .footer-legal a:hover {
+      color: var(--gold)
+    }
+
+    @media (max-width: 1024px) {
+      .footer-inner,
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2rem !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-inner,
+      .footer-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
 </style>
+    <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
 <input type="checkbox" id="nav-toggle" hidden>
-<nav>
-  <a class="nav-logo" href="/"><img src="/ISC.png" alt="ISC Credit"></a>
-  <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"></label>
-  <ul class="nav-links">
-    <li class="nav-has-sub"><a href="/products/">Products</a>
-      <ul class="nav-sublist">
-        <li><a href="/products/trended-credit-reports/">Trended Credit Reports</a></li>
-        <li><a href="/products/aus-soft-pull/">AUS Soft Pull</a></li>
-        <li><a href="/products/smartselect/">SmartSelect</a></li>
-        <li><a href="/products/rapid-rescore/">Rapid Rescore</a></li>
-        <li><a href="/products/credit-supplements/">Credit Supplements</a></li>
-        <li><a href="/products/score-optimization/">Score Optimization</a></li>
-        <li><a href="/products/borrower-verifications/">Borrower Verifications</a></li>
-      </ul>
-    </li>
-    <li><a href="/integrations/">Integrations</a></li>
-    <li><a href="/insights/">ISC Insights</a></li>
-    <li><a href="/lender-solutions/">Lender Solutions</a></li>
-    <li><a href="/about/">About</a></li>
-  </ul>
-  <div class="nav-right">
-    <span class="nav-phone">800-290-2801</span>
-    <a href="https://iscsite.meridianlink.com/custom/login.aspx" target="_blank" rel="noopener" referrerpolicy="origin">Client Login</a>
-    <a class="nav-cta" href="/contact/">Get started</a>
-  </div>
-</nav>
+  <nav>
+    <a class="nav-logo" href="/"><img src="/ISC.png" alt="ISC Credit"></a>
+    <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"></label>
+    <ul class="nav-links">
+      <li class="nav-has-sub"><a href="/products/">Products</a>
+        <ul class="nav-sublist">
+          <li><a href="/products/trended-credit-reports/">Trended Credit Reports</a></li>
+          <li><a href="/products/aus-soft-pull/">AUS Soft Pull</a></li>
+          <li><a href="/products/smartselect/">SmartSelect</a></li>
+          <li><a href="/products/rapid-rescore/">Rapid Rescore</a></li>
+          <li><a href="/products/credit-supplements/">Credit Supplements</a></li>
+          <li><a href="/products/score-optimization/">Score Optimization</a></li>
+          <li><a href="/products/borrower-verifications/">Borrower Verifications</a></li>
+        </ul>
+      </li>
+      <li><a href="/integrations/">Integrations</a></li>
+      <li><a href="/insights/">Insights</a></li>
+      <li><a href="/lender-solutions/">Lender Solutions</a></li>
+      <li class="nav-has-sub"><span class="nav-parent-label" tabindex="0">Why ISC</span>
+        <ul class="nav-sublist">
+          <li><a href="/why-isc/">Why Clients Switch to ISC</a></li>
+        </ul>
+      </li>
+      <li><a href="/client-success/">Client Success</a></li>
+      <li><a href="/resources/">Resources</a></li>
+      <li><a href="/about/">About</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:+18002902801" style="font-size:.78rem;font-weight:600;color:var(--navy)">800-290-2801</a>
+      <a href="https://iscsite.meridianlink.com/custom/login.aspx" target="_blank" style="font-size:.78rem;font-weight:600;color:var(--navy)">Client Login</a>
+      <a class="btn-primary" href="/contact/">Get Started</a>
+    </div>
+  </nav>
 <div class="page-hero"><div class="hero-inner">
     <div class="hero-two-col"><div>
       <div class="hero-eyebrow">Score Optimization</div>
@@ -558,7 +717,7 @@ img, video { max-width: 100%; height: auto; }
 
 <section class="cs">
   <h2>Credit simulation tools and the new scoring models</h2>
-  <p>Classic FICO models (FICO 2, 4, and 5) remain the standard for mortgage underwriting. ISC's simulation tools support Classic FICO. At this time, VantageScore 4.0 and FICO 10T cannot be simulated by any available credit simulation tool, ISC will update clients as this changes.</p>
+  <p>VantageScore 4.0 is available for approved lender use in a limited rollout/interim implementation. Classic FICO remains standard for lenders that have not been approved for VantageScore 4.0 use. Availability depends on investor, GSE approval, and platform support.</p>
   <ul>
     <li><strong>A single payoff the week before application</strong> may have less impact under trended models than it would under Classic FICO, because the model considers whether this is a pattern</li>
     <li><strong>Sustained paydown behavior</strong> over multiple months carries more weight, sometimes making a partial paydown over time more effective than a single lump payoff</li>
@@ -566,7 +725,7 @@ img, video { max-width: 100%; height: auto; }
   </ul>
   <p>ISC's team understands these nuances and builds simulation strategies based on the Classic FICO model your lender is using, helping you identify the items that may impact the score before spending rescore fees.</p>
   <div class="callout">
-    <strong>VantageScore 4.0 and FICO 10T:</strong> No credit simulation tool currently supports these scoring models. All three ISC simulation tools, CreditXpert, Score Navigator, and FICO Mortgage Score Simulator, support Classic FICO models only. ISC will notify clients when simulation support becomes available.
+    <strong>VantageScore 4.0 and FICO 10T:</strong> VantageScore 4.0 is available for approved lender use in a limited rollout/interim implementation. Classic FICO remains standard for lenders that have not been approved for VantageScore 4.0 use. Availability depends on investor, GSE approval, and platform support.
   </div>
 </section>
 
@@ -586,7 +745,7 @@ img, video { max-width: 100%; height: auto; }
   <h2>Related ISC products</h2>
   <div class="card-grid-3">
     <a class="p-card" href="/products/rapid-rescore/" style="text-decoration:none"><span class="p-card-tag tag-amber">Execute the plan</span><h3>Rapid Rescore</h3><p>Submit verified updates for bureau review in 2–5 business days. Results not guaranteed.</p><span class="p-card-link">Learn more →</span></a>
-    <a class="p-card" href="/products/credit-supplements/" style="text-decoration:none"><span class="p-card-tag tag-blue">Often ~1 hr</span><h3>Credit Supplements</h3><p>Update bureau tradelines as part of the rescore strategy.</p><span class="p-card-link">Learn more →</span></a>
+    <a class="p-card" href="/products/credit-supplements/" style="text-decoration:none"><span class="p-card-tag tag-blue">Supplement support</span><h3>Credit Supplements</h3><p>Update bureau tradelines as part of the rescore strategy.</p><span class="p-card-link">Learn more →</span></a>
     <a class="p-card" href="/products/aus-soft-pull/" style="text-decoration:none"><span class="p-card-tag tag-green">Verify</span><h3>Soft Pull Follow-Up</h3><p>Check the updated score before re-pulling hard credit.</p><span class="p-card-link">Learn more →</span></a>
   </div>
 </section>
@@ -628,51 +787,60 @@ img, video { max-width: 100%; height: auto; }
 </aside>
   </div>
 </div>
-<footer>
-  <div class="footer-inner">
-    <div>
-      <span class="footer-logo">ISC<span>.</span></span>
-      <p class="footer-tagline">Family-owned mortgage credit reporting since 1989. FCRA &amp; GLBA compliant. Costa Mesa, California.</p>
-      <div class="footer-contact">
-        <a href="tel:+18002902801">800-290-2801</a>
-        <a href="mailto:support@isccredit.com">support@isccredit.com</a>
-        <a href="https://www.google.com/maps?cid=850364998172701238" target="_blank" rel="noopener">1503 South Coast Drive, Suite 205, Costa Mesa, CA 92626</a>
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <a class="footer-logo" href="/">ISC<span>.</span></a>
+        <p class="footer-tagline">Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. Costa
+          Mesa, California.</p>
+        <div class="footer-contact">
+          <a href="tel:+18002902801">📞 800-290-2801</a>
+          <a href="mailto:support@isccredit.com">✉️ support@isccredit.com</a>
+          <a href="https://www.google.com/maps?cid=850364998172701238" target="_blank" rel="noopener">📍 1503 South
+            Coast Drive Suite 205, Costa Mesa, CA 92626</a>
+          <span>🕐 Mon&ndash;Fri &middot; 9:00 AM&ndash;5:00 PM Pacific Time</span>
+        </div>
+      </div>
+      <div class="fc-col">
+        <p class="fc-title"><a href="/products/" style="color:inherit;text-decoration:none">Products</a></p>
+        <ul>
+          <li><a href="/products/aus-soft-pull/">AUS Soft Pull</a></li>
+          <li><a href="/products/trended-credit-reports/">Mortgage Credit Reports</a></li>
+          <li><a href="/products/smartselect/">SmartSelect</a></li>
+          <li><a href="/products/rapid-rescore/">Rapid Rescore</a></li>
+          <li><a href="/products/credit-supplements/">Supplements</a></li>
+          <li><a href="/products/score-optimization/">Score Optimization</a></li>
+          <li><a href="/products/borrower-verifications/">Verifications</a></li>
+        </ul>
+      </div>
+      <div class="fc-col">
+        <p class="fc-title">Company</p>
+        <ul>
+          <li><a href="/about/">About ISC</a></li>
+          <li><a href="/why-isc/">Why Switch to ISC</a></li>
+          <li><a href="/integrations/">Integrations</a></li>
+          <li><a href="/insights/">Insights</a></li>
+          <li><a href="/lender-solutions/">Lender Solutions</a></li>
+          <li><a href="/client-support/">Client Support</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="https://iscsite.meridianlink.com/custom/login.aspx" target="_blank" rel="noopener">Client Login</a></li>
+        </ul>
+      </div>
+      <div class="fc-col">
+        <p class="fc-title">Help &amp; Legal</p>
+        <ul>
+          <li><a href="/consumer-assistance/">Consumer Assistance</a></li>
+          <li><a href="/borrower-credit-education/">Borrower Credit Education</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/terms-of-use/">Terms of Use</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer-col"><p class="footer-col-title"><a href="/products/" style="color:inherit;text-decoration:none">Products</a></p><ul>
-      <li><a href="/products/trended-credit-reports/">Mortgage Credit Reports</a></li>
-      <li><a href="/products/aus-soft-pull/">AUS Soft Pull</a></li>
-      <li><a href="/products/rapid-rescore/">Rapid Rescore</a></li>
-      <li><a href="/products/credit-supplements/">Credit Supplements</a></li>
-      <li><a href="/products/score-optimization/">Score Optimization</a></li>
-      <li><a href="/products/borrower-verifications/">Verifications</a></li>
-    </ul></div>
-    <div class="footer-col"><p class="footer-col-title">Company</p><ul>
-      <li><a href="/about/">About ISC</a></li>
-      <li><a href="/why-isc/">Why Switch to ISC</a></li>
-      <li><a href="/integrations/">LOS Integrations</a></li>
-      <li><a href="/insights/">ISC Insights</a></li>
-      <li><a href="/lender-solutions/">Lender Solutions</a></li>
-      <li><a href="/client-support/">Client Support</a></li>
-      <li><a href="/contact/">Contact Us</a></li>
-      <li><a href="https://iscsite.meridianlink.com/custom/login.aspx" target="_blank" rel="noopener">Client Login</a></li>
-    </ul></div>
-    <div class="footer-col"><p class="footer-col-title">Resources</p><ul>
-      <li><a href="/insights/">ISC Insights</a></li>
-      <li><a href="/insights/">HBPPA Guide</a></li>
-      <li><a href="/insights/">VantageScore 4.0</a></li>
-      <li><a href="/insights/">Rescore Playbook</a></li>
-      <li><a href="/consumer-assistance/">Consumer Assistance</a></li>
-    </ul></div>
-  </div>
-  <div class="footer-bottom">
-    <p class="footer-copy">&copy; 2026 Information Searching Company &middot; FCRA &amp; GLBA Compliant &middot; Family-owned Since 1989 &middot; Costa Mesa, CA 92626</p>
-    <div class="footer-legal">
-      <a href="/privacy-policy/">Privacy Policy</a>
-      <a href="/terms-of-use/">Terms of Use</a>
-      <a href="/consumer-assistance/">Consumer Assistance</a>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Information Searching Company &middot; Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. &middot; Costa Mesa, CA 92626</p>
+      <div class="footer-legal"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-use/">Terms of Use</a><a
+          href="/consumer-assistance/">Consumer Assistance</a></div>
     </div>
-  </div>
-</footer>
+  </footer>
 </body>
 </html>
