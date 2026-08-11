@@ -56,7 +56,10 @@ export async function onRequestPost(context) {
     });
 
     const data = await response.json();
-
+    console.log('MAILCHIMP STATUS:', response.status);
+    console.log('MAILCHIMP RESPONSE:', JSON.stringify(data));
+    console.log('LIST_ID USED:', LIST_ID);
+    console.log('DATACENTER USED:', DATACENTER);
     // 6. Handle Mailchimp Responses
     // Mailchimp returns 400 if the user is already subscribed, which is fine, we still want to give them the PDF.
     if (response.ok || data.title === "Member Exists") {
