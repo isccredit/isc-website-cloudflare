@@ -2303,17 +2303,17 @@
           <div class="bm-compare">
             <div class="bm-box bm-box-isc">
               <div class="bm-box-title">ISC Credit</div>
-              <div class="bm-box-num">0.6<span style="font-size:.85rem;font-weight:400"> hrs</span></div>
+              <div class="bm-box-num" id="latest-isc">0.6<span style="font-size:.85rem;font-weight:400"> hrs</span></div>
               <div class="bm-box-sub">Average trade turnaround</div>
             </div>
             <div class="bm-box bm-box-ind">
               <div class="bm-box-title">Industry Average</div>
-              <div class="bm-box-num">26.3<span style="font-size:.85rem;font-weight:400"> hrs</span></div>
+              <div class="bm-box-num" id="latest-industry">26.3<span style="font-size:.85rem;font-weight:400"> hrs</span></div>
               <div class="bm-box-sub">MeridianLink benchmark</div>
             </div>
           </div>
           <div class="bm-footer">
-            <div class="bm-footer-text">Source: MeridianLink Industry Benchmark, trade turnaround, July 2026</div>
+            <div class="bm-footer-text" id="latest-source">Source: MeridianLink Industry Benchmark, trade turnaround, July 2026</div>
             <a class="bm-badge" href="/insights/"
               style="text-transform:none;letter-spacing:.02em;text-decoration:none">View benchmark history &rarr;</a>
           </div>
@@ -3032,6 +3032,32 @@
           href="/consumer-assistance/">Consumer Assistance</a></div>
     </div>
   </footer>
+<script>
+(async function () {
+  try {
+    const response = await fetch('/data/benchmarks.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error('Benchmark data could not be loaded');
+
+    const data = await response.json();
+    const latest = data.records[0];
+
+    const [year, month] = latest.month.split('-');
+    const monthName = new Date(Number(year), Number(month) - 1, 1)
+      .toLocaleString('en-US', { month: 'long' });
+
+    document.getElementById('latest-isc').innerHTML =
+      `${latest.isc.toFixed(1)}<span style="font-size:.85rem;font-weight:400"> hrs</span>`;
+
+    document.getElementById('latest-industry').innerHTML =
+      `${latest.industry.toFixed(1)}<span style="font-size:.85rem;font-weight:400"> hrs</span>`;
+
+    document.getElementById('latest-source').textContent =
+      `Source: ${data.source}, ${data.metric}, ${monthName} ${year}`;
+  } catch (error) {
+    console.error('Benchmark data error:', error);
+  }
+})();
+</script>
 </body>
 
 </html>
