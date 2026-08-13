@@ -1505,6 +1505,36 @@
   }
 })();
 </script>
+<script>
+(async function () {
+  try {
+    const response = await fetch('/data/benchmarks.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error('Benchmark data could not be loaded');
+
+    const data = await response.json();
+
+    function monthYear(monthString) {
+      const [year, month] = monthString.split('-');
+
+      return new Date(Number(year), Number(month) - 1, 1)
+        .toLocaleString('en-US', {
+          month: 'long',
+          year: 'numeric'
+        });
+    }
+
+    const streakLabel = document.getElementById('products-streak-label');
+
+    if (streakLabel && data.streakStart) {
+      streakLabel.textContent =
+        `Trade turnaround on MeridianLink, Ranked #1 every month since ${monthYear(data.streakStart)}`;
+    }
+
+  } catch (error) {
+    console.error('Products benchmark error:', error);
+  }
+})();
+</script>
 </body>
 
 </html>
