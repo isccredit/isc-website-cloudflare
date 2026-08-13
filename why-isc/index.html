@@ -1657,7 +1657,7 @@
     <div class="hero-inner">
       <div class="hero-eyebrow">For mortgage brokers and lenders</div>
       <h1>When mortgage teams switch credit vendors, here is what they tell us.</h1>
-      <span
+      <span id="why-isc-streak-badge"
         style="display:inline-block;background:rgba(240,185,66,.15);color:var(--gold);border:1.5px solid var(--gold);border-radius:999px;padding:.4rem .95rem;font-size:.78rem;font-weight:600;letter-spacing:.02em;margin:.6rem 0 1.1rem;font-family:var(--fb)">&#127942;
         Trade turnaround #1 on MeridianLink, every month since June 2025</span>
       <p class="hero-sub">ISC has served mortgage professionals exclusively since 1989. Many client relationships span
@@ -1691,7 +1691,7 @@
         <div class="who-card">
           <span class="wc-icon">⚡</span>
           <div class="wc-title">Faster Trade Updates</div>
-          <div class="wc-body">In June 2026, ISC averaged a 1.0-hour trade turnaround compared to a 27.3-hour industry benchmark in MeridianLink’s Industry Benchmark dashboard.</div>
+          <div class="wc-body" id="why-isc-latest-benchmark">In June 2026, ISC averaged a 1.0-hour trade turnaround compared to a 27.3-hour industry benchmark in MeridianLink’s Industry Benchmark dashboard.</div>
         </div>
         <div class="who-card">
           <span class="wc-icon">👥</span>
@@ -1866,7 +1866,51 @@
     </div>
   </footer>
 
+<script>
+(async function () {
+  try {
+    const response = await fetch('/data/benchmarks.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error('Benchmark data could not be loaded');
 
+    const data = await response.json();
+
+    const records = [...data.records].sort((a, b) =>
+      b.month.localeCompare(a.month)
+    );
+
+    const latest = records[0];
+
+    function monthYear(monthString) {
+      const [year, month] = monthString.split('-');
+
+      return new Date(Number(year), Number(month) - 1, 1)
+        .toLocaleString('en-US', {
+          month: 'long',
+          year: 'numeric'
+        });
+    }
+
+    // #1 streak badge
+    const streakBadge = document.getElementById('why-isc-streak-badge');
+
+    if (streakBadge && data.streakStart) {
+      streakBadge.textContent =
+        `🏆 Trade turnaround #1 on MeridianLink, every month since ${monthYear(data.streakStart)}`;
+    }
+
+    // Latest trade turnaround proof point
+    const latestBenchmark = document.getElementById('why-isc-latest-benchmark');
+
+    if (latestBenchmark) {
+      latestBenchmark.textContent =
+        `In ${monthYear(latest.month)}, ISC averaged a ${latest.isc.toFixed(1)}-hour trade turnaround compared to a ${latest.industry.toFixed(1)}-hour industry benchmark in MeridianLink’s Industry Benchmark dashboard.`;
+    }
+
+  } catch (error) {
+    console.error('Why ISC benchmark error:', error);
+  }
+})();
+</script>
 </body>
 
 </html>
