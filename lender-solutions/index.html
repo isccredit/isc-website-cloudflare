@@ -1487,7 +1487,7 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-eyebrow">High-Volume Lender Program</div>
-      <span class="hero-pill">🏆 MeridianLink Industry Benchmark: #1 Trade Turnaround every month since June 2025</span>
+      <span class="hero-pill" id="lender-streak-hero">🏆 MeridianLink Industry Benchmark: #1 Trade Turnaround every month since June 2025</span>
       <h1>Lender-specific products for high-volume mortgage operations.</h1>
       <p class="hero-sub">ISC Credit supports qualified lenders with direct access to lender-specific mortgage products
         for high-volume operations, backed by the same team and turnaround performance that mortgage professionals have
@@ -1552,8 +1552,7 @@
           </div>
           <div class="ps-item">
             <div class="ps-icon">⚡</div>
-            <div class="ps-text"><strong>#1 trade turnaround</strong><span>MeridianLink Industry Benchmark data ranked
-                ISC #1 in trade turnaround every month since June 2025.</span></div>
+            <span id="lender-streak-proof">MeridianLink Industry Benchmark data ranked ISC #1 in trade turnaround every month since June 2025.</span>
           </div>
           <div class="ps-item">
             <div class="ps-icon" style="color:var(--gold,#f0b942)">&#9733;</div>
@@ -1671,8 +1670,7 @@
             <div
               style="display:block;font-size:.95rem;color:#ffffff;font-weight:700;margin-bottom:.35rem;line-height:1.35">
               Benchmark-backed trade turnaround</div>
-            <div style="display:block;font-size:.85rem;color:#ffffff;opacity:.85;line-height:1.55">ISC ranked #1 in
-              trade turnaround every month since June 2025, based on MeridianLink Industry Benchmark data.</div>
+            <div id="lender-streak-card" style="display:block;font-size:.85rem;color:#ffffff;opacity:.85;line-height:1.55">ISC ranked #1 in trade turnaround every month since June 2025, based on MeridianLink Industry Benchmark data.</div>
           </div>
         </div>
         <div
@@ -1887,6 +1885,50 @@
           href="/consumer-assistance/">Consumer Assistance</a></div>
     </div>
   </footer>
+<script>
+(async function () {
+  try {
+    const response = await fetch('/data/benchmarks.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error('Benchmark data could not be loaded');
+
+    const data = await response.json();
+
+    function monthYear(monthString) {
+      const [year, month] = monthString.split('-');
+
+      return new Date(Number(year), Number(month) - 1, 1)
+        .toLocaleString('en-US', {
+          month: 'long',
+          year: 'numeric'
+        });
+    }
+
+    const streakStart = monthYear(data.streakStart);
+
+    const hero = document.getElementById('lender-streak-hero');
+    const proof = document.getElementById('lender-streak-proof');
+    const card = document.getElementById('lender-streak-card');
+
+    if (hero) {
+      hero.textContent =
+        `🏆 MeridianLink Industry Benchmark: #1 Trade Turnaround every month since ${streakStart}`;
+    }
+
+    if (proof) {
+      proof.textContent =
+        `MeridianLink Industry Benchmark data ranked ISC #1 in trade turnaround every month since ${streakStart}.`;
+    }
+
+    if (card) {
+      card.textContent =
+        `ISC ranked #1 in trade turnaround every month since ${streakStart}, based on MeridianLink Industry Benchmark data.`;
+    }
+
+  } catch (error) {
+    console.error('Lender benchmark error:', error);
+  }
+})();
+</script>
 </body>
 
 </html>
