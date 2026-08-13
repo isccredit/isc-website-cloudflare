@@ -2521,8 +2521,8 @@
     <div class="section-inner">
 <div style="margin-bottom:2rem">
         <div class="section-eyebrow" style="color:#6b4e0a">MeridianLink benchmark</div>
-        <h2 class="section-h2">Ranked #1 in trade turnaround every month since June 2025.</h2>
-        <p class="section-sub" style="color:#5c4715;max-width:580px">Based on MeridianLink Industry Benchmark data from June 2025 through July 2026..</p>
+        <h2 class="section-h2" id="benchmark-streak-title">Ranked #1 in trade turnaround every month since June 2025.</h2>
+        <p class="section-sub" id="benchmark-streak-range" style="color:#5c4715;max-width:580px">Based on MeridianLink Industry Benchmark data from June 2025 through July 2026.</p>
       </div>
       <div class="bm-section-wrap">
         <div class="bm-section-grid">
@@ -3080,7 +3080,48 @@
 
     document.getElementById('latest-source').textContent =
       `Source: ${data.source}, ${data.metric}, ${fullMonth(latest.month)} ${latestYear}`;
+    // Current consecutive #1 streak
+    function monthYear(monthString) {
+      const [year, month] = monthString.split('-');
+      const monthName = new Date(Number(year), Number(month) - 1, 1)
+        .toLocaleString('en-US', { month: 'long' });
 
+      return `${monthName} ${year}`;
+    }
+
+    function inclusiveMonthCount(startMonth, endMonth) {
+      const [startYear, startNum] = startMonth.split('-').map(Number);
+      const [endYear, endNum] = endMonth.split('-').map(Number);
+
+      return ((endYear - startYear) * 12) + (endNum - startNum) + 1;
+    }
+
+    if (Number(latest.rank) === 1) {
+      const firstNonNumberOne = records.findIndex(
+        record => Number(record.rank) !== 1
+      );
+
+      let currentStreakStart;
+
+      if (firstNonNumberOne === -1) {
+        currentStreakStart =
+          data.streakStart || records[records.length - 1].month;
+      } else {
+        currentStreakStart =
+          records[firstNonNumberOne - 1].month;
+      }
+
+      const streakMonths =
+        inclusiveMonthCount(currentStreakStart, latest.month);
+
+      document.getElementById('benchmark-streak-title').textContent =
+        `Ranked #1 in trade turnaround every month since ${monthYear(currentStreakStart)}.`;
+
+      document.getElementById('benchmark-streak-range').textContent =
+        `Based on ${data.source} data from ${monthYear(currentStreakStart)} through ${monthYear(latest.month)}.`;
+
+      console.log(`Current #1 streak: ${streakMonths} months`);
+    }
     // Six-month chart
     const sixMonths = records.slice(0, 6);
 
