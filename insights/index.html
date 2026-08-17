@@ -760,7 +760,7 @@ img, video { max-width: 100%; height: auto; }
             <th>Source</th>
           </tr>
         </thead>
-      <tbody>
+      <tbody id="benchmark-archive-body">
           
           <tr class="pending"><td>August 2026</td><td>Available September 1</td><td></td><td></td><td style="font-size:.72rem;color:var(--muted)">MeridianLink</td></tr>
 <tr><td><strong>July 2026</strong></td><td><span class="isc-num" style="font-size:1.15rem">0.6 hrs</span></td><td class="ind-num" style="color:#e2504d">26.3 hrs</td><td><span class="hundred" title="Ranked #1 by MeridianLink">🏆 #1</span></td><td style="font-size:.72rem;color:var(--muted)">MeridianLink</td></tr>
@@ -954,6 +954,95 @@ img, video { max-width: 100%; height: auto; }
           href="/consumer-assistance/">Consumer Assistance</a></div>
     </div>
   </footer>
+<script>
+(async function () {
+  try {
+    const response = await fetch('/data/benchmarks.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error('Benchmark data could not be loaded');
+
+    const data = await response.json();
+
+    const records = [...data.records].sort((a, b) =>
+      b.month.localeCompare(a.month)
+    );
+
+    function monthYear(monthString) {
+      const [year, month] = monthString.split('-');
+
+      return new Date(Number(year), Number(month) - 1, 1)
+        .toLocaleString('en-US', {
+          month: 'long',
+          year: 'numeric'
+        });
+    }
+
+    function addMonths(monthString, amount) {
+      const [year, month] = monthString.split('-').map(Number);
+      const date = new Date(year, month - 1 + amount, 1);
+
+      return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+    }
+
+    const latest = records[0];
+
+    // Latest completed month + 1 = pending benchmark month
+    const pendingMonth = addMonths(latest.month, 1);
+
+    // Pending month + 1 = expected publication month
+    const availableMonth = addMonths(pendingMonth, 1);
+    const [availableYear, availableNumber] = availableMonth.split('-');
+
+    const availableName = new Date(
+      Number(availableYear),
+      Number(availableNumber) - 1,
+      1
+    ).toLocaleString('en-US', { month: 'long' });
+
+    const archiveBody = document.getElementById('benchmark-archive-body');
+
+    let html = `
+      <tr class="pending">
+        <td>${monthYear(pendingMonth)}</td>
+        <td>Available ${availableName} 1</td>
+        <td></td>
+        <td></td>
+        <td style="font-size:.72rem;color:var(--muted)">MeridianLink</td>
+      </tr>
+    `;
+
+    records.forEach((record, index) => {
+      const isLatest = index === 0;
+
+      const monthCell = isLatest
+        ? `<strong>${monthYear(record.month)}</strong>`
+        : monthYear(record.month);
+
+      const iscClass = isLatest
+        ? `class="isc-num" style="font-size:1.15rem"`
+        : `class="isc-num"`;
+
+      const rankDisplay = Number(record.rank) === 1
+        ? `<span class="hundred" title="Ranked #1 by MeridianLink">🏆 #1</span>`
+        : `${record.rank}`;
+
+      html += `
+        <tr>
+          <td>${monthCell}</td>
+          <td><span ${iscClass}>${record.isc.toFixed(1)} hrs</span></td>
+          <td class="ind-num" style="color:#e2504d">${record.industry.toFixed(1)} hrs</td>
+          <td>${rankDisplay}</td>
+          <td style="font-size:.72rem;color:var(--muted)">MeridianLink</td>
+        </tr>
+      `;
+    });
+
+    archiveBody.innerHTML = html;
+
+  } catch (error) {
+    console.error('Benchmark archive error:', error);
+  }
+})();
+</script>
 </body>
 </html>
 

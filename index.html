@@ -2303,17 +2303,17 @@
           <div class="bm-compare">
             <div class="bm-box bm-box-isc">
               <div class="bm-box-title">ISC Credit</div>
-              <div class="bm-box-num">0.6<span style="font-size:.85rem;font-weight:400"> hrs</span></div>
+              <div class="bm-box-num" id="latest-isc">0.6<span style="font-size:.85rem;font-weight:400"> hrs</span></div>
               <div class="bm-box-sub">Average trade turnaround</div>
             </div>
             <div class="bm-box bm-box-ind">
               <div class="bm-box-title">Industry Average</div>
-              <div class="bm-box-num">26.3<span style="font-size:.85rem;font-weight:400"> hrs</span></div>
+              <div class="bm-box-num" id="latest-industry">26.3<span style="font-size:.85rem;font-weight:400"> hrs</span></div>
               <div class="bm-box-sub">MeridianLink benchmark</div>
             </div>
           </div>
           <div class="bm-footer">
-            <div class="bm-footer-text">Source: MeridianLink Industry Benchmark, trade turnaround, July 2026</div>
+            <div class="bm-footer-text" id="latest-source">Source: MeridianLink Industry Benchmark, trade turnaround, July 2026</div>
             <a class="bm-badge" href="/insights/"
               style="text-transform:none;letter-spacing:.02em;text-decoration:none">View benchmark history &rarr;</a>
           </div>
@@ -2343,7 +2343,7 @@
         <div class="why-card dark">
           <span class="why-icon">⚡</span>
           <div class="why-title">Fast when it counts.</div>
-          <div class="why-body">MeridianLink Industry Benchmark data ranked ISC #1 in trade turnaround every month since June 2025.</div>
+         <div class="why-body" id="home-why-streak">MeridianLink Industry Benchmark data ranked ISC #1 in trade turnaround every month since June 2025.</div>
         </div>
         <div class="why-card">
           <span class="why-icon">👤</span>
@@ -2521,8 +2521,8 @@
     <div class="section-inner">
 <div style="margin-bottom:2rem">
         <div class="section-eyebrow" style="color:#6b4e0a">MeridianLink benchmark</div>
-        <h2 class="section-h2">Ranked #1 in trade turnaround every month since June 2025.</h2>
-        <p class="section-sub" style="color:#5c4715;max-width:580px">Based on MeridianLink Industry Benchmark data from June 2025 through July 2026..</p>
+        <h2 class="section-h2" id="benchmark-streak-title">Ranked #1 in trade turnaround every month since June 2025.</h2>
+        <p class="section-sub" id="benchmark-streak-range" style="color:#5c4715;max-width:580px">Based on MeridianLink Industry Benchmark data from June 2025 through July 2026.</p>
       </div>
       <div class="bm-section-wrap">
         <div class="bm-section-grid">
@@ -2552,61 +2552,61 @@
                 <div style="position:absolute;top:0;bottom:0;left:100%;width:1px;background:rgba(255,255,255,.14)"></div>
               </div>
               <div style="display:flex;align-items:center;gap:12px;margin:0 0 9px;position:relative;z-index:1">
-                <div style="width:60px;font-size:12px;color:rgba(255,255,255,.55);flex-shrink:0">Jul 2026</div>
+                <div id="chart-month-0" style="width:60px;font-size:12px;color:rgba(255,255,255,.55);flex-shrink:0">Jul 2026</div>
                 <div style="flex:1;position:relative;height:20px">
-                  <div data-ind="65.750" style="position:absolute;left:0;top:0;height:100%;width:0;background:#e2504d;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
-                  <div data-isc="1.500" style="position:absolute;left:0;top:0;height:100%;width:0;min-width:4px;background:#f0b942;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
+                  <div id="chart-ind-bar-0" data-ind="65.750" style="position:absolute;left:0;top:0;height:100%;width:0;background:#e2504d;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
+                  <div id="chart-isc-bar-0" data-isc="1.500" style="position:absolute;left:0;top:0;height:100%;width:0;min-width:4px;background:#f0b942;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
                 </div>
-                <div style="width:112px;text-align:right;font-size:12px;flex-shrink:0"><span style="color:#f0b942;font-weight:500">0.6 hr</span><span style="color:rgba(255,255,255,.3)"> / </span><span style="color:#ff7d7d;font-weight:500">26.3 hrs</span></div>
+               <div id="chart-values-0" style="width:112px;text-align:right;font-size:12px;flex-shrink:0"><span style="color:#f0b942;font-weight:500">0.6 hr</span><span style="color:rgba(255,255,255,.3)"> / </span><span style="color:#ff7d7d;font-weight:500">26.3 hrs</span></div>
               </div>
 
               <div style="display:flex;align-items:center;gap:12px;margin:0 0 9px;position:relative;z-index:1">
-                <div style="width:60px;font-size:12px;color:rgba(255,255,255,.55);flex-shrink:0">Jun 2026</div>
+                <div id="chart-month-1" style="width:60px;font-size:12px;color:rgba(255,255,255,.55);flex-shrink:0">Jun 2026</div>
                 <div style="flex:1;position:relative;height:20px">
-                  <div data-ind="68.250" style="position:absolute;left:0;top:0;height:100%;width:0;background:#e2504d;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
-                  <div data-isc="2.500" style="position:absolute;left:0;top:0;height:100%;width:0;min-width:4px;background:#f0b942;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
+                  <div id="chart-ind-bar-1" data-ind="68.250" style="position:absolute;left:0;top:0;height:100%;width:0;background:#e2504d;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
+                  <div id="chart-isc-bar-1" data-isc="2.500" style="position:absolute;left:0;top:0;height:100%;width:0;min-width:4px;background:#f0b942;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
                 </div>
-                <div style="width:112px;text-align:right;font-size:12px;flex-shrink:0"><span style="color:#f0b942;font-weight:500">1.0 hrs</span><span style="color:rgba(255,255,255,.3)"> / </span><span style="color:#ff7d7d;font-weight:500">27.3 hrs</span></div>
+                <div id="chart-values-1" style="width:112px;text-align:right;font-size:12px;flex-shrink:0"><span style="color:#f0b942;font-weight:500">1.0 hrs</span><span style="color:rgba(255,255,255,.3)"> / </span><span style="color:#ff7d7d;font-weight:500">27.3 hrs</span></div>
               </div>
               <div style="display:flex;align-items:center;gap:12px;margin:0 0 9px;position:relative;z-index:1">
-                <div style="width:60px;font-size:12px;color:rgba(255,255,255,.55);flex-shrink:0">May 2026</div>
+                <div id="chart-month-2" style="width:60px;font-size:12px;color:rgba(255,255,255,.55);flex-shrink:0">May 2026</div>
                 <div style="flex:1;position:relative;height:20px">
-                  <div data-ind="67.000" style="position:absolute;left:0;top:0;height:100%;width:0;background:#e2504d;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
-                  <div data-isc="3.750" style="position:absolute;left:0;top:0;height:100%;width:0;min-width:4px;background:#f0b942;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
+                  <div id="chart-ind-bar-2" data-ind="67.000" style="position:absolute;left:0;top:0;height:100%;width:0;background:#e2504d;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
+                  <div id="chart-isc-bar-2" data-isc="3.750" style="position:absolute;left:0;top:0;height:100%;width:0;min-width:4px;background:#f0b942;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
                 </div>
-                <div style="width:112px;text-align:right;font-size:12px;flex-shrink:0"><span style="color:#f0b942;font-weight:500">1.5 hrs</span><span style="color:rgba(255,255,255,.3)"> / </span><span style="color:#ff7d7d;font-weight:500">26.8 hrs</span></div>
+                <div id="chart-values-2" style="width:112px;text-align:right;font-size:12px;flex-shrink:0"><span style="color:#f0b942;font-weight:500">1.5 hrs</span><span style="color:rgba(255,255,255,.3)"> / </span><span style="color:#ff7d7d;font-weight:500">26.8 hrs</span></div>
               </div>
               <div style="display:flex;align-items:center;gap:12px;margin:0 0 9px;position:relative;z-index:1">
-                <div style="width:60px;font-size:12px;color:rgba(255,255,255,.55);flex-shrink:0">Apr 2026</div>
+                <div id="chart-month-3" style="width:60px;font-size:12px;color:rgba(255,255,255,.55);flex-shrink:0">Apr 2026</div>
                 <div style="flex:1;position:relative;height:20px">
-                  <div data-ind="65.250" style="position:absolute;left:0;top:0;height:100%;width:0;background:#e2504d;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
-                  <div data-isc="2.250" style="position:absolute;left:0;top:0;height:100%;width:0;min-width:4px;background:#f0b942;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
+                  <div id="chart-ind-bar-3" data-ind="65.250" style="position:absolute;left:0;top:0;height:100%;width:0;background:#e2504d;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
+                  <div id="chart-isc-bar-3" data-isc="2.250" style="position:absolute;left:0;top:0;height:100%;width:0;min-width:4px;background:#f0b942;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
                 </div>
-                <div style="width:112px;text-align:right;font-size:12px;flex-shrink:0"><span style="color:#f0b942;font-weight:500">0.9 hrs</span><span style="color:rgba(255,255,255,.3)"> / </span><span style="color:#ff7d7d;font-weight:500">26.1 hrs</span></div>
+                <div id="chart-values-3" style="width:112px;text-align:right;font-size:12px;flex-shrink:0"><span style="color:#f0b942;font-weight:500">0.9 hrs</span><span style="color:rgba(255,255,255,.3)"> / </span><span style="color:#ff7d7d;font-weight:500">26.1 hrs</span></div>
               </div>
               <div style="display:flex;align-items:center;gap:12px;margin:0 0 9px;position:relative;z-index:1">
-                <div style="width:60px;font-size:12px;color:rgba(255,255,255,.55);flex-shrink:0">Mar 2026</div>
+                <div id="chart-month-4" style="width:60px;font-size:12px;color:rgba(255,255,255,.55);flex-shrink:0">Mar 2026</div>
                 <div style="flex:1;position:relative;height:20px">
-                  <div data-ind="70.500" style="position:absolute;left:0;top:0;height:100%;width:0;background:#e2504d;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
-                  <div data-isc="2.500" style="position:absolute;left:0;top:0;height:100%;width:0;min-width:4px;background:#f0b942;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
+                  <div id="chart-ind-bar-4" data-ind="70.500" style="position:absolute;left:0;top:0;height:100%;width:0;background:#e2504d;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
+                  <div id="chart-isc-bar-4" data-isc="2.500" style="position:absolute;left:0;top:0;height:100%;width:0;min-width:4px;background:#f0b942;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
                 </div>
-                <div style="width:112px;text-align:right;font-size:12px;flex-shrink:0"><span style="color:#f0b942;font-weight:500">1.0 hrs</span><span style="color:rgba(255,255,255,.3)"> / </span><span style="color:#ff7d7d;font-weight:500">28.2 hrs</span></div>
+                <div id="chart-values-4" style="width:112px;text-align:right;font-size:12px;flex-shrink:0"><span style="color:#f0b942;font-weight:500">1.0 hrs</span><span style="color:rgba(255,255,255,.3)"> / </span><span style="color:#ff7d7d;font-weight:500">28.2 hrs</span></div>
               </div>
               <div style="display:flex;align-items:center;gap:12px;margin:0 0 9px;position:relative;z-index:1">
-                <div style="width:60px;font-size:12px;color:rgba(255,255,255,.55);flex-shrink:0">Feb 2026</div>
+                <div id="chart-month-5" style="width:60px;font-size:12px;color:rgba(255,255,255,.55);flex-shrink:0">Feb 2026</div>
                 <div style="flex:1;position:relative;height:20px">
-                  <div data-ind="68.000" style="position:absolute;left:0;top:0;height:100%;width:0;background:#e2504d;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
-                  <div data-isc="3.000" style="position:absolute;left:0;top:0;height:100%;width:0;min-width:4px;background:#f0b942;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
+                  <div id="chart-ind-bar-5" data-ind="68.000" style="position:absolute;left:0;top:0;height:100%;width:0;background:#e2504d;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
+                  <div id="chart-isc-bar-5" data-isc="3.000" style="position:absolute;left:0;top:0;height:100%;width:0;min-width:4px;background:#f0b942;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
                 </div>
-                <div style="width:112px;text-align:right;font-size:12px;flex-shrink:0"><span style="color:#f0b942;font-weight:500">1.2 hrs</span><span style="color:rgba(255,255,255,.3)"> / </span><span style="color:#ff7d7d;font-weight:500">27.2 hrs</span></div>
+                <div id="chart-values-5" style="width:112px;text-align:right;font-size:12px;flex-shrink:0"><span style="color:#f0b942;font-weight:500">1.2 hrs</span><span style="color:rgba(255,255,255,.3)"> / </span><span style="color:#ff7d7d;font-weight:500">27.2 hrs</span></div>
               </div>
               <div style="display:flex;align-items:center;gap:12px;margin:0 0 9px;position:relative;z-index:1;padding-top:13px;border-top:1px solid rgba(255,255,255,.12)">
                 <div style="width:60px;font-size:12px;color:rgba(255,255,255,.9);font-weight:500;flex-shrink:0;line-height:1.25">6-month<br>average</div>
                 <div style="flex:1;position:relative;height:22px">
-                  <div data-ind="67.458" style="position:absolute;left:0;top:0;height:100%;width:0;background:#e2504d;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
-                  <div data-isc="2.583" style="position:absolute;left:0;top:0;height:100%;width:0;min-width:4px;background:#f0b942;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
+                  <div id="chart-avg-ind-bar" data-ind="67.458" style="position:absolute;left:0;top:0;height:100%;width:0;background:#e2504d;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
+                  <div id="chart-avg-isc-bar" data-isc="2.583" style="position:absolute;left:0;top:0;height:100%;width:0;min-width:4px;background:#f0b942;border-radius:5px;transition:width .6s cubic-bezier(.22,.61,.36,1)"></div>
                 </div>
-                <div style="width:112px;text-align:right;font-size:12px;flex-shrink:0"><span style="color:#f0b942;font-weight:500">1.0 hrs</span><span style="color:rgba(255,255,255,.3)"> / </span><span style="color:#ff7d7d;font-weight:500">27.0 hrs</span></div>
+                <div id="chart-avg-values" style="width:112px;text-align:right;font-size:12px;flex-shrink:0"><span style="color:#f0b942;font-weight:500">1.0 hrs</span><span style="color:rgba(255,255,255,.3)"> / </span><span style="color:#ff7d7d;font-weight:500">27.0 hrs</span></div>
               </div>
             </div>
             <div style="display:flex;gap:12px;margin-top:5px">
@@ -2646,8 +2646,7 @@
           <div class="sr-heading">What that looks like in practice</div>
           <div class="sr-item">
             <div class="sr-icon">&#9889;</div>
-            <div class="sr-text"><strong>Fast trade updates</strong><span>MeridianLink Industry Benchmark data ranked
-                ISC #1 in trade turnaround every month since June 2025.</span></div>
+            <div class="sr-text"><strong>Fast trade updates</strong><span id="home-support-streak">MeridianLink Industry Benchmark data ranked ISC #1 in trade turnaround every month since June 2025.</span></div>
           </div>
           <div class="sr-item">
             <div class="sr-icon">📞</div>
@@ -2698,7 +2697,7 @@
               <td class="factor">Trade turnaround</td>
               <td class="comp-bad">12-month industry average for trade turnaround, based on MeridianLink benchmark data
               </td>
-              <td class="comp-isc comp-good" style="background:rgba(240,185,66,.07);font-weight:500">✓ Ranked #1 in
+              <td class="comp-isc comp-good" id="home-comparison-streak" style="background:rgba(240,185,66,.07);font-weight:500">✓ Ranked #1 in
                 trade turnaround every month since June 2025</td>
             </tr>
             <tr>
@@ -2965,7 +2964,7 @@
   </section>
 
   <section class="cta-strip">
-    <h2>Ranked #1 in trade turnaround on MeridianLink every month since June 2025.</h2>
+    <h2 id="home-cta-streak">Ranked #1 in trade turnaround on MeridianLink every month since June 2025.</h2>
     <p>Join the 10,000+ mortgage professionals ISC has served since 1989, and see why we have a 5.0-star Google rating
       from 200+ reviewers.</p>
     <a class="btn-navy" href="/contact/">Get started today &rarr;</a>
@@ -3032,6 +3031,177 @@
           href="/consumer-assistance/">Consumer Assistance</a></div>
     </div>
   </footer>
+<script>
+(async function () {
+  try {
+    const response = await fetch('/data/benchmarks.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error('Benchmark data could not be loaded');
+
+    const data = await response.json();
+
+    // Always sort newest month first
+    const records = [...data.records].sort((a, b) =>
+      b.month.localeCompare(a.month)
+    );
+
+    const latest = records[0];
+
+    function fullMonth(monthString) {
+      const [year, month] = monthString.split('-');
+      return new Date(Number(year), Number(month) - 1, 1)
+        .toLocaleString('en-US', { month: 'long' });
+    }
+
+    function shortMonth(monthString) {
+      const [year, month] = monthString.split('-');
+      const monthName = new Date(Number(year), Number(month) - 1, 1)
+        .toLocaleString('en-US', { month: 'short' });
+
+      return `${monthName} ${year}`;
+    }
+
+    function iscUnit(value) {
+      return value < 1 ? 'hr' : 'hrs';
+    }
+
+    function barPercent(value) {
+      return Math.min((value / 40) * 100, 100);
+    }
+
+    // Latest benchmark box
+    const [latestYear] = latest.month.split('-');
+
+    document.getElementById('latest-isc').innerHTML =
+      `${latest.isc.toFixed(1)}<span style="font-size:.85rem;font-weight:400"> hrs</span>`;
+
+    document.getElementById('latest-industry').innerHTML =
+      `${latest.industry.toFixed(1)}<span style="font-size:.85rem;font-weight:400"> hrs</span>`;
+
+    document.getElementById('latest-source').textContent =
+      `Source: ${data.source}, ${data.metric}, ${fullMonth(latest.month)} ${latestYear}`;
+    // Current consecutive #1 streak
+    function monthYear(monthString) {
+      const [year, month] = monthString.split('-');
+      const monthName = new Date(Number(year), Number(month) - 1, 1)
+        .toLocaleString('en-US', { month: 'long' });
+
+      return `${monthName} ${year}`;
+    }
+
+    function inclusiveMonthCount(startMonth, endMonth) {
+      const [startYear, startNum] = startMonth.split('-').map(Number);
+      const [endYear, endNum] = endMonth.split('-').map(Number);
+
+      return ((endYear - startYear) * 12) + (endNum - startNum) + 1;
+    }
+
+    if (Number(latest.rank) === 1) {
+      const firstNonNumberOne = records.findIndex(
+        record => Number(record.rank) !== 1
+      );
+
+      let currentStreakStart;
+
+      if (firstNonNumberOne === -1) {
+        currentStreakStart =
+          data.streakStart || records[records.length - 1].month;
+      } else {
+        currentStreakStart =
+          records[firstNonNumberOne - 1].month;
+      }
+
+      const streakMonths =
+        inclusiveMonthCount(currentStreakStart, latest.month);
+
+      document.getElementById('benchmark-streak-title').textContent =
+        `Ranked #1 in trade turnaround every month since ${monthYear(currentStreakStart)}.`;
+
+      document.getElementById('benchmark-streak-range').textContent =
+        `Based on ${data.source} data from ${monthYear(currentStreakStart)} through ${monthYear(latest.month)}.`;
+
+const streakStartLabel = monthYear(currentStreakStart);
+
+const homeWhyStreak = document.getElementById('home-why-streak');
+const homeSupportStreak = document.getElementById('home-support-streak');
+const homeCtaStreak = document.getElementById('home-cta-streak');
+const homeComparisonStreak = document.getElementById('home-comparison-streak');
+      
+if (homeWhyStreak) {
+  homeWhyStreak.textContent =
+    `MeridianLink Industry Benchmark data ranked ISC #1 in trade turnaround every month since ${streakStartLabel}.`;
+}
+
+if (homeSupportStreak) {
+  homeSupportStreak.textContent =
+    `MeridianLink Industry Benchmark data ranked ISC #1 in trade turnaround every month since ${streakStartLabel}.`;
+}
+
+if (homeCtaStreak) {
+  homeCtaStreak.textContent =
+    `Ranked #1 in trade turnaround on MeridianLink every month since ${streakStartLabel}.`;
+}
+if (homeComparisonStreak) {
+  homeComparisonStreak.textContent =
+    `✓ Ranked #1 in trade turnaround every month since ${streakStartLabel}`;
+}
+      console.log(`Current #1 streak: ${streakMonths} months`);
+    }
+    // Six-month chart
+    const sixMonths = records.slice(0, 6);
+
+    sixMonths.forEach((record, index) => {
+      const iscPct = barPercent(record.isc);
+      const indPct = barPercent(record.industry);
+
+      const monthEl = document.getElementById(`chart-month-${index}`);
+      const iscBar = document.getElementById(`chart-isc-bar-${index}`);
+      const indBar = document.getElementById(`chart-ind-bar-${index}`);
+      const valuesEl = document.getElementById(`chart-values-${index}`);
+
+      monthEl.textContent = shortMonth(record.month);
+
+      iscBar.dataset.isc = iscPct.toFixed(3);
+      indBar.dataset.ind = indPct.toFixed(3);
+
+      iscBar.style.width = `${iscPct}%`;
+      indBar.style.width = `${indPct}%`;
+
+      valuesEl.innerHTML =
+        `<span style="color:#f0b942;font-weight:500">${record.isc.toFixed(1)} ${iscUnit(record.isc)}</span>` +
+        `<span style="color:rgba(255,255,255,.3)"> / </span>` +
+        `<span style="color:#ff7d7d;font-weight:500">${record.industry.toFixed(1)} hrs</span>`;
+    });
+
+    // Six-month averages
+    const avgIsc =
+      sixMonths.reduce((sum, record) => sum + record.isc, 0) / sixMonths.length;
+
+    const avgIndustry =
+      sixMonths.reduce((sum, record) => sum + record.industry, 0) / sixMonths.length;
+
+    const avgIscPct = barPercent(avgIsc);
+    const avgIndPct = barPercent(avgIndustry);
+
+    const avgIscBar = document.getElementById('chart-avg-isc-bar');
+    const avgIndBar = document.getElementById('chart-avg-ind-bar');
+    const avgValues = document.getElementById('chart-avg-values');
+
+    avgIscBar.dataset.isc = avgIscPct.toFixed(3);
+    avgIndBar.dataset.ind = avgIndPct.toFixed(3);
+
+    avgIscBar.style.width = `${avgIscPct}%`;
+    avgIndBar.style.width = `${avgIndPct}%`;
+
+    avgValues.innerHTML =
+      `<span style="color:#f0b942;font-weight:500">${avgIsc.toFixed(1)} hrs</span>` +
+      `<span style="color:rgba(255,255,255,.3)"> / </span>` +
+      `<span style="color:#ff7d7d;font-weight:500">${avgIndustry.toFixed(1)} hrs</span>`;
+
+  } catch (error) {
+    console.error('Benchmark data error:', error);
+  }
+})();
+</script>
 </body>
 
 </html>

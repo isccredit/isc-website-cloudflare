@@ -1,0 +1,86 @@
+{
+  "source": "MeridianLink Industry Benchmark",
+  "metric": "trade turnaround",
+  "unit": "hours",
+  "streakStart": "2025-06",
+  "records": [
+    {
+      "month": "2026-07",
+      "isc": 0.6,
+      "industry": 26.3,
+      "rank": 1
+    },
+    {
+      "month": "2026-06",
+      "isc": 1.0,
+      "industry": 27.3,
+      "rank": 1
+    },
+    {
+      "month": "2026-05",
+      "isc": 1.5,
+      "industry": 26.8,
+      "rank": 1
+    },
+    {
+      "month": "2026-04",
+      "isc": 0.9,
+      "industry": 26.1,
+      "rank": 1
+    },
+    {
+      "month": "2026-03",
+      "isc": 1.0,
+      "industry": 28.2,
+      "rank": 1
+    },
+    {
+      "month": "2026-02",
+      "isc": 1.2,
+      "industry": 27.2,
+      "rank": 1
+    },
+    {
+      "month": "2026-01",
+      "isc": 0.4,
+      "industry": 27.3,
+      "rank": 1
+    },
+    {
+      "month": "2025-12",
+      "isc": 0.6,
+      "industry": 31.0,
+      "rank": 1
+    },
+    {
+      "month": "2025-11",
+      "isc": 2.1,
+      "industry": 28.6,
+      "rank": 1
+    },
+    {
+      "month": "2025-10",
+      "isc": 5.2,
+      "industry": 28.5,
+      "rank": 1
+    },
+    {
+      "month": "2025-09",
+      "isc": 2.4,
+      "industry": 28.9,
+      "rank": 1
+    },
+    {
+      "month": "2025-08",
+      "isc": 2.0,
+      "industry": 26.7,
+      "rank": 1
+    },
+    {
+      "month": "2025-07",
+      "isc": 2.3,
+      "industry": 28.2,
+      "rank": 1
+    }
+  ]
+}
