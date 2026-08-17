@@ -2697,7 +2697,7 @@
               <td class="factor">Trade turnaround</td>
               <td class="comp-bad">12-month industry average for trade turnaround, based on MeridianLink benchmark data
               </td>
-              <td class="comp-isc comp-good" style="background:rgba(240,185,66,.07);font-weight:500">✓ Ranked #1 in
+              <td class="comp-isc comp-good" id="home-comparison-streak" style="background:rgba(240,185,66,.07);font-weight:500">✓ Ranked #1 in
                 trade turnaround every month since June 2025</td>
             </tr>
             <tr>
@@ -3124,7 +3124,8 @@ const streakStartLabel = monthYear(currentStreakStart);
 const homeWhyStreak = document.getElementById('home-why-streak');
 const homeSupportStreak = document.getElementById('home-support-streak');
 const homeCtaStreak = document.getElementById('home-cta-streak');
-
+const homeComparisonStreak = document.getElementById('home-comparison-streak');
+      
 if (homeWhyStreak) {
   homeWhyStreak.textContent =
     `MeridianLink Industry Benchmark data ranked ISC #1 in trade turnaround every month since ${streakStartLabel}.`;
@@ -3139,7 +3140,10 @@ if (homeCtaStreak) {
   homeCtaStreak.textContent =
     `Ranked #1 in trade turnaround on MeridianLink every month since ${streakStartLabel}.`;
 }
-
+if (homeComparisonStreak) {
+  homeComparisonStreak.textContent =
+    `✓ Ranked #1 in trade turnaround every month since ${streakStartLabel}`;
+}
       console.log(`Current #1 streak: ${streakMonths} months`);
     }
     // Six-month chart
