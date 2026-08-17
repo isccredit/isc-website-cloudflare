@@ -2343,7 +2343,7 @@
         <div class="why-card dark">
           <span class="why-icon">⚡</span>
           <div class="why-title">Fast when it counts.</div>
-          <div class="why-body">MeridianLink Industry Benchmark data ranked ISC #1 in trade turnaround every month since June 2025.</div>
+         <div class="why-body" id="home-why-streak">MeridianLink Industry Benchmark data ranked ISC #1 in trade turnaround every month since June 2025.</div>
         </div>
         <div class="why-card">
           <span class="why-icon">👤</span>
@@ -2646,8 +2646,7 @@
           <div class="sr-heading">What that looks like in practice</div>
           <div class="sr-item">
             <div class="sr-icon">&#9889;</div>
-            <div class="sr-text"><strong>Fast trade updates</strong><span>MeridianLink Industry Benchmark data ranked
-                ISC #1 in trade turnaround every month since June 2025.</span></div>
+            <div class="sr-text"><strong>Fast trade updates</strong><span id="home-support-streak">MeridianLink Industry Benchmark data ranked ISC #1 in trade turnaround every month since June 2025.</span></div>
           </div>
           <div class="sr-item">
             <div class="sr-icon">📞</div>
@@ -2965,7 +2964,7 @@
   </section>
 
   <section class="cta-strip">
-    <h2>Ranked #1 in trade turnaround on MeridianLink every month since June 2025.</h2>
+    <h2 id="home-cta-streak">Ranked #1 in trade turnaround on MeridianLink every month since June 2025.</h2>
     <p>Join the 10,000+ mortgage professionals ISC has served since 1989, and see why we have a 5.0-star Google rating
       from 200+ reviewers.</p>
     <a class="btn-navy" href="/contact/">Get started today &rarr;</a>
@@ -3119,6 +3118,27 @@
 
       document.getElementById('benchmark-streak-range').textContent =
         `Based on ${data.source} data from ${monthYear(currentStreakStart)} through ${monthYear(latest.month)}.`;
+
+const streakStartLabel = monthYear(currentStreakStart);
+
+const homeWhyStreak = document.getElementById('home-why-streak');
+const homeSupportStreak = document.getElementById('home-support-streak');
+const homeCtaStreak = document.getElementById('home-cta-streak');
+
+if (homeWhyStreak) {
+  homeWhyStreak.textContent =
+    `MeridianLink Industry Benchmark data ranked ISC #1 in trade turnaround every month since ${streakStartLabel}.`;
+}
+
+if (homeSupportStreak) {
+  homeSupportStreak.textContent =
+    `MeridianLink Industry Benchmark data ranked ISC #1 in trade turnaround every month since ${streakStartLabel}.`;
+}
+
+if (homeCtaStreak) {
+  homeCtaStreak.textContent =
+    `Ranked #1 in trade turnaround on MeridianLink every month since ${streakStartLabel}.`;
+}
 
       console.log(`Current #1 streak: ${streakMonths} months`);
     }
