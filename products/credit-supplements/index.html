@@ -693,7 +693,7 @@ img, video { max-width: 100%; height: auto; }
       <h1>Credit supplements handled quickly, clearly, and by a team that knows mortgage files.</h1>
       <p class="hero-sub">Credit supplements help mortgage professionals request verified updates or documentation on specific credit report items. ISC processes supplement requests quickly and clearly, with a dedicated rep on every file.</p>
         <div style="margin:1rem 0 1.5rem;display:flex;flex-wrap:wrap">
-        <span style="display:inline-flex;align-items:center;gap:.4rem;background:rgba(240,185,66,.15);color:var(--gold);border:1.5px solid var(--gold);border-radius:999px;padding:.45rem 1rem;font-size:.78rem;font-weight:700;letter-spacing:.04em;font-family:var(--fb)"><span>&#127942;</span><span>#1 TRADE TURNAROUND ON MERIDIANLINK &middot; Ranked #1 every month since June 2025</span></span>
+        <span style="display:inline-flex;align-items:center;gap:.4rem;background:rgba(240,185,66,.15);color:var(--gold);border:1.5px solid var(--gold);border-radius:999px;padding:.45rem 1rem;font-size:.78rem;font-weight:700;letter-spacing:.04em;font-family:var(--fb)"><span>&#127942;</span><span id="supplements-streak-label">#1 TRADE TURNAROUND ON MERIDIANLINK &middot; Ranked #1 every month since June 2025</span></span>
       </div>
       <div class="hero-actions">
         <a class="btn-gold" href="/contact/">Get started today &rarr;</a>
@@ -840,5 +840,36 @@ img, video { max-width: 100%; height: auto; }
           href="/consumer-assistance/">Consumer Assistance</a></div>
     </div>
   </footer>
+<script>
+(async function () {
+  try {
+    const response = await fetch('/data/benchmarks.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error('Benchmark data could not be loaded');
+
+    const data = await response.json();
+
+    function monthYear(monthString) {
+      const [year, month] = monthString.split('-');
+
+      return new Date(Number(year), Number(month) - 1, 1)
+        .toLocaleString('en-US', {
+          month: 'long',
+          year: 'numeric'
+        });
+    }
+
+    const streakLabel =
+      document.getElementById('supplements-streak-label');
+
+    if (streakLabel && data.streakStart) {
+      streakLabel.innerHTML =
+        `#1 TRADE TURNAROUND ON MERIDIANLINK &middot; Ranked #1 every month since ${monthYear(data.streakStart)}`;
+    }
+
+  } catch (error) {
+    console.error('Supplements benchmark error:', error);
+  }
+})();
+</script>
 </body>
 </html>
