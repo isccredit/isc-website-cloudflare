@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SmartSelect | Cost-Efficient Credit Screening | ISC Credit</title>
-<meta name="description" content="ISC SmartSelect lets mortgage pros start with a single-bureau pull and add bureaus only when needed. A flexible, cost-controlled credit screening option.">
-    <link rel="canonical" href="https://www.isccredit.com/products/smartselect/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CreditXpert Score Simulation | Mortgage Credit Optimization | ISC Credit</title>
+<meta name="description" content="ISC runs CreditXpert mortgage score simulations for clients, typically in about 30 minutes. Get hands-on guidance from a team with 20+ years of CreditXpert experience.">
+    <link rel="canonical" href="https://www.isccredit.com/products/creditxpert-score-simulation/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ISC Credit">
-<meta property="og:url" content="https://www.isccredit.com/products/smartselect/">
-<meta property="og:title" content="SmartSelect | Cost-Efficient Credit Screening | ISC Credit">
-<meta property="og:description" content="ISC SmartSelect lets mortgage pros start with a single-bureau pull and add bureaus only when needed. A flexible, cost-controlled credit screening option.">
+<meta property="og:url" content="https://www.isccredit.com/products/creditxpert-score-simulation/">
+<meta property="og:title" content="CreditXpert Score Simulation | Mortgage Credit Optimization | ISC Credit">
+<meta property="og:description" content="ISC runs CreditXpert mortgage score simulations for clients, typically in about 30 minutes, with hands-on support from an experienced mortgage credit team.">
 <meta property="og:image" content="https://www.isccredit.com/ISC.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SmartSelect | Cost-Efficient Credit Screening | ISC Credit">
-<meta name="twitter:description" content="ISC SmartSelect lets mortgage pros start with a single-bureau pull and add bureaus only when needed. A flexible, cost-controlled credit screening option.">
+<meta name="twitter:title" content="CreditXpert Score Simulation | Mortgage Credit Optimization | ISC Credit">
+<meta name="twitter:description" content="ISC runs CreditXpert mortgage score simulations for clients, typically in about 30 minutes, with hands-on support from an experienced mortgage credit team.">
 <meta name="twitter:image" content="https://www.isccredit.com/ISC.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -29,9 +30,11 @@
   --white:#fff;--off:#f7f8fc;--muted:#6b7a99;--border:#e8e0d0;--text:#2d2416;
   --fd:'Playfair Display',Georgia,serif;--fb:'DM Sans',system-ui,sans-serif;
 }
-body{font-family:var(--fb);color:var(--text);background:var(--cream);line-height:1.7}
+body{font-family:var(--fb);color:var(--text);background:var(--cream);line-height:1.6}
 a{color:var(--blue);text-decoration:none}
 a:hover{text-decoration:underline}
+
+/* NAV */
 nav{background:var(--white);border-bottom:1px solid var(--sand);padding:1.1rem 2.5rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 1px 6px rgba(10,22,40,.06)}
 .nav-logo{flex-shrink:0;font-family:var(--fd);font-size:1.45rem;color:var(--navy);font-weight:700;text-decoration:none;display:flex;align-items:center;gap:.4rem}
 .logo-dot{width:7px;height:7px;background:var(--gold);border-radius:50%;margin-bottom:.4rem}
@@ -43,60 +46,100 @@ nav{background:var(--white);border-bottom:1px solid var(--sand);padding:1.1rem 2
 .nav-phone{font-size:.78rem;font-weight:600;color:var(--navy)}
 .nav-cta{background:var(--navy);color:var(--white);font-size:.8rem;font-weight:600;padding:.6rem 1.3rem;border-radius:5px;text-decoration:none}
 .nav-cta:hover{background:var(--navy2);text-decoration:none}
-.page-hero{background:var(--navy);padding:4rem 2.5rem 3.5rem;position:relative;overflow:hidden}
-.page-hero::before{content:'';position:absolute;top:-80px;right:-80px;width:350px;height:350px;background:rgba(240,185,66,.04);border-radius:50%;pointer-events:none}
-.hero-inner{max-width:960px;margin:0 auto}
+
+/* HERO */
+.page-hero{background:var(--navy);padding:4.5rem 2.5rem 4rem;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:rgba(240,185,66,.04);border-radius:50%;pointer-events:none}
+.hero-inner{max-width:1100px;margin:0 auto}
 .hero-eyebrow{font-size:.65rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,185,66,.7);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
 .hero-eyebrow::before{content:'';width:20px;height:1px;background:var(--gold);opacity:.6}
-.page-hero h1{font-family:var(--fd);font-size:2.4rem;color:var(--white);margin-bottom:.8rem;letter-spacing:-.02em;line-height:1.18;max-width:720px}
-.hero-sub{font-size:.9rem;color:rgba(255,255,255,.55);max-width:620px;line-height:1.78;margin-bottom:1.5rem}
-.hero-actions{display:flex;gap:.75rem;flex-wrap:wrap;align-items:center}
-.btn-gold{background:var(--gold);color:var(--navy);font-size:.85rem;font-weight:700;padding:.8rem 1.6rem;border-radius:5px;text-decoration:none;display:inline-block;transition:all .2s}
+.hero-tag{display:inline-flex;align-items:center;gap:.4rem;background:var(--gold-bg);border:1px solid var(--gold-bd);color:var(--gold);font-size:.65rem;font-weight:600;padding:.25rem .7rem;border-radius:999px;margin-bottom:1rem;text-transform:uppercase;letter-spacing:.06em;width:fit-content}
+.hero-two-col{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center}
+.page-hero h1{font-family:var(--fd);font-size:2.5rem;color:var(--white);margin-bottom:.85rem;letter-spacing:-.02em;line-height:1.15;max-width:600px}
+.hero-sub{font-size:.9rem;color:rgba(255,255,255,.55);max-width:560px;line-height:1.78;margin-bottom:1.5rem}
+.hero-actions{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn-gold{background:var(--gold);color:var(--navy);font-size:.85rem;font-weight:700;padding:.8rem 1.6rem;border-radius:5px;border:none;cursor:pointer;font-family:var(--fb);text-decoration:none;display:inline-block;transition:all .2s}
 .btn-gold:hover{background:#e8a800;text-decoration:none}
-.btn-ghost{background:transparent;color:rgba(255,255,255,.75);font-size:.85rem;font-weight:500;padding:.8rem 1.4rem;border-radius:5px;border:1px solid rgba(255,255,255,.22);text-decoration:none;display:inline-block}
+.btn-ghost{background:transparent;color:rgba(255,255,255,.75);font-size:.85rem;font-weight:500;padding:.8rem 1.4rem;border-radius:5px;border:1px solid rgba(255,255,255,.2);cursor:pointer;font-family:var(--fb);text-decoration:none;display:inline-block}
 .btn-ghost:hover{border-color:rgba(255,255,255,.55);color:#fff;text-decoration:none}
-.trust-bar{background:var(--cream);border-bottom:1px solid var(--sand);padding:.85rem 2.5rem;display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap}
+.hero-speed-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:1.5rem;min-width:200px}
+.hsc-label{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.3);margin-bottom:1rem}
+.hsc-item{display:flex;align-items:center;gap:.75rem;padding:.7rem 0;border-bottom:.5px solid rgba(255,255,255,.08)}
+.hsc-item:last-child{border-bottom:none}
+.hsc-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.dot-g{background:#22c55e}.dot-b{background:#60a5fa}.dot-a{background:#f59e0b}
+.hsc-text{font-size:.78rem;font-weight:600;color:rgba(255,255,255,.85)}
+.hsc-sub{font-size:.67rem;color:rgba(255,255,255,.38);margin-top:.05rem}
+
+/* TRUST BAR */
+.trust-bar{background:var(--cream);border-bottom:1px solid var(--sand);padding:.9rem 2.5rem;display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap}
 .trust-item{font-size:.7rem;font-weight:600;color:#6b5a40;display:flex;align-items:center;gap:.4rem;text-transform:uppercase;letter-spacing:.04em}
 .trust-item::before{content:'✓';color:#c8a84b;font-weight:700}
 .trust-div{width:1px;height:14px;background:var(--sand)}
-.page-body{max-width:1060px;margin:0 auto;padding:3.5rem 2.5rem}
-.two-col{display:grid;grid-template-columns:1fr 270px;gap:3rem;align-items:start}
+
+/* LAYOUT */
+.page-body{max-width:1100px;margin:0 auto;padding:4rem 2.5rem}
+.body-grid{display:grid;grid-template-columns:1fr 290px;gap:3rem;align-items:start}
 .sticky-sb{position:sticky;top:88px;display:flex;flex-direction:column;gap:1rem}
+
+/* SIDEBAR */
 .sb-card{background:var(--white);border:1px solid var(--sand);border-radius:10px;padding:1.25rem}
 .sb-dark{background:var(--navy);border-color:transparent}
 .sb-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--warm);margin-bottom:.85rem}
 .sb-dark .sb-label{color:var(--gold)}
+.sb-stat{margin-bottom:.7rem;padding-bottom:.7rem;border-bottom:.5px solid var(--sand)}
+.sb-stat:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.sb-num{font-family:var(--fd);font-size:1.55rem;color:var(--navy);line-height:1;margin-bottom:.18rem}
+.sb-num.g{color:var(--green)}
+.sb-desc{font-size:.74rem;color:var(--warm);line-height:1.45}
 .sb-list{display:flex;flex-direction:column;gap:.42rem}
 .sb-li{font-size:.77rem;color:var(--text);display:flex;align-items:flex-start;gap:.42rem;line-height:1.4}
 .sb-li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;margin-top:.05rem}
 .sb-dark .sb-li{color:rgba(255,255,255,.7)}
 .sb-dark .sb-li::before{color:var(--gold)}
-.sb-cta{display:block;background:var(--gold);color:var(--navy);font-size:.85rem;font-weight:700;padding:.8rem 1.25rem;border-radius:6px;text-align:center;text-decoration:none;margin-top:.75rem}
-.sb-cta:hover{background:#e8a800;text-decoration:none}
-.sb-phone{display:block;text-align:center;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.55);margin-top:.55rem;text-decoration:none}
-.sb-phone:hover{color:#fff}
-.sb-link{display:block;font-size:.78rem;color:var(--blue);padding:.42rem 0;border-bottom:.5px solid var(--sand);text-decoration:none}
-.sb-link:hover{color:var(--navy)}
-.sb-link:last-child{border-bottom:none}
-section.cs{margin-bottom:2.75rem;scroll-margin-top:100px}
+.sb-cta-btn{display:block;background:var(--gold);color:var(--navy);font-size:.85rem;font-weight:700;padding:.8rem 1.25rem;border-radius:6px;text-align:center;text-decoration:none;margin-top:.75rem}
+.sb-cta-btn:hover{background:#e8a800;text-decoration:none}
+.sb-phone-link{display:block;text-align:center;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.55);margin-top:.55rem;text-decoration:none}
+.sb-phone-link:hover{color:#fff}
+.sb-related-item{display:flex;align-items:center;gap:.5rem;padding:.5rem 0;border-bottom:.5px solid var(--sand);font-size:.78rem;text-decoration:none;color:var(--blue);transition:color .18s}
+.sb-related-item:last-child{border-bottom:none}
+.sb-related-item:hover{color:var(--navy)}
+
+/* CONTENT */
+section.cs{margin-bottom:3rem;scroll-margin-top:100px}
 section.cs h2{font-family:var(--fd);font-size:1.55rem;color:var(--navy);margin-bottom:.9rem;letter-spacing:-.02em;padding-bottom:.55rem;border-bottom:2px solid var(--gold);display:inline-block}
 section.cs h3{font-family:var(--fb);font-size:.96rem;font-weight:600;color:var(--navy);margin:1.5rem 0 .5rem;letter-spacing:0}
 section.cs p{font-size:.88rem;color:#4a3c2a;line-height:1.82;margin-bottom:.85rem}
-section.cs ul,section.cs ol{margin:.5rem 0 1rem 0;display:flex;flex-direction:column;gap:.48rem}
-section.cs li{font-size:.86rem;color:#4a3c2a;line-height:1.7;position:relative;padding-left:1.4rem}
-section.cs li::before{content:'→';color:var(--blue);font-weight:700;position:absolute;left:0;top:0}
-section.cs ol li{counter-increment:none}
+section.cs ul{margin:.5rem 0 1rem 0;display:flex;flex-direction:column;gap:.48rem}
+section.cs li{
+  font-size:.86rem;
+  color:#4a3c2a;
+  line-height:1.7;
+  position:relative;
+  padding-left:1.4rem;
+}
+
+section.cs li::before{
+  content:'→';
+  color:var(--blue);
+  font-weight:700;
+  position:absolute;
+  left:0;
+  top:0;
+}
 section.cs strong{color:var(--navy);font-weight:600}
+
+/* CALLOUTS */
 .callout{background:var(--white);border:1px solid var(--sand);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:.95rem 1.2rem;margin:1.2rem 0;font-size:.85rem;color:var(--navy);line-height:1.7}
+.callout strong{color:var(--navy)}
 .callout-green{border-left-color:var(--green);background:#f0fdf4;color:#14532d}
 .callout-blue{border-left-color:var(--blue);background:#eff6ff;color:#1e3a5f}
-.callout-amber{border-left-color:var(--amber);background:var(--amber-bg);color:#78350f}
-.callout-red{border-left-color:var(--red);background:var(--red-bg);color:#7f1d1d}
 .info-navy{background:var(--navy);border-radius:8px;padding:1.2rem 1.4rem;margin:1.2rem 0;font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.72}
 .info-navy strong{color:var(--gold)}
-.info-navy a{color:var(--gold)}
-.card-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.2rem 0}
+
+/* CARDS */
 .card-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.2rem 0}
+.card-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:1.2rem 0}
 .p-card{background:var(--white);border:1px solid var(--sand);border-radius:10px;padding:1.2rem;transition:all .2s}
 .p-card:hover{border-color:var(--blue);box-shadow:0 4px 12px rgba(26,79,214,.08)}
 .p-card.featured{border-color:var(--gold);border-width:2px}
@@ -107,13 +150,28 @@ section.cs strong{color:var(--navy);font-weight:600}
 .tag-gold{background:var(--gold-bg);border:1px solid var(--gold-bd);color:#9a7010}
 .tag-red{background:var(--red-bg);color:var(--red)}
 .p-card h3{font-size:.88rem;font-weight:600;color:var(--navy);margin:0 0 .38rem;letter-spacing:0;font-family:var(--fb)}
-.p-card p{font-size:.76rem;color:var(--warm);line-height:1.63;margin:0}
+.p-card p{font-size:.75rem;color:var(--warm);line-height:1.63;margin:0}
 .p-card-link{font-size:.72rem;font-weight:600;color:var(--blue);margin-top:.58rem;display:block}
+
+/* DARK STRIP */
+.dark-strip{background:var(--navy);border-radius:12px;padding:2rem;margin:1.5rem 0}
+.dark-strip h3{font-family:var(--fd);font-size:1.2rem;color:#fff;margin-bottom:1rem}
+.dark-strip p{font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.72;margin-bottom:.75rem}
+.dark-strip p:last-child{margin-bottom:0}
+.dark-strip strong{color:#fff}
+.dark-two{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.08);border-radius:8px;overflow:hidden;margin-top:1rem}
+.dark-col{background:var(--navy2);padding:1.1rem 1.25rem;font-size:.8rem;color:rgba(255,255,255,.65);line-height:1.65}
+.dark-col-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.35);margin-bottom:.55rem}
+.dark-col-label.gold{color:var(--gold)}
+
+/* STEPS */
 .step-list{display:flex;flex-direction:column;gap:.85rem;margin:1.2rem 0}
 .step-item{display:flex;align-items:flex-start;gap:1rem;background:var(--white);border:1px solid var(--sand);border-radius:10px;padding:1.1rem}
 .step-num{width:34px;height:34px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:1.1rem;color:var(--gold);font-weight:700;flex-shrink:0}
 .step-content h4{font-size:.86rem;font-weight:600;color:var(--navy);margin-bottom:.28rem;font-family:var(--fb);letter-spacing:0}
 .step-content p{font-size:.78rem;color:var(--warm);line-height:1.63;margin:0}
+
+/* TABLES */
 .data-table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.82rem}
 .data-table th{background:var(--navy);color:#fff;padding:.62rem 1rem;text-align:left;font-weight:600;font-size:.75rem}
 .data-table th:first-child{border-radius:8px 0 0 0}
@@ -123,10 +181,12 @@ section.cs strong{color:var(--navy);font-weight:600}
 .data-table tr:nth-child(even) td{background:#faf8f5}
 .cell-yes{color:var(--green);font-weight:700}
 .cell-no{color:var(--red)}
-.flag{background:var(--amber-bg);border:1px solid #fcd34d;border-radius:6px;padding:.5rem .75rem;font-size:.72rem;color:#78350f;display:inline-flex;align-items:center;gap:.4rem;margin:.3rem 0}
-.flag::before{content:'⚠';font-size:.75rem}
-footer{background:var(--navy2);padding:2.5rem;border-top:1px solid rgba(255,255,255,.07)}
-.footer-inner{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2rem}
+.cell-coming{color:var(--amber);font-weight:600}
+
+/* BREADCRUMB */
+/* FOOTER */
+footer{background:var(--navy2);padding:2.5rem 2.5rem;border-top:1px solid rgba(255,255,255,.07)}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2rem}
 .footer-logo{font-family:var(--fd);font-size:1.3rem;color:var(--white);font-weight:700;display:block;margin-bottom:.65rem}
 .footer-logo span{color:var(--gold)}
 .footer-tagline{font-size:.76rem;color:rgba(255,255,255,.38);line-height:1.7;margin-bottom:1rem;max-width:240px}
@@ -136,7 +196,7 @@ footer{background:var(--navy2);padding:2.5rem;border-top:1px solid rgba(255,255,
 .footer-col ul{display:flex;flex-direction:column;gap:.55rem;list-style:none}
 .footer-col a{font-size:.76rem;color:rgba(255,255,255,.45);text-decoration:none}
 .footer-col a:hover{color:var(--gold)}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:1.25rem;max-width:1060px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:1.25rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 .footer-copy{font-size:.7rem;color:rgba(255,255,255,.25)}
 .footer-legal{display:flex;gap:1.5rem}
 .footer-legal a{font-size:.7rem;color:rgba(255,255,255,.25);text-decoration:none}
@@ -637,104 +697,160 @@ img, video { max-width: 100%; height: auto; }
     </div>
   </nav>
 <div class="page-hero"><div class="hero-inner">
-  <div class="hero-eyebrow">Products · Smart Screening</div>
-  <div class="hero-tag" style="display:inline-flex;align-items:center;gap:.4rem;background:rgba(240,185,66,.1);border:1px solid rgba(240,185,66,.25);color:var(--gold);font-size:.65rem;font-weight:600;padding:.25rem .7rem;border-radius:999px;margin-bottom:1rem;text-transform:uppercase;letter-spacing:.06em">Cost-effective · Start with one bureau</div>
-  <h1>SmartSelect: start with one bureau and add more only when needed.</h1>
-  <p class="hero-sub">SmartSelect lets mortgage professionals begin with a single-bureau pull for early screening or prequalification. If more credit data is needed, additional bureaus can be added as needed, helping prevent unnecessary bureau attempts and charges while supporting a flexible path to a full tri-merge report.</p>
-  <div class="hero-actions"><a class="btn-gold" href="/contact/">Get started today &rarr;</a><a class="btn-ghost" href="tel:+18002902801">Call 800-290-2801</a></div>
-</div></div>
-<div class="trust-bar"><div class="trust-item">Start with 1 Bureau</div><div class="trust-div"></div><div class="trust-item">Add More When Needed</div><div class="trust-div"></div><div class="trust-item">Instant Results</div><div class="trust-div"></div><div class="trust-item">Cost-Effective</div><div class="trust-div"></div><div class="trust-item">FCRA Compliant</div></div>
+    <div class="hero-two-col"><div>
+      <div class="hero-eyebrow">CreditXpert Score Simulation</div>
+      <div class="hero-tag">20+ years of CreditXpert experience · Typically about 30 minutes · Results not guaranteed</div>
+      <h1>More than software access. ISC runs the CreditXpert simulation for you.</h1>
+      <p class="hero-sub">ISC uses CreditXpert to model potential mortgage credit score outcomes, review eligible scenarios, and help you understand what may be worth pursuing before a Rapid Rescore. Our team handles the simulation for you and typically completes CreditXpert requests in about 30 minutes.</p>
+      <p style="font-size:.85rem;color:var(--warm);margin-top:.5rem;font-weight:500">Hands-on support from an ISC team with more than 20 years of CreditXpert experience.</p>
+      <div class="hero-actions">
+        <a class="btn-gold" href="/contact/">Request a simulation &rarr;</a>
+        <a class="btn-ghost" href="tel:+18002902801">Call 800-290-2801</a>
+      </div>
+    </div></div>
+  </div></div>
+<div class="trust-bar"><div class="trust-item">20+ Years CreditXpert Experience</div><div class="trust-div"></div><div class="trust-item">~30-Minute Typical Turnaround</div><div class="trust-div"></div><div class="trust-item">ISC Runs It For You</div><div class="trust-div"></div><div class="trust-item">Mortgage-Focused Support</div><div class="trust-div"></div><div class="trust-item">Estimates, Not Guarantees</div></div>
 <div class="page-body">
-  <div class="two-col">
+  <div class="body-grid">
     <main>
 <section class="cs">
-  <h2>What is SmartSelect?</h2>
-  <p>SmartSelect is an <strong>automatic cascading credit report system</strong>. It starts with a single-bureau pull and follows configurable rules, such as credit score thresholds or other credit criteria, to determine whether additional bureaus should be ordered. This helps prevent unnecessary bureau pulls while giving you a flexible path to additional credit data when needed.</p>
-  <p>If SmartSelect stops the pull because your filters were met or because a bureau couldn't complete the pull, you can manually add additional bureaus at any time. You stay in control of the file.</p>
-  <p>This approach is ideal for mortgage brokers and lenders who want a smarter, lower-cost way to evaluate borrowers early in the pipeline before committing to a full tri-merge report.</p>
-  <p>Equifax, Experian, and TransUnion are all supported. You set the filters, SmartSelect handles the cascade, and you can add more bureaus manually whenever the file calls for it.</p>
- <div class="callout callout-green">
-  <strong>Why this matters for your bottom line:</strong> When some applicants do not proceed beyond the initial credit screen, starting with fewer bureaus can help reduce unnecessary credit report costs across a high-volume pipeline. Actual savings depend on your workflow, configuration, and pricing.
-</div>
+  <h2>CreditXpert expertise, with ISC doing the work</h2>
+  <p>CreditXpert is a mortgage credit optimization platform that uses predictive analytics and simulation tools to model potential credit score outcomes and identify paths toward a target score. ISC adds a hands-on service layer: instead of asking your team to learn another platform, your ISC support team runs the simulation for you.</p>
+  <p>ISC has more than 20 years of experience working with CreditXpert. That experience matters when a file is close to qualifying, a pricing threshold is in reach, or you need to compare several possible credit actions before deciding what to pursue.</p>
+  <div class="callout callout-green">
+    <strong>Typical turnaround:</strong> Most CreditXpert simulation requests are completed by ISC in about 30 minutes. Turnaround can vary based on file complexity and the scenarios being reviewed.
+  </div>
 </section>
 
 <section class="cs">
-  <h2>How SmartSelect works</h2>
+  <h2>How the ISC CreditXpert process works</h2>
   <div class="step-list">
-    <div class="step-item"><div class="step-num">1</div><div class="step-content"><h4>Start with a single-bureau pull</h4><p>Order a report from one bureau, whichever bureau your experience suggests is most relevant for your borrower. Review scores and tradelines for an initial credit picture.</p></div></div>
-    <div class="step-item"><div class="step-num">2</div><div class="step-content"><h4>Evaluate the borrower's credit profile</h4><p>Review the single-bureau result. Does the borrower look like a viable candidate? Are the scores in range? Are there obvious issues that need to be addressed before moving forward?</p></div></div>
     <div class="step-item">
-  <div class="step-num">3</div>
-  <div class="step-content">
-    <h4>Add additional bureaus only when needed</h4>
-    <p>SmartSelect follows your configured rules to determine whether a second or third bureau should be added. Additional bureaus can also be ordered when needed for the applicable mortgage workflow.</p>
-
-    <p style="margin-top:.85rem;font-size:.85rem;line-height:1.72;background:rgba(240,185,66,.08);border-left:3px solid #f0b942;padding:.65rem .9rem;border-radius:4px"><strong>Frozen bureau handling:</strong> SmartSelect can help prevent additional bureau attempts and unnecessary charges when a freeze affects the workflow. Once the applicable freeze is lifted, contact ISC if additional bureau data is needed.</p>
-  </div>
-</div>
-
- 
+      <div class="step-num">1</div>
+      <div class="step-content"><h4>Tell us the goal</h4><p>Let your ISC support team know the target score, qualifying threshold, pricing goal, or credit scenario you want to evaluate.</p></div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content"><h4>ISC runs the CreditXpert simulation</h4><p>Our team uses the borrower's mortgage credit data to model eligible what-if scenarios and review projected score outcomes.</p></div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><h4>We review the results with you</h4><p>Your ISC support team helps explain the projected outcomes so you can compare potential options and decide what, if anything, is worth pursuing.</p></div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content"><h4>Take the appropriate next step</h4><p>If the borrower completes an eligible action and acceptable documentation is available, ISC can help determine whether a Rapid Rescore or another credit-report update is appropriate.</p></div>
+    </div>
   </div>
 </section>
 
 <section class="cs">
-  <h2>Who benefits most from SmartSelect</h2>
+  <h2>What a CreditXpert simulation can help evaluate</h2>
+  <p>Depending on the borrower's credit profile and the scenarios supported by the platform, CreditXpert can help model the potential effect of specific credit changes before money is spent on bureau rescore requests.</p>
   <div class="card-grid-2">
-    <div class="p-card"><span class="p-card-tag tag-gold">High-volume brokers</span><h3>Brokers screening large lead pipelines</h3><p>When you receive a high volume of referrals or leads, starting with a single-bureau pull can help reduce initial screening costs compared with ordering a full tri-merge on every applicant.</p></div>
-    <div class="p-card"><span class="p-card-tag tag-gold">Early conversations</span><h3>Loan officers in early prequalification</h3><p>During early conversations with prospective borrowers, a single-bureau pull can provide an initial credit view to help assess feasibility and discuss next steps before committing to a full tri-merge report.</p></div>
-    <div class="p-card"><span class="p-card-tag tag-blue">Cost-conscious teams</span><h3>Teams with cost-control workflows</h3><p>Lenders and brokers who want more control over credit report costs across their team or branch. SmartSelect creates a natural gate before the full tri-merge is ordered.</p></div>
-    <div class="p-card"><span class="p-card-tag tag-blue">Pre-application review</span><h3>Borrowers not ready for a full application</h3><p>When a borrower is exploring their options but not ready for a formal application, SmartSelect provides useful credit information without the full cost of a tri-merge.</p></div>
+    <div class="p-card"><span class="p-card-tag tag-green">Balances</span><h3>Revolving balance changes</h3><p>Model how eligible changes to reported revolving balances or utilization may affect the projected mortgage credit score.</p></div>
+    <div class="p-card"><span class="p-card-tag tag-blue">Targets</span><h3>Target-score scenarios</h3><p>Evaluate potential paths toward a specific score threshold used for qualification, pricing, or a loan-program requirement.</p></div>
+    <div class="p-card"><span class="p-card-tag tag-blue">What-if</span><h3>Specific credit scenarios</h3><p>Compare supported what-if scenarios to see which documented changes may have the strongest projected impact on the file.</p></div>
+    <div class="p-card"><span class="p-card-tag tag-amber">Planning</span><h3>Rescore planning</h3><p>Use projected results to help decide whether an eligible credit change may be worth pursuing before bureau rescore fees are incurred.</p></div>
   </div>
 </section>
 
 <section class="cs">
-  <h2>How SmartSelect fits your ordering workflow</h2>
-  <p>SmartSelect can be configured around your team's credit screening criteria and incorporated into supported ordering workflows. Once configured, it follows your established rules on applicable SmartSelect orders.</p>
-  <div class="step-list">
-    <div class="step-item"><div class="step-num">1</div><div class="step-content"><h4>Set your filters once</h4><p>Work with your ISC support team to define the criteria that should trigger the cascade: minimum score thresholds, required tradelines, derogatory flags, or other data points your team cares about. Filters can be set at the account or branch level.</p></div></div>
-    <div class="step-item"><div class="step-num">2</div><div class="step-content"><h4>Order through your LOS as usual</h4><p>For supported integrations, SmartSelect can work within your existing credit ordering process, helping reduce unnecessary manual decision points.</p></div></div>
-    <div class="step-item"><div class="step-num">3</div><div class="step-content"><h4>The cascade runs automatically</h4><p>SmartSelect pulls the first bureau and applies your configured rules. Based on those rules, the workflow can stop or continue to additional bureaus as needed.</p></div></div>
-    <div class="step-item"><div class="step-num">4</div><div class="step-content"><h4>Add bureaus manually when you need them</h4><p>If the cascade stops early but you decide you need additional bureaus for AUS, underwriting, or further review, you can manually add them at any time. SmartSelect does not lock you out of pulling more.</p></div></div>
+  <h2>Credit simulation and Rapid Rescore are different</h2>
+  <p>These two services work well together, but they do different jobs.</p>
+  <div class="dark-strip">
+    <div class="dark-two">
+      <div class="dark-col">
+        <div class="dark-col-label gold">CreditXpert simulation</div>
+        <div style="color:rgba(255,255,255,.88);font-size:.85rem;line-height:1.85">
+          Estimates potential score outcomes<br>
+          Helps compare possible scenarios<br>
+          Does not change bureau data<br>
+          Results are projections, not guarantees
+        </div>
+      </div>
+      <div class="dark-col">
+        <div class="dark-col-label" style="color:rgba(255,255,255,.55)">Rapid Rescore</div>
+        <div style="color:rgba(255,255,255,.78);font-size:.85rem;line-height:1.85">
+          Submits eligible verified updates for bureau review<br>
+          Requires acceptable documentation<br>
+          Typical ISC turnaround is 2–5 business days<br>
+          Actual score changes are not guaranteed
+        </div>
+      </div>
+    </div>
   </div>
-  <p style="margin-top:1rem;font-size:.85rem;line-height:1.72">Talk to your ISC support team to set up SmartSelect filters tailored to your team's workflow.</p>
+  <p>The simulation helps you evaluate potential options first. If the borrower completes an eligible action and the required documentation is available, a Rapid Rescore may then be used to submit the verified change for bureau review.</p>
+</section>
+
+<section class="cs">
+  <h2>What CreditXpert simulation does not do</h2>
+  <ul>
+    <li><strong>It does not guarantee a score increase.</strong> Projected outcomes are estimates and the actual score depends on the borrower's full credit profile and the scoring model in use.</li>
+    <li><strong>It does not directly change bureau data.</strong> Any credit-report update must follow the applicable creditor, repository, and documentation process.</li>
+    <li><strong>It does not replace required documentation.</strong> A projected scenario is not proof that an account has changed.</li>
+    <li><strong>It is not consumer credit repair.</strong> ISC provides mortgage credit simulation support to mortgage professionals as part of the lending workflow.</li>
+  </ul>
+  <div class="callout">
+    <strong>Current scoring-model note:</strong> ISC's current CreditXpert simulation service is used with Classic FICO mortgage score workflows. VantageScore 4.0 and FICO 10T simulations are not currently offered through ISC's simulation tools. Availability may change as vendor platforms evolve.
+  </div>
+</section>
+
+<section class="cs">
+  <h2>Why mortgage teams use ISC for CreditXpert</h2>
+  <div class="card-grid-2">
+    <div class="p-card"><span class="p-card-tag tag-gold">Experience</span><h3>20+ years with CreditXpert</h3><p>ISC has worked with the CreditXpert platform for more than two decades, giving our team deep familiarity with mortgage score simulation workflows.</p></div>
+    <div class="p-card"><span class="p-card-tag tag-green">Speed</span><h3>Typically about 30 minutes</h3><p>Most CreditXpert simulation requests are completed in about 30 minutes, helping you make a decision while the file is still moving.</p></div>
+    <div class="p-card"><span class="p-card-tag tag-blue">Service</span><h3>We run it for you</h3><p>You do not need to become the CreditXpert expert. Your ISC team runs the simulation and helps you understand the projected results.</p></div>
+    <div class="p-card"><span class="p-card-tag tag-amber">Workflow</span><h3>Connected to the next step</h3><p>If a simulation identifies a scenario worth pursuing, the same ISC team can help with the applicable supplement, documentation, or Rapid Rescore workflow.</p></div>
+  </div>
 </section>
 
 <section class="cs">
   <h2>Related ISC products</h2>
   <div class="card-grid-3">
-    <a class="p-card" href="/products/aus-soft-pull/" style="text-decoration:none"><span class="p-card-tag tag-green">No score impact</span><h3>AUS Soft Pull</h3><p>Zero score impact. Instant results. Prequal and AUS-supported options available.</p><span class="p-card-link">Learn more →</span></a>
-    <a class="p-card" href="/products/trended-credit-reports/" style="text-decoration:none"><span class="p-card-tag tag-blue">Full report</span><h3>Tri-Merge Credit Report</h3><p>When you're ready for the complete hard pull, instant delivery, all three bureaus.</p><span class="p-card-link">Learn more →</span></a>
-    <a class="p-card" href="/products/rapid-rescore/" style="text-decoration:none"><span class="p-card-tag tag-amber">Score work</span><h3>Rapid Rescore</h3><p>Update qualifying credit information quickly when documented changes may affect mortgage credit scores.</p><span class="p-card-link">Learn more →</span></a>
+    <a class="p-card" href="/products/rapid-rescore/" style="text-decoration:none"><span class="p-card-tag tag-amber">Execute</span><h3>Rapid Rescore</h3><p>Submit eligible verified credit changes for bureau review when timing matters.</p><span class="p-card-link">Learn more →</span></a>
+    <a class="p-card" href="/products/score-optimization/" style="text-decoration:none"><span class="p-card-tag tag-gold">Compare tools</span><h3>Score Optimization</h3><p>See ISC's broader mortgage score simulation options, including CreditXpert, ScoreNavigator, and the FICO Score Mortgage Simulator.</p><span class="p-card-link">Learn more →</span></a>
+    <a class="p-card" href="/products/credit-supplements/" style="text-decoration:none"><span class="p-card-tag tag-blue">Document</span><h3>Credit Supplements</h3><p>Request documented verification or updates on specific mortgage credit report items.</p><span class="p-card-link">Learn more →</span></a>
   </div>
-</section></main>
+</section>
+</main>
     <aside class="sticky-sb">
 <div class="sb-card">
-  <div class="sb-label">SmartSelect</div>
+  <div class="sb-label">CreditXpert service</div>
+  <div class="sb-stat"><div class="sb-num g">20+ years</div><div class="sb-desc">ISC experience working with CreditXpert</div></div>
+  <div class="sb-stat"><div class="sb-num g">~30 min</div><div class="sb-desc">Typical CreditXpert simulation turnaround</div></div>
+</div>
+<div class="sb-card">
+  <div class="sb-label">ISC handles the simulation</div>
   <div class="sb-list">
-    <div class="sb-li">Start with 1 bureau</div>
-    <div class="sb-li">Add 2nd or 3rd only when needed</div>
-    <div class="sb-li">Instant results</div>
-    <div class="sb-li">Flexible cost control</div>
-    <div class="sb-li">Works with hard or soft pulls</div>
+    <div class="sb-li">Target-score scenarios</div>
+    <div class="sb-li">Eligible what-if modeling</div>
+    <div class="sb-li">Projected outcome review</div>
+    <div class="sb-li">Hands-on explanation from your ISC team</div>
+    <div class="sb-li">Rapid Rescore planning when appropriate</div>
   </div>
 </div>
 <div class="sb-card">
-  <div class="sb-label">Related products</div>
-  <a class="sb-link" href="/products/aus-soft-pull/">AUS Soft Pull</a>
-  <a class="sb-link" href="/products/trended-credit-reports/">Tri-Merge Reports</a>
-  <a class="sb-link" href="/products/rapid-rescore/">Rapid Rescore</a>
-  <a class="sb-link" href="/products/score-optimization/">Score Optimization</a>
-  <a class="sb-link" href="/resources/smartselect-guide/">→ SmartSelect cascading pulls guide</a>
+  <div class="sb-label">Important</div>
+  <div class="sb-list">
+    <div class="sb-li">Results are estimates only</div>
+    <div class="sb-li">No score increase is guaranteed</div>
+    <div class="sb-li">Simulation does not change bureau data</div>
+    <div class="sb-li">Documentation may be required for next steps</div>
+  </div>
 </div>
 <div class="sb-card sb-dark">
-  <div class="sb-label">Get started</div>
+  <div class="sb-label">Request a CreditXpert simulation</div>
   <div class="sb-list" style="margin-bottom:.85rem">
-    <div class="sb-li">No setup fees</div>
-    <div class="sb-li">Dedicated support team</div>
+    <div class="sb-li">Available to ISC mortgage clients</div>
+    <div class="sb-li">Typically completed in about 30 minutes</div>
+    <div class="sb-li">Contact your rep for pricing</div>
   </div>
-  <a class="sb-cta" href="/contact/">Get started today</a>
-  <a class="sb-phone" href="tel:+18002902801">800-290-2801</a>
-</div></aside>
+  <a class="sb-cta-btn" href="/contact/">Get started today</a>
+  <a class="sb-phone-link" href="tel:+18002902801">800-290-2801</a>
+</div>
+</aside>
   </div>
 </div>
   <footer>
@@ -793,4 +909,5 @@ img, video { max-width: 100%; height: auto; }
           href="/consumer-assistance/">Consumer Assistance</a></div>
     </div>
   </footer>
-</body></html>
+</body>
+</html>
