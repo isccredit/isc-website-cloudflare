@@ -83,8 +83,8 @@ section.cs h2{font-family:var(--fd);font-size:1.55rem;color:var(--navy);margin-b
 section.cs h3{font-family:var(--fb);font-size:.96rem;font-weight:600;color:var(--navy);margin:1.5rem 0 .5rem;letter-spacing:0}
 section.cs p{font-size:.88rem;color:#4a3c2a;line-height:1.82;margin-bottom:.85rem}
 section.cs ul,section.cs ol{margin:.5rem 0 1rem 0;display:flex;flex-direction:column;gap:.48rem}
-section.cs li{font-size:.86rem;color:#4a3c2a;line-height:1.7;display:flex;align-items:flex-start;gap:.5rem}
-section.cs li::before{content:'→';color:var(--blue);font-weight:700;flex-shrink:0;margin-top:.05rem}
+section.cs li{font-size:.86rem;color:#4a3c2a;line-height:1.7;position:relative;padding-left:1.4rem}
+section.cs li::before{content:'→';color:var(--blue);font-weight:700;position:absolute;left:0;top:0}
 section.cs ol li{counter-increment:none}
 section.cs strong{color:var(--navy);font-weight:600}
 .callout{background:var(--white);border:1px solid var(--sand);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:.95rem 1.2rem;margin:1.2rem 0;font-size:.85rem;color:var(--navy);line-height:1.7}
@@ -626,11 +626,7 @@ img, video { max-width: 100%; height: auto; }
       <li><a href="/integrations/">Integrations</a></li>
       <li><a href="/insights/">Insights</a></li>
       <li><a href="/lender-solutions/">Lender Solutions</a></li>
-      <li class="nav-has-sub"><span class="nav-parent-label" tabindex="0">Why ISC</span>
-        <ul class="nav-sublist">
-          <li><a href="/why-isc/">Why Clients Switch to ISC</a></li>
-        </ul>
-      </li>
+      <li><a href="/why-isc/">Why ISC</a></li>
       <li><a href="/client-success/">Client Success</a></li>
       <li><a href="/resources/">Resources</a></li>
       <li><a href="/about/">About</a></li>
