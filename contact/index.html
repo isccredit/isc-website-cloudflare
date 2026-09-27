@@ -631,6 +631,7 @@ img, video { max-width: 100%; height: auto; }
         <option>Existing client support</option>
         <option>Billing question</option>
         <option>ISC Waypoint</option>
+        <option>Fee schedule request</option>
         <option>Other</option>
       </select>
     </div>
@@ -730,7 +731,8 @@ img, video { max-width: 100%; height: auto; }
   </footer>
 <script>
 (function(){try{var t=new URLSearchParams(location.search).get('topic');
-if(t==='waypoint'){var s=document.querySelector('select[name="inquiry-type"]');if(s){s.value='ISC Waypoint';}}}catch(e){}})();
+var map={'waypoint':'ISC Waypoint','fee-schedule':'Fee schedule request'};
+if(map[t]){var s=document.querySelector('select[name="inquiry-type"]');if(s){s.value=map[t];}}}catch(e){}})();
 </script>
 </body>
 </html>
