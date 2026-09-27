@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LOS Integrations | ISC Credit Connects With Your Workflow</title>
+<meta name="description" content="Connect ISC mortgage credit reporting with 25+ LOS platforms, including Encompass, Floify, MeridianLink, Fannie Mae DU, and Freddie Mac LP.">
+    <link rel="canonical" href="https://www.isccredit.com/integrations/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ISC Credit">
+<meta property="og:url" content="https://www.isccredit.com/integrations/">
+<meta property="og:title" content="LOS Integrations | ISC Credit Connects With Your Workflow">
+<meta property="og:description" content="Connect ISC mortgage credit reporting with 25+ LOS platforms, including Encompass, Floify, MeridianLink, Fannie Mae DU, and Freddie Mac LP.">
+<meta property="og:image" content="https://www.isccredit.com/ISC.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LOS Integrations | ISC Credit Connects With Your Workflow">
+<meta name="twitter:description" content="Connect ISC mortgage credit reporting with 25+ LOS platforms, including Encompass, Floify, MeridianLink, Fannie Mae DU, and Freddie Mac LP.">
+<meta name="twitter:image" content="https://www.isccredit.com/ISC.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0a1628;--navy2:#0f2040;--blue:#1a4fd6;
+  --gold:#f0b942;--gold-bg:rgba(240,185,66,.10);--gold-bd:rgba(240,185,66,.25);
+  --green:#16a34a;--green-bg:#dcfce7;
+  --amber:#d97706;--amber-bg:#fef3c7;
+  --red:#dc2626;--red-bg:#fee2e2;
+  --cream:#f7f5f0;--sand:#e8e0d0;--warm:#7a6e62;
+  --white:#fff;--off:#f7f8fc;--muted:#6b7a99;--border:#e8e0d0;--text:#2d2416;
+  --fd:'Playfair Display',Georgia,serif;--fb:'DM Sans',system-ui,sans-serif;
+}
+body{font-family:var(--fb);color:var(--text);background:var(--cream);line-height:1.6}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* NAV */
+nav{background:var(--white);border-bottom:1px solid var(--sand);padding:1.1rem 2.5rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 1px 6px rgba(10,22,40,.06)}
+.nav-logo{flex-shrink:0;font-family:var(--fd);font-size:1.45rem;color:var(--navy);font-weight:700;text-decoration:none;display:flex;align-items:center;gap:.4rem}
+.logo-dot{width:7px;height:7px;background:var(--gold);border-radius:50%;margin-bottom:.4rem}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a,.nav-links .nav-parent-label{font-size:.82rem;font-weight:500;color:var(--warm);text-decoration:none;transition:color .18s}
+.nav-links a:hover,.nav-links .nav-parent-label:hover,.nav-links .nav-parent-label:focus{color:var(--navy)}
+.nav-parent-label{cursor:default}
+.nav-right{display:flex;gap:.75rem;align-items:center}
+.nav-phone{font-size:.78rem;font-weight:600;color:var(--navy)}
+.nav-cta{background:var(--navy);color:var(--white);font-size:.8rem;font-weight:600;padding:.6rem 1.3rem;border-radius:5px;text-decoration:none}
+.nav-cta:hover{background:var(--navy2);text-decoration:none}
+
+/* HERO */
+.page-hero{background:var(--navy);padding:4.5rem 2.5rem 4rem;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:rgba(240,185,66,.04);border-radius:50%;pointer-events:none}
+.hero-inner{max-width:1100px;margin:0 auto}
+.hero-eyebrow{font-size:.65rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,185,66,.7);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.hero-eyebrow::before{content:'';width:20px;height:1px;background:var(--gold);opacity:.6}
+.hero-tag{display:inline-flex;align-items:center;gap:.4rem;background:var(--gold-bg);border:1px solid var(--gold-bd);color:var(--gold);font-size:.65rem;font-weight:600;padding:.25rem .7rem;border-radius:999px;margin-bottom:1rem;text-transform:uppercase;letter-spacing:.06em;width:fit-content}
+.hero-two-col{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center}
+.page-hero h1{font-family:var(--fd);font-size:2.5rem;color:var(--white);margin-bottom:.85rem;letter-spacing:-.02em;line-height:1.15;max-width:600px}
+.hero-sub{font-size:.9rem;color:rgba(255,255,255,.55);max-width:560px;line-height:1.78;margin-bottom:1.5rem}
+.hero-actions{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn-gold{background:var(--gold);color:var(--navy);font-size:.85rem;font-weight:700;padding:.8rem 1.6rem;border-radius:5px;border:none;cursor:pointer;font-family:var(--fb);text-decoration:none;display:inline-block;transition:all .2s}
+.btn-gold:hover{background:#e8a800;text-decoration:none}
+.btn-ghost{background:transparent;color:rgba(255,255,255,.75);font-size:.85rem;font-weight:500;padding:.8rem 1.4rem;border-radius:5px;border:1px solid rgba(255,255,255,.2);cursor:pointer;font-family:var(--fb);text-decoration:none;display:inline-block}
+.btn-ghost:hover{border-color:rgba(255,255,255,.55);color:#fff;text-decoration:none}
+.hero-speed-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:1.5rem;min-width:200px}
+.hsc-label{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.3);margin-bottom:1rem}
+.hsc-item{display:flex;align-items:center;gap:.75rem;padding:.7rem 0;border-bottom:.5px solid rgba(255,255,255,.08)}
+.hsc-item:last-child{border-bottom:none}
+.hsc-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.dot-g{background:#22c55e}.dot-b{background:#60a5fa}.dot-a{background:#f59e0b}
+.hsc-text{font-size:.78rem;font-weight:600;color:rgba(255,255,255,.85)}
+.hsc-sub{font-size:.67rem;color:rgba(255,255,255,.38);margin-top:.05rem}
+
+/* TRUST BAR */
+.trust-bar{background:var(--cream);border-bottom:1px solid var(--sand);padding:.9rem 2.5rem;display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap}
+.trust-item{font-size:.7rem;font-weight:600;color:#6b5a40;display:flex;align-items:center;gap:.4rem;text-transform:uppercase;letter-spacing:.04em}
+.trust-item::before{content:'✓';color:#c8a84b;font-weight:700}
+.trust-div{width:1px;height:14px;background:var(--sand)}
+
+/* LAYOUT */
+.page-body{max-width:1100px;margin:0 auto;padding:4rem 2.5rem}
+.body-grid{display:grid;grid-template-columns:1fr 290px;gap:3rem;align-items:start}
+.sticky-sb{position:sticky;top:88px;display:flex;flex-direction:column;gap:1rem}
+
+/* SIDEBAR */
+.sb-card{background:var(--white);border:1px solid var(--sand);border-radius:10px;padding:1.25rem}
+.sb-dark{background:var(--navy);border-color:transparent}
+.sb-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--warm);margin-bottom:.85rem}
+.sb-dark .sb-label{color:var(--gold)}
+.sb-stat{margin-bottom:.7rem;padding-bottom:.7rem;border-bottom:.5px solid var(--sand)}
+.sb-stat:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.sb-num{font-family:var(--fd);font-size:1.55rem;color:var(--navy);line-height:1;margin-bottom:.18rem}
+.sb-num.g{color:var(--green)}
+.sb-desc{font-size:.74rem;color:var(--warm);line-height:1.45}
+.sb-list{display:flex;flex-direction:column;gap:.42rem}
+.sb-li{font-size:.77rem;color:var(--text);display:flex;align-items:flex-start;gap:.42rem;line-height:1.4}
+.sb-li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;margin-top:.05rem}
+.sb-dark .sb-li{color:rgba(255,255,255,.7)}
+.sb-dark .sb-li::before{color:var(--gold)}
+.sb-cta-btn{display:block;background:var(--gold);color:var(--navy);font-size:.85rem;font-weight:700;padding:.8rem 1.25rem;border-radius:6px;text-align:center;text-decoration:none;margin-top:.75rem}
+.sb-cta-btn:hover{background:#e8a800;text-decoration:none}
+.sb-phone-link{display:block;text-align:center;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.55);margin-top:.55rem;text-decoration:none}
+.sb-phone-link:hover{color:#fff}
+.sb-related-item{display:flex;align-items:center;gap:.5rem;padding:.5rem 0;border-bottom:.5px solid var(--sand);font-size:.78rem;text-decoration:none;color:var(--blue);transition:color .18s}
+.sb-related-item:last-child{border-bottom:none}
+.sb-related-item:hover{color:var(--navy)}
+
+/* CONTENT */
+section.cs{margin-bottom:3rem;scroll-margin-top:100px}
+section.cs h2{font-family:var(--fd);font-size:1.55rem;color:var(--navy);margin-bottom:.9rem;letter-spacing:-.02em;padding-bottom:.55rem;border-bottom:2px solid var(--gold);display:inline-block}
+section.cs h3{font-family:var(--fb);font-size:.96rem;font-weight:600;color:var(--navy);margin:1.5rem 0 .5rem;letter-spacing:0}
+section.cs p{font-size:.88rem;color:#4a3c2a;line-height:1.82;margin-bottom:.85rem}
+section.cs ul{margin:.5rem 0 1rem 0;display:flex;flex-direction:column;gap:.48rem}
+section.cs li{font-size:.86rem;color:#4a3c2a;line-height:1.7;position:relative;padding-left:1.4rem}
+section.cs li::before{content:'→';color:var(--blue);font-weight:700;position:absolute;left:0;top:0}
+section.cs strong{color:var(--navy);font-weight:600}
+
+/* CALLOUTS */
+.callout{background:var(--white);border:1px solid var(--sand);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:.95rem 1.2rem;margin:1.2rem 0;font-size:.85rem;color:var(--navy);line-height:1.7}
+.callout strong{color:var(--navy)}
+.callout-green{border-left-color:var(--green);background:#f0fdf4;color:#14532d}
+.callout-blue{border-left-color:var(--blue);background:#eff6ff;color:#1e3a5f}
+.info-navy{background:var(--navy);border-radius:8px;padding:1.2rem 1.4rem;margin:1.2rem 0;font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.72}
+.info-navy strong{color:var(--gold)}
+
+/* CARDS */
+.card-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.2rem 0}
+.card-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:1.2rem 0}
+.p-card{background:var(--white);border:1px solid var(--sand);border-radius:10px;padding:1.2rem;transition:all .2s}
+.p-card:hover{border-color:var(--blue);box-shadow:0 4px 12px rgba(26,79,214,.08)}
+.p-card.featured{border-color:var(--gold);border-width:2px}
+.p-card-tag{font-size:.6rem;font-weight:700;padding:.18rem .52rem;border-radius:999px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:.65rem;display:inline-block}
+.tag-green{background:var(--green-bg);color:var(--green)}
+.tag-blue{background:#e8f0fe;color:var(--blue)}
+.tag-amber{background:var(--amber-bg);color:var(--amber)}
+.tag-gold{background:var(--gold-bg);border:1px solid var(--gold-bd);color:#9a7010}
+.tag-red{background:var(--red-bg);color:var(--red)}
+.p-card h3{font-size:.88rem;font-weight:600;color:var(--navy);margin:0 0 .38rem;letter-spacing:0;font-family:var(--fb)}
+.p-card p{font-size:.75rem;color:var(--warm);line-height:1.63;margin:0}
+.p-card-link{font-size:.72rem;font-weight:600;color:var(--blue);margin-top:.58rem;display:block}
+
+/* DARK STRIP */
+.dark-strip{background:var(--navy);border-radius:12px;padding:2rem;margin:1.5rem 0}
+.dark-strip h3{font-family:var(--fd);font-size:1.2rem;color:#fff;margin-bottom:1rem}
+.dark-strip p{font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.72;margin-bottom:.75rem}
+.dark-strip p:last-child{margin-bottom:0}
+.dark-strip strong{color:#fff}
+.dark-two{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.08);border-radius:8px;overflow:hidden;margin-top:1rem}
+.dark-col{background:var(--navy2);padding:1.1rem 1.25rem;font-size:.8rem;color:rgba(255,255,255,.65);line-height:1.65}
+.dark-col-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.35);margin-bottom:.55rem}
+.dark-col-label.gold{color:var(--gold)}
+
+/* STEPS */
+.step-list{display:flex;flex-direction:column;gap:.85rem;margin:1.2rem 0}
+.step-item{display:flex;align-items:flex-start;gap:1rem;background:var(--white);border:1px solid var(--sand);border-radius:10px;padding:1.1rem}
+.step-num{width:34px;height:34px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:1.1rem;color:var(--gold);font-weight:700;flex-shrink:0}
+.step-content h4{font-size:.86rem;font-weight:600;color:var(--navy);margin-bottom:.28rem;font-family:var(--fb);letter-spacing:0}
+.step-content p{font-size:.78rem;color:var(--warm);line-height:1.63;margin:0}
+
+/* TABLES */
+.data-table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.82rem}
+.data-table th{background:var(--navy);color:#fff;padding:.62rem 1rem;text-align:left;font-weight:600;font-size:.75rem}
+.data-table th:first-child{border-radius:8px 0 0 0}
+.data-table th:last-child{border-radius:0 8px 0 0}
+.data-table td{padding:.62rem 1rem;border-bottom:1px solid var(--sand);color:#4a3c2a;vertical-align:top}
+.data-table tr:last-child td{border-bottom:none}
+.data-table tr:nth-child(even) td{background:#faf8f5}
+.cell-yes{color:var(--green);font-weight:700}
+.cell-no{color:var(--red)}
+.cell-coming{color:var(--amber);font-weight:600}
+
+/* BREADCRUMB */
+/* FOOTER */
+footer{background:var(--navy2);padding:2.5rem 2.5rem;border-top:1px solid rgba(255,255,255,.07)}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2rem}
+.footer-logo{font-family:var(--fd);font-size:1.3rem;color:var(--white);font-weight:700;display:block;margin-bottom:.65rem}
+.footer-logo span{color:var(--gold)}
+.footer-tagline{font-size:.76rem;color:rgba(255,255,255,.38);line-height:1.7;margin-bottom:1rem;max-width:240px}
+.footer-contact a{display:block;font-size:.76rem;color:rgba(255,255,255,.5);margin-bottom:.32rem;text-decoration:none}
+.footer-contact a:hover{color:var(--gold)}
+.footer-col-title{font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.28);margin-bottom:.85rem}
+.footer-col ul{display:flex;flex-direction:column;gap:.55rem;list-style:none}
+.footer-col a{font-size:.76rem;color:rgba(255,255,255,.45);text-decoration:none}
+.footer-col a:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:1.25rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-copy{font-size:.7rem;color:rgba(255,255,255,.25)}
+.footer-legal{display:flex;gap:1.5rem}
+.footer-legal a{font-size:.7rem;color:rgba(255,255,255,.25);text-decoration:none}
+.footer-legal a:hover{color:var(--gold)}
+
+/* ============================================================ */
+/* RESPONSIVE - full coverage: desktop, tablet, mobile, small    */
+/* ============================================================ */
+
+/* Universal safety: prevent image/video overflow site-wide */
+img, video { max-width: 100%; height: auto; }
+
+/* Hamburger toggle styling (visible only on mobile) */
+.nav-burger { display: none; }
+.nav-burger::before { content: '\2630'; font-size: 1.55rem; color: var(--navy); line-height: 1; }
+#nav-toggle:checked ~ nav .nav-burger::before { content: '\2715'; }
+
+/* ----- TABLET LANDSCAPE / SMALL LAPTOP (<=1024px) ----- */
+@media (max-width: 1024px) {
+  .hero-inner, .hero-two-col, .body-grid, .founding-wrap, .data-wrap,
+  .program-wrap, .two-col, .support-wrap, .bm-compare, .bm-section-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  .sticky-sb {
+    position: static !important;
+    width: 100% !important;
+    margin-top: 2rem !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  .card-grid-3, .products-grid, .products-wrap, .reviews-grid,
+  .team-grid, .bureau-grid, .stats-3, .how-grid, .newsletter-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .why-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .los-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .footer-inner, .footer-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+  }
+}
+
+/* ----- TABLET / PHONE WIDE (<=768px) - NAV BECOMES HAMBURGER ----- */
+@media (max-width: 1024px) {
+  /* Nav: flex-wrap, show hamburger, hide links/right by default */
+  nav {
+    height: auto !important;
+    min-height: 60px !important;
+    padding: .75rem 1rem !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+  }
+  .nav-burger {
+    display: flex !important;
+    align-items: center !important;
+    cursor: pointer !important;
+    margin-left: auto !important;
+    padding: .25rem .5rem !important;
+  }
+  nav .nav-links,
+  nav .nav-right {
+    display: none !important;
+    flex-basis: 100% !important;
+    width: 100% !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    align-items: stretch !important;
+    margin-top: .75rem !important;
+  }
+  nav .nav-links li {
+    list-style: none !important;
+    border-top: 1px solid var(--sand) !important;
+  }
+  nav .nav-links li a,
+  nav .nav-links li .nav-parent-label {
+    display: block !important;
+    padding: .85rem 0 !important;
+    border-radius: 0 !important;
+  }
+  nav .nav-right a {
+    display: block !important;
+    padding: .85rem 0 !important;
+    border-top: 1px solid var(--sand) !important;
+    text-align: left !important;
+  }
+  nav .nav-right a.btn-primary,
+  nav .nav-right .btn-primary {
+    background: var(--navy) !important;
+    color: #fff !important;
+    text-align: center !important;
+    margin-top: .5rem !important;
+    border-top: none !important;
+    border-radius: 6px !important;
+    padding: .85rem 1rem !important;
+  }
+  #nav-toggle:checked ~ nav .nav-links,
+  #nav-toggle:checked ~ nav .nav-right {
+    display: flex !important;
+  }
+
+}
+
+  @media (max-width: 768px) {
+  /* Equal-split grids collapse */
+  .dark-two, .benefit-grid, .bm-compare, .bm-section-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  .form-row, .form-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+  .band { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
+
+  /* Tables overflow protection */
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
+}
+
+/* ----- MOBILE (<=600px) ----- */
+@media (max-width: 600px) {
+  .card-grid-3, .card-grid-2, .products-grid, .products-wrap,
+  .reviews-grid, .team-grid, .bureau-grid, .stats-3, .how-grid,
+  .newsletter-grid, .why-grid, .who-grid,
+  .footer-inner, .footer-grid, .los-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .section { padding: 2.5rem 0 !important; }
+  .section-inner { padding-left: 1rem !important; padding-right: 1rem !important; }
+  .hero { padding: 2.25rem 0 !important; }
+  .hero-inner { padding-left: 1rem !important; padding-right: 1rem !important; gap: 1.5rem !important; }
+  h1, .hero-h1 { font-size: 1.85rem !important; line-height: 1.2 !important; }
+  .section-h2 { font-size: 1.5rem !important; line-height: 1.25 !important; }
+  .hero-sub { font-size: 1rem !important; line-height: 1.55 !important; }
+  .section-sub { font-size: .9rem !important; }
+  .hero-actions {
+    flex-direction: column !important;
+    gap: .65rem !important;
+    align-items: stretch !important;
+  }
+  .hero-actions > a { text-align: center !important; display: block !important; }
+  .trust-bar {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    font-size: .68rem !important;
+    padding: .75rem .5rem !important;
+    gap: .5rem .85rem !important;
+  }
+  .trust-bar .ti, .ti { font-size: .68rem !important; }
+  .trust-bar .td, .trust-div { display: none !important; }
+
+  /* Comparison table - much tighter on mobile */
+  .comp-table { font-size: .72rem !important; line-height: 1.45 !important; }
+  .comp-table th[style*="width:170px"],
+  .comp-table .factor {
+    width: 80px !important;
+    font-size: .7rem !important;
+    font-weight: 600 !important;
+    padding: .5rem .35rem !important;
+  }
+  .comp-table th, .comp-table td { padding: .5rem .4rem !important; vertical-align: top !important; }
+  .data-table, .bm-table { font-size: .78rem !important; }
+  .data-table th, .data-table td, .bm-table th, .bm-table td {
+    padding: .55rem .5rem !important;
+  }
+
+  /* Benchmark chart axis on mobile: hide 5/15/25, smaller font */
+  #bm-anim div[style*="font-size:11px"] { font-size: 10px !important; }
+  #bm-anim span[style*="left:14.286%"],
+  #bm-anim span[style*="left:42.857%"],
+  #bm-anim span[style*="left:71.429%"] {
+    display: none !important;
+  }
+  /* Chart row label/value widths shrink */
+  #bm-anim div[style*="width:60px"] { width: 48px !important; font-size: .68rem !important; }
+  #bm-anim div[style*="width:112px"] { width: 78px !important; font-size: .67rem !important; }
+
+  /* Hero benchmark strip stacks */
+  .bm-strip, .bm-strip-row { flex-direction: column !important; gap: .75rem !important; }
+  .ctr-row, .proof-bar { flex-wrap: wrap !important; gap: .75rem !important; justify-content: center !important; }
+}
+
+/* ----- SMALL MOBILE (<=400px) ----- */
+@media (max-width: 400px) {
+  .section-inner, .hero-inner { padding-left: .85rem !important; padding-right: .85rem !important; }
+  h1, .hero-h1 { font-size: 1.6rem !important; }
+  .section-h2 { font-size: 1.35rem !important; }
+  .hero-sub, .section-sub { font-size: .88rem !important; }
+  #bm-anim div[style*="width:60px"] { width: 42px !important; font-size: .64rem !important; }
+  #bm-anim div[style*="width:112px"] { width: 70px !important; font-size: .63rem !important; }
+  /* Chart axis: keep only 0, 20, 30 on tiny screens */
+  #bm-anim span[style*="left:28.571%"] { display: none !important; }
+  /* Comp table: even tighter */
+  .comp-table { font-size: .68rem !important; }
+  .comp-table th[style*="width:170px"], .comp-table .factor { width: 70px !important; font-size: .66rem !important; }
+}
+
+/* Products submenu - desktop: hidden; mobile (in open hamburger): indented list */
+.nav-sublist { display: none; list-style: none; }
+@media (max-width: 1024px) {
+  #nav-toggle:checked ~ nav .nav-sublist {
+    display: block !important;
+    padding-left: 1.25rem !important;
+    background: rgba(0,0,0,0.025) !important;
+    border-top: 1px solid var(--sand) !important;
+  }
+  .nav-sublist li {
+    list-style: none !important;
+    border-top: 1px solid rgba(0,0,0,0.04) !important;
+  }
+  .nav-sublist li:first-child { border-top: none !important; }
+  .nav-sublist li a {
+    display: block !important;
+    padding: .55rem 0 !important;
+    font-size: .82rem !important;
+    color: var(--warm) !important;
+  }
+}
+
+
+/* Brand logo image in nav */
+.nav-logo img { flex-shrink: 0; display: block; height: 32px; width: auto; max-width: 100%; }
+@media (max-width: 600px) { .nav-logo img { height: 26px; } }
+
+/* Inline-grid override: catches divs that use inline style grid-template-columns instead of a class */
+@media (max-width: 1024px) {
+  [style*="grid-template-columns:1fr 360px"],
+  [style*="grid-template-columns: 1fr 360px"],
+  [style*="grid-template-columns:1fr 400px"],
+  [style*="grid-template-columns: 1fr 400px"],
+  [style*="grid-template-columns:1fr 340px"],
+  [style*="grid-template-columns: 1fr 340px"],
+  [style*="grid-template-columns:1fr 320px"],
+  [style*="grid-template-columns: 1fr 320px"],
+  [style*="grid-template-columns:1fr 290px"],
+  [style*="grid-template-columns: 1fr 290px"],
+  [style*="grid-template-columns:1fr 270px"],
+  [style*="grid-template-columns: 1fr 270px"],
+  [style*="grid-template-columns:repeat(3"],
+  [style*="grid-template-columns: repeat(3"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+  }
+}
+@media (max-width: 600px) {
+  [style*="grid-template-columns:1fr 1fr"],
+  [style*="grid-template-columns: 1fr 1fr"],
+  [style*="grid-template-columns:repeat(2"],
+  [style*="grid-template-columns: repeat(2"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* Hide the Source column on the benchmark table - every row is MeridianLink anyway */
+  .bm-table th:nth-child(5),
+  .bm-table td:nth-child(5) { display: none !important; }
+  /* And tighten the bm-table on mobile */
+  .bm-table { font-size: .78rem !important; }
+  .bm-table th, .bm-table td { padding: .55rem .5rem !important; vertical-align: top !important; }
+}
+
+/* Site-wide horizontal-overflow guard (mobile) */
+@media (max-width: 768px) {
+  html, body { overflow-x: hidden; max-width: 100vw; }
+  .data-table, .comp-table, .bm-table { width: 100% !important; }
+  /* hero-speed-card: allow shrinking on mobile */
+  .hero-speed-card { min-width: 0 !important; width: 100% !important; }
+}
+
+/* Long URL/word wrapping protection */
+@media (max-width: 768px) {
+  a, p, li, td, span { overflow-wrap: anywhere; word-break: break-word; }
+  /* But don't break phone-style number strings */
+  a[href^="tel:"] { word-break: keep-all; overflow-wrap: normal; }
+}
+
+/* Desktop Products dropdown (hover-activated, hidden on mobile where hamburger handles it) */
+@media (min-width: 1025px) {
+  .nav-has-sub { position: relative; }
+  .nav-has-sub > a::after,
+  .nav-has-sub > span.nav-parent-label::after {
+    content: ' \25BE';
+    font-size: .65em;
+    opacity: .7;
+    margin-left: .15em;
+  }
+  .nav-has-sub:hover > .nav-sublist,
+  .nav-has-sub:focus-within > .nav-sublist {
+    display: block !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--white);
+    border: 1px solid var(--sand);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(10,22,40,.12);
+    padding: .4rem 0;
+    min-width: 240px;
+    z-index: 300;
+    margin-top: 0;
+  }
+  .nav-has-sub > .nav-sublist li {
+    list-style: none;
+    border-top: none !important;
+  }
+  .nav-has-sub > .nav-sublist li a {
+    display: block !important;
+    padding: .55rem 1.1rem !important;
+    font-size: .82rem !important;
+    color: var(--warm) !important;
+    border-radius: 0 !important;
+  }
+  .nav-has-sub > .nav-sublist li a:hover {
+    background: var(--off, #f7f5f0);
+    color: var(--navy) !important;
+  }
+}
+
+    .btn-primary {
+      background: var(--navy, #0a1628);
+      color: #fff !important;
+      font-size: .8rem;
+      font-weight: 600;
+      padding: .55rem 1.25rem;
+      border-radius: 5px;
+      border: 2px solid var(--navy, #0a1628);
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s ease;
+    }
+    .btn-primary:hover {
+      background: var(--navy2, #0f2040);
+      border-color: var(--navy2, #0f2040);
+      text-decoration: none;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy2);
+      padding: 4rem 2.5rem 2rem;
+      border-top: 1px solid rgba(255, 255, 255, .07)
+    }
+
+    .footer-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem
+    }
+
+    .footer-logo {
+      font-family: var(--fd);
+      font-size: 1.4rem;
+      color: #fff;
+      font-weight: 700;
+      display: block;
+      margin-bottom: .6rem
+    }
+
+    .footer-logo span {
+      color: var(--gold)
+    }
+
+    .footer-tagline {
+      font-size: .77rem;
+      color: rgba(255, 255, 255, .33);
+      line-height: 1.72;
+      margin-bottom: 1.1rem;
+      max-width: 240px
+    }
+
+    .footer-contact a,
+    .footer-contact span {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .4);
+      margin-bottom: .4rem;
+      line-height: 1.5
+    }
+
+    .footer-contact a:hover {
+      color: var(--gold)
+    }
+
+    .fc-title {
+      font-size: .63rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: rgba(255, 255, 255, .8);
+      font-weight: 700;
+      margin-bottom: 1.25rem
+    }
+
+    .fc-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: .85rem
+    }
+
+    .fc-col a {
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .4);
+      transition: color .2s
+    }
+
+    .fc-col a:hover {
+      color: var(--gold)
+    }
+
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(255, 255, 255, .07);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem
+    }
+
+    .footer-copy {
+      font-size: .69rem;
+      color: rgba(255, 255, 255, .22)
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 1.75rem
+    }
+
+    .footer-legal a {
+      font-size: .69rem;
+      color: rgba(255, 255, 255, .22);
+      transition: color .18s
+    }
+
+    .footer-legal a:hover {
+      color: var(--gold)
+    }
+
+    @media (max-width: 1024px) {
+      .footer-inner,
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2rem !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-inner,
+      .footer-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ33YXF0Y7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XZ33YXF0Y7');
+</script>
+<!-- site-icons -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>@media (min-width:1025px) and (max-width:1400px){.nav-links{gap:.1rem!important}.nav-links a,.nav-links .nav-parent-label{padding:.45rem .55rem!important}}@media (min-width:1025px) and (max-width:1280px){nav{padding-left:1.25rem!important;padding-right:1.25rem!important}.nav-links a,.nav-links .nav-parent-label{font-size:.76rem!important;padding:.4rem .42rem!important;white-space:nowrap}.nav-right{gap:.6rem!important}.nav-right a{white-space:nowrap;font-size:.74rem!important}.nav-right .btn-primary{padding:.5rem .8rem!important}}@media (min-width:1025px) and (max-width:1100px){nav{padding-left:.9rem!important;padding-right:.9rem!important}.nav-links a,.nav-links .nav-parent-label{font-size:.72rem!important;padding:.35rem .3rem!important}.nav-right{gap:.45rem!important}.nav-right a{font-size:.7rem!important}.nav-right .btn-primary{padding:.45rem .65rem!important}}</style>
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<input type="checkbox" id="nav-toggle" hidden>
+  <nav>
+    <a class="nav-logo" href="/"><img src="/ISC.png" alt="ISC Credit"></a>
+    <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"></label>
+    <ul class="nav-links">
+      <li class="nav-has-sub"><a href="/products/">Products</a>
+        <ul class="nav-sublist">
+          <li><a href="/products/trended-credit-reports/">Trended Credit Reports</a></li>
+          <li><a href="/products/aus-soft-pull/">AUS Soft Pull</a></li>
+          <li><a href="/products/smartselect/">SmartSelect</a></li>
+          <li><a href="/products/rapid-rescore/">Rapid Rescore</a></li>
+          <li><a href="/products/credit-supplements/">Credit Supplements</a></li>
+          <li><a href="/products/score-optimization/">Score Optimization</a></li>
+          <li><a href="/products/creditxpert-score-simulation/">CreditXpert Score Simulation</a></li>
+          <li><a href="/products/borrower-verifications/">Borrower Verifications</a></li>
+        </ul>
+      </li>
+      <li><a href="/waypoint/">Waypoint</a></li>
+      <li><a href="/integrations/">Integrations</a></li>
+      <li><a href="/insights/">Insights</a></li>
+      <li><a href="/lender-solutions/">Lender Solutions</a></li>
+      <li><a href="/why-isc/">Why ISC</a></li>
+      <li><a href="/client-success/">Client Success</a></li>
+      <li><a href="/resources/">Resources</a></li>
+      <li><a href="/about/">About</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:+18002902801" style="font-size:.78rem;font-weight:600;color:var(--navy)">800-290-2801</a>
+      <a href="https://iscsite.meridianlink.com/custom/login.aspx" target="_blank" style="font-size:.78rem;font-weight:600;color:var(--navy)">Client Login</a>
+      <a class="btn-primary" href="/contact/">Get Started</a>
+    </div>
+  </nav>
+
+<div class="page-hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">LOS Integrations</div>
+    <div class="hero-tag">25+ active integrations · Connect to the systems you already use</div>
+    <h1>ISC connects directly with the LOS your team already uses</h1>
+    <p class="hero-sub">ISC integrates with 25+ leading loan origination systems, helping mortgage professionals order credit reports, receive results, and keep files moving without disrupting their workflow.</p>
+    <div class="hero-actions">
+      <a class="btn-gold" href="/contact/">Get started today &rarr;</a>
+      <a class="btn-ghost" href="tel:+18002902801">Call 800-290-2801</a>
+    </div>
+  </div>
+</div>
+<div class="trust-bar">
+  <div class="trust-item">25+ LOS Integrations</div><div class="trust-div"></div>
+  <div class="trust-item">Bi-directional</div><div class="trust-div"></div>
+  <div class="trust-item">Direct Results Delivery</div><div class="trust-div"></div>
+  <div class="trust-item">Reduced Manual Entry</div><div class="trust-div"></div>
+  <div class="trust-item">Simple Setup</div>
+</div>
+<div class="page-body">
+  <section class="cs">
+    <h2>All active LOS integrations</h2>
+    <p>ISC has invested in deep, bi-directional integrations with the loan origination systems your team uses every day. Order reports, receive results, and track status, all from inside your LOS without switching screens or entering data twice.</p>
+    <div class="card-grid-3">
+      <div class="p-card featured"><span class="p-card-tag tag-gold">Most used</span><h3>Encompass by ICE</h3><p>Full bi-directional integration with Encompass Partner Connect (EPC). Order all ISC products directly within Encompass, tri-merge, soft pull, supplements, verifications, with results returned automatically to the borrower's file. Milestone-based ordering available.</p></div>
+      <div class="p-card"><span class="p-card-tag tag-blue">Popular</span><h3>Floify</h3><p>Direct integration support for mortgage brokers on the Floify platform. Pull credit reports and receive results without leaving the Floify borrower portal workflow.</p></div>
+      <div class="p-card"><span class="p-card-tag tag-blue">Popular</span><h3>MeridianLink Mortgage</h3><p>Full integration with MeridianLink Mortgage LOS. ISC is an approved vendor in the MeridianLink ecosystem, connection setup is fast.</p></div>
+      <div class="p-card"><span class="p-card-tag tag-green">GSE Direct</span><h3>Fannie Mae Desktop Underwriter</h3><p>Direct integration with DU. Submit credit data for automated underwriting directly from your ISC order without re-entering borrower information.</p></div>
+      <div class="p-card"><span class="p-card-tag tag-green">GSE Direct</span><h3>Freddie Mac Loan Product Advisor</h3><p>Direct integration with LPA. Streamline the AUS submission process with direct data flow from ISC credit reports.</p></div>
+      <div class="p-card"><span class="p-card-tag tag-blue">Enterprise</span><h3>Black Knight / Empower</h3><p>Integration with the Black Knight Empower LOS for enterprise lenders. Full credit and verification ordering within the Empower workflow.</p></div>
+      <div class="p-card"><span class="p-card-tag tag-blue">Broker</span><h3>ARIVE</h3><p>Native integration for the ARIVE platform. ISC is a certified ARIVE credit reporting partner, connect your account in the ARIVE vendor directory in minutes.</p></div>
+      <div class="p-card"><span class="p-card-tag tag-blue">Digital</span><h3>Blend</h3><p>Connect ISC to the Blend digital lending platform for a smoother borrower and lender experience across the application and underwriting workflow.</p></div>
+      <div class="p-card"><span class="p-card-tag tag-blue">Broker</span><h3>LendingPad</h3><p>Full integration with the LendingPad LOS. Order all ISC credit products and receive results within your existing LendingPad workflow.</p></div>
+      <div class="p-card"><span class="p-card-tag tag-blue">Retail</span><h3>CloudVirga</h3><p>ISC integrates with the CloudVirga point-of-sale and LOS platform for retail and wholesale lenders managing high-volume borrower pipelines.</p></div>
+      <div class="p-card"><span class="p-card-tag tag-amber">CRM</span><h3>Salesforce</h3><p>CRM integration for lenders using Salesforce Financial Services Cloud in their mortgage origination workflow.</p></div>
+      <div class="p-card"><span class="p-card-tag tag-amber">Community</span><h3>LendSmart</h3><p>Integration with LendSmart Mortgage for community banks and credit unions managing residential mortgage origination.</p></div>
+      <div class="p-card"><span class="p-card-tag tag-amber">Non-QM</span><h3>LendingWise</h3><p>Private lending and bridge loan platform integration for non-QM, commercial bridge, and hard money lenders.</p></div>
+      <div class="p-card"><span class="p-card-tag tag-amber">Broker</span><h3>MLOflo</h3><p>Broker-focused LOS integration. Order ISC products and receive results without leaving your MLOflo workflow.</p></div>
+    </div>
+    <div class="callout">Don't see your LOS listed? These are 14 of ISC's most-used integrations, 25+ total are available. Contact your ISC support team. We add new integrations regularly and can often accommodate custom integrations for enterprise clients, call 800-290-2801 to discuss your specific LOS.</div>
+  </section>
+
+  <section class="cs">
+    <h2>Getting connected, it takes minutes</h2>
+    <div class="step-list">
+      <div class="step-item"><div class="step-num">1</div><div class="step-content"><h4>Complete ISC onboarding</h4><p>Following your onsite inspection (required by the credit bureaus), your ISC account is activated, typically within 1 business day. Your dedicated rep handles all onboarding paperwork and bureau credentialing.</p></div></div>
+      <div class="step-item"><div class="step-num">2</div><div class="step-content"><h4>Locate ISC in your LOS vendor directory</h4><p>Most LOS platforms have ISC pre-configured as an approved credit reporting vendor. Search for "Information Searching Company" or "ISC Credit" in your vendor or integration directory.</p></div></div>
+      <div class="step-item"><div class="step-num">3</div><div class="step-content"><h4>Enter your ISC credentials</h4><p>Your ISC support team provides your login credentials and walks you through any LOS-specific setup steps. This typically takes 5–15 minutes. Your rep stays on the call until your first test order is confirmed.</p></div></div>
+      <div class="step-item"><div class="step-num">4</div><div class="step-content"><h4>Place your first order and confirm delivery</h4><p>Pull a test report directly from your LOS and confirm results are delivered correctly to the borrower file. Most integrations can be set up quickly after credential entry.</p></div></div>
+    </div>
+  </section>
+
+  <section class="cs">
+    <h2>What flows through the integration</h2>
+    <div class="card-grid-2">
+      <div class="p-card"><span class="p-card-tag tag-green">Outbound from LOS</span><h3>What ISC receives automatically</h3>
+        <ul style="margin:0;list-style:none;display:flex;flex-direction:column;gap:.35rem">
+          <li style="font-size:.78rem;color:var(--warm);display:flex;align-items:flex-start;gap:.4rem;line-height:1.4"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span>Borrower name, SSN, date of birth</li>
+          <li style="font-size:.78rem;color:var(--warm);display:flex;align-items:flex-start;gap:.4rem;line-height:1.4"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span>Current and previous addresses</li>
+          <li style="font-size:.78rem;color:var(--warm);display:flex;align-items:flex-start;gap:.4rem;line-height:1.4"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span>Co-borrower information</li>
+          <li style="font-size:.78rem;color:var(--warm);display:flex;align-items:flex-start;gap:.4rem;line-height:1.4"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span>Report type selection</li>
+          <li style="font-size:.78rem;color:var(--warm);display:flex;align-items:flex-start;gap:.4rem;line-height:1.4"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span>Loan number for file association</li>
+        </ul>
+      </div>
+      <div class="p-card"><span class="p-card-tag tag-blue">Inbound to LOS</span><h3>What ISC delivers back automatically</h3>
+        <ul style="margin:0;list-style:none;display:flex;flex-direction:column;gap:.35rem">
+          <li style="font-size:.78rem;color:var(--warm);display:flex;align-items:flex-start;gap:.4rem;line-height:1.4"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span>Full credit report PDF to the borrower file</li>
+          <li style="font-size:.78rem;color:var(--warm);display:flex;align-items:flex-start;gap:.4rem;line-height:1.4"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span>Tri-bureau scores (Classic FICO; VantageScore 4.0 where supported)</li>
+          <li style="font-size:.78rem;color:var(--warm);display:flex;align-items:flex-start;gap:.4rem;line-height:1.4"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span>MISMO-formatted data for DU/LP submission</li>
+          <li style="font-size:.78rem;color:var(--warm);display:flex;align-items:flex-start;gap:.4rem;line-height:1.4"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span>Supplement updates to existing files</li>
+          <li style="font-size:.78rem;color:var(--warm);display:flex;align-items:flex-start;gap:.4rem;line-height:1.4"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span>Verification results (VOI, VOE, flood, SSA-89)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <a class="footer-logo" href="/">ISC<span>.</span></a>
+        <p class="footer-tagline">Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. Costa
+          Mesa, California.</p>
+        <div class="footer-contact">
+          <a href="tel:+18002902801">800-290-2801</a>
+          <a href="mailto:support@isccredit.com">support@isccredit.com</a>
+          <a href="https://www.google.com/maps?cid=850364998172701238" target="_blank" rel="noopener">1503 South
+            Coast Drive Suite 205, Costa Mesa, CA 92626</a>
+          <span>Mon&ndash;Fri &middot; 9:00 AM&ndash;5:00 PM Pacific Time</span>
+        </div>
+      </div>
+      <div class="fc-col">
+        <p class="fc-title"><a href="/products/" style="color:inherit;text-decoration:none">Products</a></p>
+        <ul>
+          <li><a href="/products/aus-soft-pull/">AUS Soft Pull</a></li>
+          <li><a href="/products/trended-credit-reports/">Mortgage Credit Reports</a></li>
+          <li><a href="/products/smartselect/">SmartSelect</a></li>
+          <li><a href="/products/rapid-rescore/">Rapid Rescore</a></li>
+          <li><a href="/products/credit-supplements/">Supplements</a></li>
+          <li><a href="/products/score-optimization/">Score Optimization</a></li>
+          <li><a href="/products/creditxpert-score-simulation/">CreditXpert Simulation</a></li>
+          <li><a href="/products/borrower-verifications/">Verifications</a></li>
+        </ul>
+      </div>
+      <div class="fc-col">
+        <p class="fc-title">Company</p>
+        <ul>
+          <li><a href="/about/">About ISC</a></li>
+          <li><a href="/why-isc/">Why Switch to ISC</a></li>
+          <li><a href="/waypoint/">ISC Waypoint</a></li>
+          <li><a href="/integrations/">Integrations</a></li>
+          <li><a href="/insights/">Insights</a></li>
+          <li><a href="/lender-solutions/">Lender Solutions</a></li>
+          <li><a href="/client-support/">Client Support</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="https://iscsite.meridianlink.com/custom/login.aspx" target="_blank" rel="noopener">Client Login</a></li>
+        </ul>
+      </div>
+      <div class="fc-col">
+        <p class="fc-title">Help &amp; Legal</p>
+        <ul>
+          <li><a href="/consumer-assistance/">Consumer Assistance</a></li>
+          <li><a href="/borrower-credit-education/">Borrower Credit Education</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/terms-of-use/">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Information Searching Company &middot; Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. &middot; Costa Mesa, CA 92626</p>
+      <div class="footer-legal"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-use/">Terms of Use</a><a
+          href="/consumer-assistance/">Consumer Assistance</a></div>
+    </div>
+  </footer>
+</body>
+</html>
