@@ -710,7 +710,7 @@ img, video { max-width: 100%; height: auto; }
     </ul>
     <div class="nav-right">
       <a href="tel:+18002902801" style="font-size:.78rem;font-weight:600;color:var(--navy)">800-290-2801</a>
-      <a href="https://iscsite.meridianlink.com/custom/login.aspx" target="_blank" style="font-size:.78rem;font-weight:600;color:var(--navy)">Client Login</a>
+      <a href="https://iscsite.cra.xedalink.net/" target="_blank" style="font-size:.78rem;font-weight:600;color:var(--navy)">Client Login</a>
       <a class="btn-primary" href="/contact/">Get Started</a>
     </div>
   </nav>
@@ -766,8 +766,9 @@ img, video { max-width: 100%; height: auto; }
         </thead>
       <tbody id="benchmark-archive-body">
           
-          <tr class="pending"><td>September 2026</td><td>Available October 1</td><td></td><td></td><td style="font-size:.72rem;color:var(--muted)">MeridianLink</td></tr>
-<tr><td><strong>August 2026</strong></td><td><span class="isc-num" style="font-size:1.15rem">0.9 hrs</span></td><td class="ind-num" style="color:#e2504d">24.7 hrs</td><td><span class="hundred" title="Ranked #1 by MeridianLink">#1</span></td><td style="font-size:.72rem;color:var(--muted)">MeridianLink</td></tr>
+          <tr class="pending"><td>October 2026</td><td>Available November 1</td><td></td><td></td><td style="font-size:.72rem;color:var(--muted)">MeridianLink</td></tr>
+<tr><td><strong>September 2026</strong></td><td><span class="isc-num" style="font-size:1.15rem">0.7 hrs</span></td><td class="ind-num" style="color:#e2504d">26.6 hrs</td><td><span class="hundred" title="Ranked #1 by MeridianLink">#1</span></td><td style="font-size:.72rem;color:var(--muted)">MeridianLink</td></tr>
+          <tr><td>August 2026</td><td><span class="isc-num">0.9 hrs</span></td><td class="ind-num" style="color:#e2504d">24.7 hrs</td><td><span class="hundred" title="Ranked #1 by MeridianLink">#1</span></td><td style="font-size:.72rem;color:var(--muted)">MeridianLink</td></tr>
           <tr><td>July 2026</td><td><span class="isc-num">0.6 hrs</span></td><td class="ind-num" style="color:#e2504d">26.3 hrs</td><td><span class="hundred" title="Ranked #1 by MeridianLink">#1</span></td><td style="font-size:.72rem;color:var(--muted)">MeridianLink</td></tr>
           <tr><td>June 2026</td><td><span class="isc-num">1.0 hrs</span></td><td class="ind-num" style="color:#e2504d">27.3 hrs</td><td><span class="hundred" title="Ranked #1 by MeridianLink">#1</span></td><td style="font-size:.72rem;color:var(--muted)">MeridianLink</td></tr>
           <tr><td>May 2026</td><td><span class="isc-num">1.5 hrs</span></td><td class="ind-num" style="color:#e2504d">26.8 hrs</td><td><span class="hundred" title="Ranked #1 by MeridianLink">#1</span></td><td style="font-size:.72rem;color:var(--muted)">MeridianLink</td></tr>
@@ -784,7 +785,7 @@ img, video { max-width: 100%; height: auto; }
         </tbody>
       </table>
     </div>
-    <p class="bm-table-note">Source: MeridianLink Industry Benchmark Dashboard, which reports supplements as trade turnaround. ISC ranked #1 each month shown.</p>
+    <p class="bm-table-note">Source: MeridianLink Industry Benchmark Dashboard, which reports supplements as trade turnaround. <span id="bm-table-note-rank">ISC ranked #1 each month shown.</span></p>
   </div>
 </section>
 
@@ -938,7 +939,7 @@ img, video { max-width: 100%; height: auto; }
           <li><a href="/lender-solutions/">Lender Solutions</a></li>
           <li><a href="/client-support/">Client Support</a></li>
           <li><a href="/contact/">Contact</a></li>
-          <li><a href="https://iscsite.meridianlink.com/custom/login.aspx" target="_blank" rel="noopener">Client Login</a></li>
+          <li><a href="https://iscsite.cra.xedalink.net/" target="_blank" rel="noopener">Client Login</a></li>
         </ul>
       </div>
       <div class="fc-col">
@@ -952,7 +953,7 @@ img, video { max-width: 100%; height: auto; }
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">&copy; 2026 Information Searching Company &middot; Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. &middot; Costa Mesa, CA 92626</p>
+      <p class="footer-copy">&copy; 2026 Information Searching Company &middot; Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. ISC Credit provides consumer reports and mortgage-related verification services to authorized business users with a permissible purpose under the FCRA. &middot; Costa Mesa, CA 92626</p>
       <div class="footer-legal"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-use/">Terms of Use</a><a
           href="/consumer-assistance/">Consumer Assistance</a></div>
     </div>
@@ -1040,6 +1041,15 @@ img, video { max-width: 100%; height: auto; }
     });
 
     archiveBody.innerHTML = html;
+
+    // the note under the table says only what the rows shown support
+    const note = document.getElementById('bm-table-note-rank');
+    if (note) {
+      const ones = records.filter(r => Number(r.rank) === 1).length;
+      note.textContent = ones === records.length
+        ? 'ISC ranked #1 each month shown.'
+        : `ISC ranked #1 in ${ones} of the ${records.length} months shown.`;
+    }
 
   } catch (error) {
     console.error('Benchmark archive error:', error);

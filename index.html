@@ -2320,6 +2320,11 @@
 .hp .rpt-t{font-size:.95rem;font-weight:700;color:var(--hp-ink)}
 .hp .rpt-d{font-size:.85rem;line-height:1.55;color:var(--hp-body)}
 .hp .rpt-n{font-size:.75rem;color:var(--hp-muted)}
+.hp a.rpt-paper{display:block;text-decoration:none;cursor:zoom-in;transition:transform .2s ease,box-shadow .2s ease}
+.hp a.rpt-paper:hover,.hp a.rpt-paper:focus-visible{transform:rotate(0deg) scale(1.02);box-shadow:0 26px 54px rgba(10,22,40,.2),0 2px 6px rgba(10,22,40,.08)}
+.hp a.rpt-paper:focus-visible{outline:2px solid var(--hp-ink);outline-offset:4px}
+.hp .rpt-btn{align-self:flex-start;display:inline-flex;align-items:center;gap:.35rem;white-space:nowrap;margin-top:.6rem;min-height:44px;padding:.55rem 1rem;border:1.5px solid var(--hp-ink);border-radius:4px;color:var(--hp-ink);font-size:.9rem;font-weight:700;text-decoration:none;background:#fff}
+.hp .rpt-btn:hover,.hp .rpt-btn:focus-visible{background:var(--hp-ink);color:#fff;text-decoration:none}
 
 /* ---- waypoint ---- */
 .hp .pin{display:flex;align-items:center;gap:.5rem}
@@ -2347,6 +2352,9 @@
 .hp .wc-body{padding:1.25rem 1.6rem 1.5rem;display:flex;flex-direction:column;gap:.55rem}
 .hp .wc-body .eb{font-size:.625rem;font-weight:700;letter-spacing:.16em;color:var(--hp-muted)}
 .hp .wc-body p{font-size:.8rem;line-height:1.5}
+.hp .wc-br{display:flex;flex-wrap:wrap;align-items:center;gap:.25rem 1.1rem;font-weight:600;color:var(--hp-ink)}
+.hp .wc-b{white-space:nowrap}
+.hp .wc-sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin:0 .4rem 0 0;vertical-align:baseline}
 .hp .wc-look{margin-top:.5rem;padding:.95rem 1.05rem;border:2px solid var(--hp-gold-deep);border-radius:8px;background:#fff;display:flex;align-items:baseline;gap:1rem}
 .hp .wc-look strong{font-family:var(--fd);font-size:1.75rem;font-weight:700;color:var(--hp-ink);flex-shrink:0}
 .hp .wc-look span{font-size:.75rem;line-height:1.5;color:var(--hp-body)}
@@ -2531,6 +2539,24 @@
     <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
+<!-- NAMB NATIONAL BANNER: temporary. Remove after the show (takedown: evening of the last exhibit day).
+     To remove: delete this block, from this comment to the closing NAMB comment below. -->
+<style>
+.namb-bar{background:#0a1628;color:#fff;border-bottom:2px solid #f0b942;font:500 .9rem/1.4 "DM Sans",system-ui,sans-serif}
+.namb-bar .in{max-width:1280px;margin:0 auto;padding:.6rem 1.25rem;display:flex;align-items:center;justify-content:center;gap:.4rem 1rem;flex-wrap:wrap;text-align:center}
+.namb-bar p{margin:0}
+.namb-bar b{color:#f0b942;font-weight:600}
+.namb-bar .dt{color:rgba(255,255,255,.72)}
+.namb-bar a{color:#0a1628;background:#f0b942;font-weight:600;padding:.3rem .8rem;border-radius:3px;text-decoration:none;white-space:nowrap}
+.namb-bar a:hover,.namb-bar a:focus-visible{background:#fff;text-decoration:none}
+@media (max-width:600px){.namb-bar{font-size:.84rem}.namb-bar .dt{display:block;width:100%}}
+</style>
+<div class="namb-bar" role="region" aria-label="Event announcement"><div class="in">
+<p>Meet ISC Credit at <b>NAMB National</b>, Booth 209</p>
+<p class="dt">October 16 to 19 &middot; Caesars Palace, Las Vegas</p>
+<a href="/contact/?topic=namb">Set up a time to meet</a>
+</div></div>
+<!-- /NAMB NATIONAL BANNER -->
 <input type="checkbox" id="nav-toggle" hidden>
   <nav>
     <a class="nav-logo" href="/"><img src="/ISC.png" alt="ISC Credit"></a>
@@ -2559,7 +2585,7 @@
     </ul>
     <div class="nav-right">
       <a href="tel:+18002902801" style="font-size:.78rem;font-weight:600;color:var(--navy)">800-290-2801</a>
-      <a href="https://iscsite.meridianlink.com/custom/login.aspx" target="_blank" style="font-size:.78rem;font-weight:600;color:var(--navy)">Client Login</a>
+      <a href="https://iscsite.cra.xedalink.net/" target="_blank" style="font-size:.78rem;font-weight:600;color:var(--navy)">Client Login</a>
       <a class="btn-primary" href="/contact/">Get Started</a>
     </div>
   </nav>
@@ -2589,17 +2615,17 @@
         <div class="ta-tile ta-isc">
           <span class="ta-who">ISC</span>
           <span class="ta-day" id="hp-ta-isc-day">Monday</span>
-          <span class="ta-time" id="hp-ta-isc-time">by 10:00 AM</span>
+          <span class="ta-time" id="hp-ta-isc-time">by 9:54 AM</span>
           <span class="ta-dur" id="hp-ta-isc-dur">about 1 hour</span>
         </div>
         <div class="ta-tile ta-ind">
           <span class="ta-who">Industry average</span>
           <span class="ta-day" id="hp-ta-ind-day">Tuesday</span>
-          <span class="ta-time" id="hp-ta-ind-time">by 11:36 AM</span>
-          <span class="ta-dur" id="hp-ta-ind-dur">about 27 hours</span>
+          <span class="ta-time" id="hp-ta-ind-time">by 11:18 AM</span>
+          <span class="ta-dur" id="hp-ta-ind-dur">about 26 hours</span>
         </div>
       </div>
-      <p class="ta-src"><span id="hp-ta-src">ISC averaged 1.0 hours against a 26.6-hour industry average, March to August 2026, MeridianLink Industry Benchmark, which reports supplements as trade turnaround.</span><br>Historical averages shown. Individual turnaround varies by request.</p>
+      <p class="ta-src"><span id="hp-ta-src">ISC averaged 0.9 hours against a 26.3-hour industry average, April to September 2026, MeridianLink Industry Benchmark, which reports supplements as trade turnaround.</span><br>Historical averages shown. Individual turnaround varies by request.</p>
     </div>
   </div>
 </section>
@@ -2625,16 +2651,16 @@
       <p class="lead">One account. One invoice. One support team that knows your workflow.</p>
       <a class="tlink" href="/products/">View all products &rarr;</a>
       <figure class="rpt">
-        <div class="rpt-paper"><img src="/assets/sample-credit-report.jpg" alt="Sample ISC merged infile credit report, first page, for a fictitious test borrower" width="900" height="1106" loading="lazy" decoding="async"></div>
-        <figcaption><span class="rpt-t">Your report, your layout.</span><span class="rpt-d">Include trended data and set the order tradelines appear. This sample lists open, then closed, then derogatory accounts.</span><span class="rpt-n">Sample report. Test file with a fictitious borrower.</span></figcaption>
+        <a class="rpt-paper" href="/assets/isc-sample-credit-report.pdf" target="_blank" rel="noopener" aria-label="View the full sample credit report (PDF, 12 pages, opens in a new tab)"><img src="/assets/sample-credit-report.jpg" alt="Sample ISC merged infile credit report, first page, for a fictitious test borrower" width="900" height="1106" loading="lazy" decoding="async"></a>
+        <figcaption><span class="rpt-t">Your report, your layout.</span><span class="rpt-d">Include trended data and set the order tradelines appear. This sample lists open, then closed, then derogatory accounts.</span><span class="rpt-n">Sample report. Test file with a fictitious borrower.</span><a class="rpt-btn" href="/assets/isc-sample-credit-report.pdf" target="_blank" rel="noopener">View full sample report &rarr;</a><span class="rpt-n">12-page PDF, opens in a new tab. Personal identifiers blurred.</span></figcaption>
       </figure>
     </div>
     <div class="prod-list">
       <a class="prow" href="/products/aus-soft-pull/"><span class="pnum">01</span><span class="pname">AUS Soft Pull</span><span class="pdesc">Review credit before a hard inquiry, with no score impact. Reissue into DU or LPA where supported.</span><span class="parr" aria-hidden="true">&rarr;</span></a>
-      <a class="prow" href="/products/trended-credit-reports/"><span class="pnum">02</span><span class="pname">Trended Credit Reports</span><span class="pdesc">Tri-merge with Classic FICO and trended data included, VantageScore 4.0 where supported.</span><span class="parr" aria-hidden="true">&rarr;</span></a>
+      <a class="prow" href="/products/trended-credit-reports/"><span class="pnum">02</span><span class="pname">Trended Credit Reports</span><span class="pdesc">Tri-merge with Classic FICO and trended data included, VantageScore 4.0 opt-in where supported.</span><span class="parr" aria-hidden="true">&rarr;</span></a>
       <a class="prow" href="/products/smartselect/"><span class="pnum">03</span><span class="pname">SmartSelect</span><span class="pdesc">Start with the lower-cost product and escalate by your own criteria.</span><span class="parr" aria-hidden="true">&rarr;</span></a>
-      <a class="prow" href="/products/credit-supplements/"><span class="pnum">04</span><span class="pname">Credit Supplements</span><span class="pdesc">Updated tradeline information from creditors, most completed within the hour. Timelines vary by file.</span><span class="parr" aria-hidden="true">&rarr;</span></a>
-      <a class="prow" href="/products/rapid-rescore/"><span class="pnum">05</span><span class="pname">Rapid Rescore</span><span class="pdesc">Submit verified, eligible updates for bureau review. Standard 2 to 5 business days, with a 24-hour rush option. Results and timing are not guaranteed and depend on documentation and bureau processing.</span><span class="parr" aria-hidden="true">&rarr;</span></a>
+      <a class="prow" href="/products/credit-supplements/"><span class="pnum">04</span><span class="pname">Credit Supplements</span><span class="pdesc">Updated tradeline information from creditors, often completed within an hour. Timelines vary by file.</span><span class="parr" aria-hidden="true">&rarr;</span></a>
+      <a class="prow" href="/products/rapid-rescore/"><span class="pnum">05</span><span class="pname">Rapid Rescore</span><span class="pdesc">Submit verified, eligible updates for bureau review. Standard 1 to 5 business days, with a 24-hour rush option. Results and timing are not guaranteed and depend on documentation and bureau processing.</span><span class="parr" aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>
@@ -2647,10 +2673,11 @@
       <h2 class="wp-h" id="hp-wp">You are here.</h2>
       <p class="lead">A monthly and quarterly report that shows where your company's credit ordering stands, built from your own ISC account activity.</p>
       <div class="wp-points"><ul>
-        <li><span class="ar" aria-hidden="true">&rarr;</span><span>Total orders, spend and cost per order</span></li>
-        <li><span class="ar" aria-hidden="true">&rarr;</span><span>Which loan officers and processors are ordering, and how often</span></li>
-        <li><span class="ar" aria-hidden="true">&rarr;</span><span>Frozen and missing bureaus, listed by borrower</span></li>
-        <li><span class="ar" aria-hidden="true">&rarr;</span><span>Every quarter, how volume, spend and team ordering are changing</span></li>
+        <li><span class="ar" aria-hidden="true">&rarr;</span><span>Files still waiting on a bureau, oldest first</span></li>
+        <li><span class="ar" aria-hidden="true">&rarr;</span><span>Earlier files still moving through the pipeline</span></li>
+        <li><span class="ar" aria-hidden="true">&rarr;</span><span>Each loan officer's orders, scores and repeat pulls</span></li>
+        <li><span class="ar" aria-hidden="true">&rarr;</span><span>Each branch on its own pages, in its own color</span></li>
+        <li><span class="ar" aria-hidden="true">&rarr;</span><span>Every quarter, how volume and each branch are changing</span></li>
       </ul></div>
       <div class="btns">
         <a class="btn btn-gold" href="/waypoint/">See what Waypoint shows</a>
@@ -2659,27 +2686,28 @@
     </div>
     <div>
       <div class="stackwrap">
-        <div class="q-behind" aria-hidden="true"><div><span class="q-full">ISC WAYPOINT &middot; QUARTERLY REVIEW &middot; Q3 2026 &middot; JULY TO SEPTEMBER</span><span class="q-short">QUARTERLY REVIEW &middot; Q3 2026</span></div></div>
+        <div class="q-behind" aria-hidden="true"><div><span class="q-full">ISC WAYPOINT &middot; QUARTERLY REPORT &middot; JUNE TO AUGUST 2026</span><span class="q-short">QUARTERLY REPORT &middot; JUN TO AUG 2026</span></div></div>
         <div class="wcard">
           <div class="wc-head">
             <span class="wc-eb">ISC CREDIT</span>
             <span class="wc-co">Harborline Mortgage Partners, LLC</span>
-            <span class="wc-sub">ISC Waypoint &middot; Credit Operations Review &middot; September 2026</span>
+            <span class="wc-sub">ISC Waypoint &middot; Monthly Report &middot; August 2026</span>
           </div>
           <div class="wc-kpis">
-            <div><span>BORROWER ORDERS</span><strong>112</strong></div>
-            <div><span>NET BILLED</span><strong>$11,403</strong></div>
-            <div><span>THREE-BUREAU</span><strong>87.5%</strong></div>
-            <div><span>MEDIAN MID</span><strong>724</strong></div>
-            <div><span>COST PER ORDER</span><strong>$102</strong></div>
-            <div><span>USERS ORDERING</span><strong>11</strong></div>
+            <div><span>BORROWER ORDERS</span><strong>56</strong></div>
+            <div><span>USERS ORDERING</span><strong>15</strong></div>
+            <div><span>THREE-BUREAU</span><strong>82.1%</strong></div>
+            <div><span>MEDIAN SCORE</span><strong>718</strong></div>
+            <div><span>WAITING ON A BUREAU</span><strong>7</strong></div>
+            <div><span>COST PER ORDER</span><strong>$112</strong></div>
           </div>
           <div class="wc-body">
             <span class="eb">OWNER SNAPSHOT</span>
-            <p>112 borrower orders in September, plus 8 frozen bureau copies and 2 refreshes.</p>
-            <p>8 frozen bureaus recovered through a bureau copy for $180.00 in total.</p>
-            <p>6 files still missing a bureau at month end, each one named.</p>
-            <div class="wc-look"><strong>$1,791.25</strong><span>worth a second look across 21 files, where a lower-cost route may have been available or a paid pull returned no usable score</span></div>
+            <p>56 borrower orders in August across two branches.</p>
+            <p class="wc-br"><span class="wc-b"><i class="wc-sw" style="background:#0E7C7B" aria-hidden="true"></i>Northshore 44 orders</span> <span class="wc-b"><i class="wc-sw" style="background:#8A3B7E" aria-hidden="true"></i>Canyon Ridge 12 orders</span></p>
+            <p>7 files waiting on a bureau at month end, the oldest 25 days open, each one named.</p>
+            <p>2 files cleared through a bureau copy for $32.00.</p>
+            <div class="wc-look"><strong>$793.10</strong><span>worth a second look across 10 files: repeat pulls with no reason on the file, and paid pulls that returned no usable score</span></div>
           </div>
         </div>
       </div>
@@ -2732,7 +2760,7 @@
   <div class="wrap">
     <p class="eyebrow bm-eb">MeridianLink benchmark</p>
     <h2 class="h2" id="benchmark-streak-title" style="margin-top:.75rem">Ranked #1 in supplement turnaround every month since June 2025.</h2>
-    <p class="bm-sub" id="benchmark-streak-range">Based on MeridianLink Industry Benchmark data from June 2025 through August 2026.</p>
+    <p class="bm-sub" id="benchmark-streak-range">Based on MeridianLink Industry Benchmark data from June 2025 through September 2026.</p>
     <div class="bm-card">
       <div class="stack">
         <p class="eyebrow">MeridianLink Industry Benchmarks</p>
@@ -2741,25 +2769,25 @@
         <a class="pill" href="/insights/">View benchmark history &rarr;</a>
       </div>
       <div class="stack">
-        <div class="x27"><strong id="hp-x">27&times;</strong><span>faster than the industry average for supplement turnaround</span></div>
+        <div class="x27"><strong id="hp-x">28&times;</strong><span>faster than the industry average for supplement turnaround</span></div>
         <div class="bm-tiles">
-          <div><span>ISC</span><strong id="hp-bm-isc">1.0 hrs</strong></div>
-          <div><span>INDUSTRY AVERAGE</span><strong id="hp-bm-ind">26.6 hrs</strong></div>
+          <div><span>ISC</span><strong id="hp-bm-isc">0.9 hrs</strong></div>
+          <div><span>INDUSTRY AVERAGE</span><strong id="hp-bm-ind">26.3 hrs</strong></div>
         </div>
-        <p class="bm-per" id="hp-bm-per">Six-month average, Mar 2026 to Aug 2026.</p>
+        <p class="bm-per" id="hp-bm-per">Six-month average, Apr 2026 to Sep 2026.</p>
         <div class="chart">
           <div class="chart-hd"><span>ISC, MONTH BY MONTH</span><span>0 TO 2 HOURS</span></div>
           <div class="bars" id="hp-bars" aria-hidden="true">
-            <div class="bar"><i style="height:50%" title="Mar 2026: 1.0 hrs"></i></div>
             <div class="bar"><i style="height:45%" title="Apr 2026: 0.9 hrs"></i></div>
             <div class="bar"><i style="height:75%" title="May 2026: 1.5 hrs"></i></div>
             <div class="bar"><i style="height:50%" title="Jun 2026: 1.0 hrs"></i></div>
             <div class="bar"><i style="height:30%" title="Jul 2026: 0.6 hrs"></i></div>
             <div class="bar"><i style="height:45%" title="Aug 2026: 0.9 hrs"></i></div>
+            <div class="bar"><i style="height:35%" title="Sep 2026: 0.7 hrs"></i></div>
           </div>
-          <div class="bar-lbl" id="hp-bar-lbl" aria-hidden="true"><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span></div>
-          <table class="sr-only" id="hp-bm-table"><caption>ISC supplement turnaround by month, hours</caption><tbody><tr><th>Mar 2026</th><td>1.0</td></tr><tr><th>Apr 2026</th><td>0.9</td></tr><tr><th>May 2026</th><td>1.5</td></tr><tr><th>Jun 2026</th><td>1.0</td></tr><tr><th>Jul 2026</th><td>0.6</td></tr><tr><th>Aug 2026</th><td>0.9</td></tr></tbody></table>
-          <p class="chart-note" id="hp-chart-note">Never above 1.5 hours in six months. On this axis the 26.6-hour industry average would sit about 13 chart-widths to the right.</p>
+          <div class="bar-lbl" id="hp-bar-lbl" aria-hidden="true"><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span></div>
+          <table class="sr-only" id="hp-bm-table"><caption>ISC supplement turnaround by month, hours</caption><tbody><tr><th>Apr 2026</th><td>0.9</td></tr><tr><th>May 2026</th><td>1.5</td></tr><tr><th>Jun 2026</th><td>1.0</td></tr><tr><th>Jul 2026</th><td>0.6</td></tr><tr><th>Aug 2026</th><td>0.9</td></tr><tr><th>Sep 2026</th><td>0.7</td></tr></tbody></table>
+          <p class="chart-note" id="hp-chart-note">Never above 1.5 hours in six months. On this axis the 26.3-hour industry average would sit about 13 chart-widths to the right.</p>
         </div>
       </div>
     </div>
@@ -2930,7 +2958,7 @@
           <li><a href="/lender-solutions/">Lender Solutions</a></li>
           <li><a href="/client-support/">Client Support</a></li>
           <li><a href="/contact/">Contact</a></li>
-          <li><a href="https://iscsite.meridianlink.com/custom/login.aspx" target="_blank" rel="noopener">Client Login</a></li>
+          <li><a href="https://iscsite.cra.xedalink.net/" target="_blank" rel="noopener">Client Login</a></li>
         </ul>
       </div>
       <div class="fc-col">
@@ -2944,7 +2972,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">&copy; 2026 Information Searching Company &middot; Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. &middot; Costa Mesa, CA 92626</p>
+      <p class="footer-copy">&copy; 2026 Information Searching Company &middot; Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. ISC Credit provides consumer reports and mortgage-related verification services to authorized business users with a permissible purpose under the FCRA. &middot; Costa Mesa, CA 92626</p>
       <div class="footer-legal"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-use/">Terms of Use</a><a
           href="/consumer-assistance/">Consumer Assistance</a></div>
     </div>
@@ -2990,8 +3018,9 @@
     var win = recs.slice(0, 6).reverse();
     var n = win.length;
     var avg = function (k) { return win.reduce(function (s, r) { return s + Number(r[k]); }, 0) / n; };
-    var isc = Math.round(avg('isc') * 10) / 10;
-    var ind = Math.round(avg('industry') * 10) / 10;
+    var iscRaw = avg('isc'), indRaw = avg('industry');
+    var isc = Math.round(iscRaw * 10) / 10;
+    var ind = Math.round(indRaw * 10) / 10;
     if (!(isc > 0) || !(ind > 0)) return;
     var first = win[0].month, last = win[n - 1].month;
     var fd = ym(first), ld = ym(last);
@@ -3011,7 +3040,8 @@
     set('hp-ta-ind-day', b.day); set('hp-ta-ind-time', b.time); set('hp-ta-ind-dur', about(ind));
     set('hp-ta-src', 'ISC averaged ' + isc.toFixed(1) + ' hours against a ' + ind.toFixed(1) + '-hour industry average, ' + period + ', MeridianLink Industry Benchmark, which reports supplements as trade turnaround.');
 
-    set('hp-x', Math.round(ind / isc) + '×');
+    // ratio from the raw averages, never from the rounded display values
+    set('hp-x', Math.round(indRaw / iscRaw) + '×');
     set('hp-bm-isc', isc.toFixed(1) + ' hrs');
     set('hp-bm-ind', ind.toFixed(1) + ' hrs');
     set('hp-bm-per', 'Six-month average, ' + shortLbl(first) + ' to ' + shortLbl(last) + '.');

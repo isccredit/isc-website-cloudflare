@@ -1490,7 +1490,7 @@
     </ul>
     <div class="nav-right">
       <a href="tel:+18002902801" style="font-size:.78rem;font-weight:600;color:var(--navy)">800-290-2801</a>
-      <a href="https://iscsite.meridianlink.com/custom/login.aspx" target="_blank" style="font-size:.78rem;font-weight:600;color:var(--navy)">Client Login</a>
+      <a href="https://iscsite.cra.xedalink.net/" target="_blank" style="font-size:.78rem;font-weight:600;color:var(--navy)">Client Login</a>
       <a class="btn-primary" href="/contact/">Get Started</a>
     </div>
   </nav>
@@ -1871,7 +1871,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">&copy; 2026 Information Searching Company &middot; Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. &middot; Costa Mesa, CA 92626</p>
+      <p class="footer-copy">&copy; 2026 Information Searching Company &middot; Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. ISC Credit provides consumer reports and mortgage-related verification services to authorized business users with a permissible purpose under the FCRA. &middot; Costa Mesa, CA 92626</p>
       <div class="footer-legal"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-use/">Terms of Use</a><a
           href="/consumer-assistance/">Consumer Assistance</a></div>
     </div>
@@ -1894,23 +1894,44 @@
         });
     }
 
-    const streakStart = monthYear(data.streakStart);
+    function iscStreak(d) {
+      const r = [...(d.records || [])].sort((a, b) => b.month.localeCompare(a.month));
+      if (!r.length) return null;
+      if (Number(r[0].rank) !== 1) {
+        const last = r.slice(0, 12);
+        return { ok: false, ones: last.filter(x => Number(x.rank) === 1).length, n: last.length };
+      }
+      let start = r[0].month, broken = false;
+      for (const x of r) { if (Number(x.rank) === 1) start = x.month; else { broken = true; break; } }
+      if (!broken && d.streakStart && d.streakStart < start) start = d.streakStart;
+      return { ok: true, start: start };
+    }
+
+    const st = iscStreak(data);
+    const streakStart = st && st.ok ? monthYear(st.start) : null;
+    const streakCount = st && !st.ok ? `in ${st.ones} of the last ${st.n} months` : null;
 
     const hero = document.getElementById('lender-streak-hero');
     const proof = document.getElementById('lender-streak-proof');
     const card = document.getElementById('lender-streak-card');
 
-    if (hero) {
+    if (hero && streakCount) {
+      hero.textContent = `MeridianLink Industry Benchmark: #1 Supplement Turnaround ${streakCount}`;
+    } else if (hero && streakStart) {
       hero.textContent =
         `MeridianLink Industry Benchmark: #1 Supplement Turnaround every month since ${streakStart}`;
     }
 
-    if (proof) {
+    if (proof && streakCount) {
+      proof.textContent = `MeridianLink Industry Benchmark data ranked ISC #1 in supplement turnaround ${streakCount}.`;
+    } else if (proof && streakStart) {
       proof.textContent =
         `MeridianLink Industry Benchmark data ranked ISC #1 in supplement turnaround every month since ${streakStart}.`;
     }
 
-    if (card) {
+    if (card && streakCount) {
+      card.textContent = `ISC ranked #1 in supplement turnaround ${streakCount}, based on MeridianLink Industry Benchmark data.`;
+    } else if (card && streakStart) {
       card.textContent =
         `ISC ranked #1 in supplement turnaround every month since ${streakStart}, based on MeridianLink Industry Benchmark data.`;
     }

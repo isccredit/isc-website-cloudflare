@@ -1298,7 +1298,7 @@
     </ul>
     <div class="nav-right">
       <a href="tel:+18002902801" style="font-size:.78rem;font-weight:600;color:var(--navy)">800-290-2801</a>
-      <a href="https://iscsite.meridianlink.com/custom/login.aspx" target="_blank" style="font-size:.78rem;font-weight:600;color:var(--navy)">Client Login</a>
+      <a href="https://iscsite.cra.xedalink.net/" target="_blank" style="font-size:.78rem;font-weight:600;color:var(--navy)">Client Login</a>
       <a class="btn-primary" href="/contact/">Get Started</a>
     </div>
   </nav>
@@ -1324,7 +1324,7 @@
         <span class="tag tag-blue">Results in minutes</span>
         <h3>Trended Mortgage Credit Reports</h3>
         <p>Tri-merge mortgage credit reports with 24-month trended data for underwriting. Classic FICO remains
-          standard, with VantageScore 4.0 available to approved lenders where supported.</p>
+          standard. VantageScore 4.0 is opt-in where supported, alongside Classic FICO or as a VantageScore-only report.</p>
         <span class="link">Learn more →</span>
       </a>
       <a class="card" href="/products/aus-soft-pull/">
@@ -1346,7 +1346,7 @@
     <h2 class="cat-label">Score Strategy</h2>
     <div class="grid">
       <a class="card" href="/products/rapid-rescore/">
-        <span class="tag tag-amber">2 to 5 business days</span>
+        <span class="tag tag-amber">1 to 5 business days</span>
         <h3>Rapid Rescore</h3>
         <p>Outdated credit information can stall a file. ISC helps submit verified updates to the bureaus for review,
           with a 24-hour rush available for time-sensitive files.</p>
@@ -1362,7 +1362,7 @@
       <a class="card feat" href="/products/creditxpert-score-simulation/">
         <span class="tag tag-gold">ISC runs it for you</span>
         <h3>CreditXpert Score Simulation</h3>
-        <p>ISC runs CreditXpert simulations for clients, typically in about 30 minutes. Our team has 20+ years of
+        <p>ISC runs CreditXpert simulations for clients, often in about 30 minutes. Our team has 20+ years of
           CreditXpert experience and helps explain projected score scenarios before you decide on the next step.</p>
         <span class="link">Learn more →</span>
       </a>
@@ -1461,7 +1461,7 @@
           <li><a href="/lender-solutions/">Lender Solutions</a></li>
           <li><a href="/client-support/">Client Support</a></li>
           <li><a href="/contact/">Contact</a></li>
-          <li><a href="https://iscsite.meridianlink.com/custom/login.aspx" target="_blank" rel="noopener">Client Login</a></li>
+          <li><a href="https://iscsite.cra.xedalink.net/" target="_blank" rel="noopener">Client Login</a></li>
         </ul>
       </div>
       <div class="fc-col">
@@ -1475,7 +1475,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">&copy; 2026 Information Searching Company &middot; Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. &middot; Costa Mesa, CA 92626</p>
+      <p class="footer-copy">&copy; 2026 Information Searching Company &middot; Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. ISC Credit provides consumer reports and mortgage-related verification services to authorized business users with a permissible purpose under the FCRA. &middot; Costa Mesa, CA 92626</p>
       <div class="footer-legal"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-use/">Terms of Use</a><a
           href="/consumer-assistance/">Consumer Assistance</a></div>
     </div>
@@ -1498,11 +1498,26 @@
         });
     }
 
+    function iscStreak(d) {
+      const r = [...(d.records || [])].sort((a, b) => b.month.localeCompare(a.month));
+      if (!r.length) return null;
+      if (Number(r[0].rank) !== 1) {
+        const last = r.slice(0, 12);
+        return { ok: false, ones: last.filter(x => Number(x.rank) === 1).length, n: last.length };
+      }
+      let start = r[0].month, broken = false;
+      for (const x of r) { if (Number(x.rank) === 1) start = x.month; else { broken = true; break; } }
+      if (!broken && d.streakStart && d.streakStart < start) start = d.streakStart;
+      return { ok: true, start: start };
+    }
+
     const streakLabel = document.getElementById('products-streak-label');
 
-    if (streakLabel && data.streakStart) {
-      streakLabel.textContent =
-        `Supplement turnaround on MeridianLink, Ranked #1 every month since ${monthYear(data.streakStart)}`;
+    const st = iscStreak(data);
+    if (streakLabel && st) {
+      streakLabel.textContent = st.ok
+        ? `Supplement turnaround on MeridianLink, Ranked #1 every month since ${monthYear(st.start)}`
+        : `Supplement turnaround on MeridianLink, Ranked #1 in ${st.ones} of the last ${st.n} months`;
     }
 
   } catch (error) {

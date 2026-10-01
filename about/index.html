@@ -1454,7 +1454,7 @@
     </ul>
     <div class="nav-right">
       <a href="tel:+18002902801" style="font-size:.78rem;font-weight:600;color:var(--navy)">800-290-2801</a>
-      <a href="https://iscsite.meridianlink.com/custom/login.aspx" target="_blank" style="font-size:.78rem;font-weight:600;color:var(--navy)">Client Login</a>
+      <a href="https://iscsite.cra.xedalink.net/" target="_blank" style="font-size:.78rem;font-weight:600;color:var(--navy)">Client Login</a>
       <a class="btn-primary" href="/contact/">Get Started</a>
     </div>
   </nav>
@@ -1481,7 +1481,7 @@
         </div>
         <div class="stat-item">
           <div class="stat-num">#1</div>
-          <div class="stat-label"><a href="/insights/" style="color:inherit;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px" title="Ranked #1 every month since June 2025. See the monthly history.">MeridianLink supplement turnaround</a></div>
+          <div class="stat-label"><a href="/insights/" style="color:inherit;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px" id="about-streak" title="Ranked #1 every month since June 2025. See the monthly history.">MeridianLink supplement turnaround</a></div>
         </div>
         <div class="stat-item">
           <div class="stat-num">25+</div>
@@ -1694,7 +1694,7 @@
           <li><a href="/lender-solutions/">Lender Solutions</a></li>
           <li><a href="/client-support/">Client Support</a></li>
           <li><a href="/contact/">Contact</a></li>
-          <li><a href="https://iscsite.meridianlink.com/custom/login.aspx" target="_blank" rel="noopener">Client Login</a></li>
+          <li><a href="https://iscsite.cra.xedalink.net/" target="_blank" rel="noopener">Client Login</a></li>
         </ul>
       </div>
       <div class="fc-col">
@@ -1708,11 +1708,40 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">&copy; 2026 Information Searching Company &middot; Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. &middot; Costa Mesa, CA 92626</p>
+      <p class="footer-copy">&copy; 2026 Information Searching Company &middot; Family-owned since 1989. ISC operates as a consumer reporting agency under FCRA and follows GLBA requirements for safeguarding consumer financial information. ISC Credit provides consumer reports and mortgage-related verification services to authorized business users with a permissible purpose under the FCRA. &middot; Costa Mesa, CA 92626</p>
       <div class="footer-legal"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-use/">Terms of Use</a><a
           href="/consumer-assistance/">Consumer Assistance</a></div>
     </div>
   </footer>
+<script>
+(async function () {
+  try {
+    const res = await fetch('/data/benchmarks.json', { cache: 'no-store' });
+    if (!res.ok) return;
+    const data = await res.json();
+    const el = document.getElementById('about-streak');
+    if (!el) return;
+    function monthYear(m) { const [y, mo] = m.split('-'); return new Date(Number(y), Number(mo) - 1, 1).toLocaleString('en-US', { month: 'long', year: 'numeric' }); }
+
+    function iscStreak(d) {
+      const r = [...(d.records || [])].sort((a, b) => b.month.localeCompare(a.month));
+      if (!r.length) return null;
+      if (Number(r[0].rank) !== 1) {
+        const last = r.slice(0, 12);
+        return { ok: false, ones: last.filter(x => Number(x.rank) === 1).length, n: last.length };
+      }
+      let start = r[0].month, broken = false;
+      for (const x of r) { if (Number(x.rank) === 1) start = x.month; else { broken = true; break; } }
+      if (!broken && d.streakStart && d.streakStart < start) start = d.streakStart;
+      return { ok: true, start: start };
+    }
+    const st = iscStreak(data);
+    if (!st) return;
+    el.title = st.ok ? `Ranked #1 every month since ${monthYear(st.start)}. See the monthly history.`
+                     : `Ranked #1 in ${st.ones} of the last ${st.n} months. See the monthly history.`;
+  } catch (e) { /* static title stays */ }
+})();
+</script>
 </body>
 
 </html>
