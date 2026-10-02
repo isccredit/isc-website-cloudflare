@@ -2285,11 +2285,11 @@
 .hp .ta-label{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55)}
 .hp .ta-lead{font-family:var(--fd);font-size:1.6rem;line-height:1.25;color:#fff}
 .hp .ta-tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem}
-.hp .ta-tile{display:flex;flex-direction:column;gap:.35rem;padding:1.5rem;border-radius:10px}
+.hp .ta-tile{display:flex;flex-direction:column;gap:.35rem;padding:1.5rem;border-radius:10px;container-type:inline-size}
 .hp .ta-isc{background:var(--hp-gold);color:var(--hp-ink)}
 .hp .ta-ind{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.72)}
 .hp .ta-who{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
-.hp .ta-day{font-family:var(--fd);font-size:2.5rem;font-weight:700;line-height:1.05;margin-top:.5rem}
+.hp .ta-day{font-family:var(--fd);font-size:2.5rem;font-size:min(2.5rem,25cqi);font-weight:700;line-height:1.05;margin-top:.5rem;white-space:nowrap;overflow-wrap:normal}
 .hp .ta-time{font-size:1.1rem;font-weight:700}
 .hp .ta-dur{font-size:.8rem;margin-top:.35rem}
 .hp .ta-isc .ta-dur{color:#3d3212}
@@ -2492,7 +2492,7 @@
   .hp .ta-card{padding:1.25rem;gap:1rem}
   .hp .ta-lead{font-size:1.25rem}
   .hp .ta-tile{padding:1rem}
-  .hp .ta-day{font-size:1.75rem}
+  .hp .ta-day{font-size:1.75rem;font-size:min(1.75rem,25cqi)}
   .hp .ta-time{font-size:.95rem}
   .hp .logo-row{gap:1.4rem}
   .hp .lg-eqx{height:44px}.hp .lg-amt{height:36px}.hp .lg-cvy{height:22px}
@@ -2657,9 +2657,9 @@
     </div>
     <div class="prod-list">
       <a class="prow" href="/products/aus-soft-pull/"><span class="pnum">01</span><span class="pname">AUS Soft Pull</span><span class="pdesc">Review credit before a hard inquiry, with no score impact. Reissue into DU or LPA where supported.</span><span class="parr" aria-hidden="true">&rarr;</span></a>
-      <a class="prow" href="/products/trended-credit-reports/"><span class="pnum">02</span><span class="pname">Trended Credit Reports</span><span class="pdesc">Tri-merge with Classic FICO and trended data included, VantageScore 4.0 opt-in where supported.</span><span class="parr" aria-hidden="true">&rarr;</span></a>
+      <a class="prow" href="/products/trended-credit-reports/"><span class="pnum">02</span><span class="pname">Trended Credit Reports</span><span class="pdesc">Tri-merge with Classic FICO and trended data included. VantageScore 4.0 is opt-in, not included by default, or VantageScore-only, where supported.</span><span class="parr" aria-hidden="true">&rarr;</span></a>
       <a class="prow" href="/products/smartselect/"><span class="pnum">03</span><span class="pname">SmartSelect</span><span class="pdesc">Start with the lower-cost product and escalate by your own criteria.</span><span class="parr" aria-hidden="true">&rarr;</span></a>
-      <a class="prow" href="/products/credit-supplements/"><span class="pnum">04</span><span class="pname">Credit Supplements</span><span class="pdesc">Updated tradeline information from creditors, often completed within an hour. Timelines vary by file.</span><span class="parr" aria-hidden="true">&rarr;</span></a>
+      <a class="prow" href="/products/credit-supplements/"><span class="pnum">04</span><span class="pname">Credit Supplements</span><span class="pdesc">Updated tradeline information from creditors, often completed within about 1 hour on average. Timelines vary by file.</span><span class="parr" aria-hidden="true">&rarr;</span></a>
       <a class="prow" href="/products/rapid-rescore/"><span class="pnum">05</span><span class="pname">Rapid Rescore</span><span class="pdesc">Submit verified, eligible updates for bureau review. Standard 1 to 5 business days, with a 24-hour rush option. Results and timing are not guaranteed and depend on documentation and bureau processing.</span><span class="parr" aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
@@ -2673,8 +2673,8 @@
       <h2 class="wp-h" id="hp-wp">You are here.</h2>
       <p class="lead">A monthly and quarterly report that shows where your company's credit ordering stands, built from your own ISC account activity.</p>
       <div class="wp-points"><ul>
-        <li><span class="ar" aria-hidden="true">&rarr;</span><span>Files still waiting on a bureau, oldest first</span></li>
-        <li><span class="ar" aria-hidden="true">&rarr;</span><span>Earlier files still moving through the pipeline</span></li>
+        <li><span class="ar" aria-hidden="true">&rarr;</span><span>Files waiting for a bureau score, oldest first</span></li>
+        <li><span class="ar" aria-hidden="true">&rarr;</span><span>Repeat pulls worth a question, each with what the file shows</span></li>
         <li><span class="ar" aria-hidden="true">&rarr;</span><span>Each loan officer's orders, scores and repeat pulls</span></li>
         <li><span class="ar" aria-hidden="true">&rarr;</span><span>Each branch on its own pages, in its own color</span></li>
         <li><span class="ar" aria-hidden="true">&rarr;</span><span>Every quarter, how volume and each branch are changing</span></li>
@@ -2698,15 +2698,14 @@
             <div><span>USERS ORDERING</span><strong>15</strong></div>
             <div><span>THREE-BUREAU</span><strong>82.1%</strong></div>
             <div><span>MEDIAN SCORE</span><strong>718</strong></div>
-            <div><span>WAITING ON A BUREAU</span><strong>7</strong></div>
+            <div><span>WAITING FOR A SCORE</span><strong>7</strong></div>
             <div><span>COST PER ORDER</span><strong>$112</strong></div>
           </div>
           <div class="wc-body">
             <span class="eb">OWNER SNAPSHOT</span>
             <p>56 borrower orders in August across two branches.</p>
             <p class="wc-br"><span class="wc-b"><i class="wc-sw" style="background:#0E7C7B" aria-hidden="true"></i>Northshore 44 orders</span> <span class="wc-b"><i class="wc-sw" style="background:#8A3B7E" aria-hidden="true"></i>Canyon Ridge 12 orders</span></p>
-            <p>7 files waiting on a bureau at month end, the oldest 25 days open, each one named.</p>
-            <p>2 files cleared through a bureau copy for $32.00.</p>
+            <p>7 files waiting for a bureau score at month end, the oldest 25 days open, each one named.</p>
             <div class="wc-look"><strong>$793.10</strong><span>worth a second look across 10 files: repeat pulls with no reason on the file, and paid pulls that returned no usable score</span></div>
           </div>
         </div>
