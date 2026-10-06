@@ -17,8 +17,10 @@
 <meta name="twitter:description" content="Contact ISC Credit. Call 800-290-2801, Monday to Friday, 9:00 AM to 5:00 PM Pacific Time, or send us a message to get started with mortgage credit reporting.">
 <meta name="twitter:image" content="https://www.isccredit.com/ISC.png">
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--navy:#0a1628;--navy2:#0f2040;--gold:#f0b942;--gold2:#e8a800;--gold3:#fef3c7;--cream:#f7f5f0;--sand:#e8e0d0;--warm:#7a6e62;--white:#fff;--off:#f7f8fc;--muted:#6b7a99;--border:#ddd6c8;--text:#2d2416;--blue:#1a4fd6;--green:#166534;--green-bg:#dcfce7;--fd:'Playfair Display',Georgia,serif;--fb:'DM Sans',system-ui,sans-serif;--shadow-sm:0 1px 4px rgba(10,22,40,.08);--shadow-md:0 4px 16px rgba(10,22,40,.12)}
@@ -562,13 +564,48 @@ img, video { max-width: 100%; height: auto; }
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>@media (min-width:1025px) and (max-width:1400px){.nav-links{gap:.1rem!important}.nav-links a,.nav-links .nav-parent-label{padding:.45rem .55rem!important}}@media (min-width:1025px) and (max-width:1280px){nav{padding-left:1.25rem!important;padding-right:1.25rem!important}.nav-links a,.nav-links .nav-parent-label{font-size:.76rem!important;padding:.4rem .42rem!important;white-space:nowrap}.nav-right{gap:.6rem!important}.nav-right a{white-space:nowrap;font-size:.74rem!important}.nav-right .btn-primary{padding:.5rem .8rem!important}}@media (min-width:1025px) and (max-width:1100px){nav{padding-left:.9rem!important;padding-right:.9rem!important}.nav-links a,.nav-links .nav-parent-label{font-size:.72rem!important;padding:.35rem .3rem!important}.nav-right{gap:.45rem!important}.nav-right a{font-size:.7rem!important}.nav-right .btn-primary{padding:.45rem .65rem!important}}</style>
-    <meta name="robots" content="noindex, nofollow">
+<style id="isc-a11y">
+/* SEO + accessibility patch 1 (shared block, same on every page) */
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.skip-link{position:absolute;left:1rem;top:-200px;z-index:10000;background:#0a1628;color:#fff!important;padding:.65rem 1.1rem;border-radius:6px;font:600 .9rem/1.2 'DM Sans',system-ui,sans-serif;text-decoration:none}
+.skip-link:focus{top:.75rem}
+#nav-toggle{display:none}
+@media (max-width:1024px){#nav-toggle{display:block;position:absolute;top:0;left:0;width:1px;height:1px;margin:0;opacity:0;pointer-events:none}}
+#nav-toggle:focus-visible ~ nav .nav-burger{outline:2px solid #0a1628;outline-offset:2px;border-radius:4px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #0a1628;outline-offset:3px;box-shadow:0 0 0 3px #f0b942}
+footer .footer-contact a,footer .footer-contact span,footer .fc-col a,footer .footer-col a{color:#98a2b3}
+footer .footer-tagline,footer .footer-copy,footer .footer-legal a,footer .fc-title,footer .footer-col-title{color:#8a94a6}
+footer .footer-contact a:hover,footer .fc-col a:hover,footer .footer-col a:hover,footer .footer-legal a:hover{color:var(--gold,#f0b942)}
+.tag-red{color:#b91c1c}
+.form-note{color:#5f6e8c}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://www.isccredit.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Contact",
+   "item": "https://www.isccredit.com/contact/"
+  }
+ ]
+}
+</script>
 </head>
 <body>
-<input type="checkbox" id="nav-toggle" hidden>
+<a class="skip-link" href="#main">Skip to content</a>
+<input type="checkbox" id="nav-toggle" aria-label="Open menu">
   <nav>
-    <a class="nav-logo" href="/"><img src="/ISC.png" alt="ISC Credit"></a>
-    <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"></label>
+    <a class="nav-logo" href="/"><img src="/assets/isc-logo.png" alt="ISC Credit" width="68" height="32"></a>
+    <label for="nav-toggle" class="nav-burger" aria-hidden="true"></label>
     <ul class="nav-links">
       <li class="nav-has-sub"><a href="/products/">Products</a>
         <ul class="nav-sublist">
@@ -597,6 +634,7 @@ img, video { max-width: 100%; height: auto; }
       <a class="btn-primary" href="/contact/">Get Started</a>
     </div>
   </nav>
+<main id="main">
 
 <div class="hero">
   <div class="hero-inner">
@@ -615,16 +653,16 @@ img, video { max-width: 100%; height: auto; }
         <p style="font-size:.9rem;color:var(--warm);margin-bottom:1rem;line-height:1.55">We respond within one business day. Required fields marked <span style="color:var(--gold,#f0b942)">*</span>.</p>
 <form id="contact-page-form" action="/api/submit" method="POST">
   <div class="form-row">
-    <div class="form-group"><label class="form-label">Name<span class="req">*</span></label><input class="form-input" type="text" name="name" placeholder="Your name" required></div>
-    <div class="form-group"><label class="form-label">Email<span class="req">*</span></label><input class="form-input" type="email" name="email" placeholder="you@company.com" required></div>
+    <div class="form-group"><label for="f-name" class="form-label">Name<span class="req">*</span></label><input id="f-name" class="form-input" type="text" name="name" placeholder="Your name" required></div>
+    <div class="form-group"><label for="f-email" class="form-label">Email<span class="req">*</span></label><input id="f-email" class="form-input" type="email" name="email" placeholder="you@company.com" required></div>
   </div>
   <div class="form-row">
-    <div class="form-group"><label class="form-label">Company</label><input class="form-input" type="text" name="company" placeholder="Your company (optional)"></div>
-    <div class="form-group"><label class="form-label">Phone</label><input class="form-input" type="tel" name="phone" placeholder="(555) 000-0000 (optional)"></div>
+    <div class="form-group"><label for="f-company" class="form-label">Company</label><input id="f-company" class="form-input" type="text" name="company" placeholder="Your company (optional)"></div>
+    <div class="form-group"><label for="f-phone" class="form-label">Phone</label><input id="f-phone" class="form-input" type="tel" name="phone" placeholder="(555) 000-0000 (optional)"></div>
   </div>
   <div class="form-row full">
-    <div class="form-group"><label class="form-label">Type of inquiry</label>
-      <select class="form-input" name="inquiry-type">
+    <div class="form-group"><label for="f-inquiry-type" class="form-label">Type of inquiry</label>
+      <select id="f-inquiry-type" class="form-input" name="inquiry-type">
         <option value="" disabled selected>Select one (optional)</option>
         <option>Sales question</option>
         <option>Product info</option>
@@ -638,7 +676,7 @@ img, video { max-width: 100%; height: auto; }
     </div>
   </div>
   <div class="form-row full">
-    <div class="form-group"><label class="form-label">Message<span class="req">*</span></label><textarea class="form-input" name="message" rows="5" placeholder="What can ISC help with?" required></textarea></div>
+    <div class="form-group"><label for="f-message" class="form-label">Message<span class="req">*</span></label><textarea id="f-message" class="form-input" name="message" rows="5" placeholder="What can ISC help with?" required></textarea></div>
   </div>
   
   <div class="cf-turnstile" data-sitekey="0x4AAAAAADio6TUkoqDiiCF-" data-theme="dark" style="margin-bottom: 15px;"></div>
@@ -672,7 +710,7 @@ img, video { max-width: 100%; height: auto; }
     </div>
   </div>
 </div>
-
+</main>
   <footer>
     <div class="footer-grid">
       <div>
@@ -734,6 +772,26 @@ img, video { max-width: 100%; height: auto; }
 (function(){try{var t=new URLSearchParams(location.search).get('topic');
 var map={'waypoint':'ISC Waypoint','fee-schedule':'Fee schedule request','namb':'NAMB meeting request'};
 if(map[t]){var s=document.querySelector('select[name="inquiry-type"]');if(s){s.value=map[t];}}}catch(e){}})();
+</script>
+<script>
+/* ISC analytics events (SEO patch 1): phone and email clicks, guide downloads, lead form starts and submits */
+(function(){
+  function send(n,p){ if(typeof window.gtag==='function'){ window.gtag('event',n,p||{}); } }
+  document.addEventListener('click',function(e){
+    var a=e.target&&e.target.closest?e.target.closest('a[href]'):null; if(!a) return;
+    var h=a.getAttribute('href')||'';
+    if(h.indexOf('tel:')===0) send('phone_click',{link_url:h});
+    else if(h.indexOf('mailto:')===0) send('email_click',{link_url:h});
+    else if(/\.pdf($|[?#])/i.test(h)) send('guide_download',{file_name:h.split('/').pop().split('?')[0]});
+  },true);
+  var started={};
+  function fid(f){ return f.id||f.getAttribute('name')||f.getAttribute('action')||'form'; }
+  document.addEventListener('focusin',function(e){
+    var t=e.target; if(!t||!t.form||!/^(INPUT|SELECT|TEXTAREA)$/.test(t.tagName)) return;
+    var id=fid(t.form); if(started[id]) return; started[id]=1; send('lead_form_start',{form_id:id});
+  });
+  document.addEventListener('submit',function(e){ send('lead_form_submit',{form_id:fid(e.target)}); },true);
+})();
 </script>
 </body>
 </html>
