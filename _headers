@@ -1,4 +1,6 @@
+# STAGING ONLY: X-Robots-Tag below is added by the staging build, never in the repo or production
 /*
+  X-Robots-Tag: noindex, nofollow
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
 

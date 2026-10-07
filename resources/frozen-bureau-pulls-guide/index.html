@@ -2425,6 +2425,7 @@ footer .footer-contact a:hover,footer .fc-col a:hover,footer .footer-col a:hover
  ]
 }
 </script>
+    <meta name="robots" content="noindex, nofollow">
 </head>
 
 <body>
@@ -2610,6 +2611,7 @@ footer .footer-contact a:hover,footer .fc-col a:hover,footer .footer-col a:hover
           link.download = ''; 
           document.body.appendChild(link);
           link.click();
+          if (window.iscGuideStatus) window.iscGuideStatus(form, 'ok', pdfUrl);
           document.body.removeChild(link);
 
           // Optional: Clear form
@@ -2618,7 +2620,7 @@ footer .footer-contact a:hover,footer .fc-col a:hover,footer .footer-col a:hover
           throw new Error("API failed");
         }
       } catch (error) {
-        alert("Something went wrong. Please try again or contact support.");
+        if (window.iscGuideStatus) { window.iscGuideStatus(form, 'err'); } else { alert("Something went wrong. Please try again or contact support."); }
         submitBtn.innerText = originalText;
         submitBtn.style.opacity = "1";
         submitBtn.disabled = false;
@@ -2645,6 +2647,7 @@ footer .footer-contact a:hover,footer .fc-col a:hover,footer .footer-col a:hover
   document.addEventListener('submit',function(e){ send('lead_form_submit',{form_id:fid(e.target)}); },true);
 })();
 </script>
+<script src="/assets/isc-forms.js"></script>
 </body>
 
 </html>
