@@ -17,8 +17,10 @@
 <meta name="twitter:description" content="Free guides and checklists for supplements, rescores, frozen bureaus, SmartPay, DU/LPA setup, and mortgage credit workflows.">
 <meta name="twitter:image" content="https://www.isccredit.com/ISC.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   
   <!-- PASTE YOUR GLOBAL CSS HERE -->
   <style>
@@ -803,7 +805,7 @@
 
     .tag-gold {
       background: var(--gold3);
-      color: #9a7010
+      color: #8a6410
     }
 
     .tag-green {
@@ -1311,7 +1313,7 @@
     .los-chip.feat {
       border-color: var(--gold);
       background: var(--gold3);
-      color: #9a7010;
+      color: #8a6410;
       font-weight: 600
     }
 
@@ -2318,7 +2320,6 @@
       .resources-header h1 { font-size: 2rem; }
     }
   </style>
-  <link rel="canonical" href="https://www.isccredit.com/resources/">
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ33YXF0Y7"></script>
 <script>
@@ -2333,12 +2334,48 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>@media (min-width:1025px) and (max-width:1400px){.nav-links{gap:.1rem!important}.nav-links a,.nav-links .nav-parent-label{padding:.45rem .55rem!important}}@media (min-width:1025px) and (max-width:1280px){nav{padding-left:1.25rem!important;padding-right:1.25rem!important}.nav-links a,.nav-links .nav-parent-label{font-size:.76rem!important;padding:.4rem .42rem!important;white-space:nowrap}.nav-right{gap:.6rem!important}.nav-right a{white-space:nowrap;font-size:.74rem!important}.nav-right .btn-primary{padding:.5rem .8rem!important}}@media (min-width:1025px) and (max-width:1100px){nav{padding-left:.9rem!important;padding-right:.9rem!important}.nav-links a,.nav-links .nav-parent-label{font-size:.72rem!important;padding:.35rem .3rem!important}.nav-right{gap:.45rem!important}.nav-right a{font-size:.7rem!important}.nav-right .btn-primary{padding:.45rem .65rem!important}}</style>
+<style id="isc-a11y">
+/* SEO + accessibility patch 1 (shared block, same on every page) */
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.skip-link{position:absolute;left:1rem;top:-200px;z-index:10000;background:#0a1628;color:#fff!important;padding:.65rem 1.1rem;border-radius:6px;font:600 .9rem/1.2 'DM Sans',system-ui,sans-serif;text-decoration:none}
+.skip-link:focus{top:.75rem}
+#nav-toggle{display:none}
+@media (max-width:1024px){#nav-toggle{display:block;position:absolute;top:0;left:0;width:1px;height:1px;margin:0;opacity:0;pointer-events:none}}
+#nav-toggle:focus-visible ~ nav .nav-burger{outline:2px solid #0a1628;outline-offset:2px;border-radius:4px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #0a1628;outline-offset:3px;box-shadow:0 0 0 3px #f0b942}
+footer .footer-contact a,footer .footer-contact span,footer .fc-col a,footer .footer-col a{color:#98a2b3}
+footer .footer-tagline,footer .footer-copy,footer .footer-legal a,footer .fc-title,footer .footer-col-title{color:#8a94a6}
+footer .footer-contact a:hover,footer .fc-col a:hover,footer .footer-col a:hover,footer .footer-legal a:hover{color:var(--gold,#f0b942)}
+.tag-red{color:#b91c1c}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://www.isccredit.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Resources",
+   "item": "https://www.isccredit.com/resources/"
+  }
+ ]
+}
+</script>
+    <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-  <input type="checkbox" id="nav-toggle" hidden>
+<a class="skip-link" href="#main">Skip to content</a>
+  <input type="checkbox" id="nav-toggle" aria-label="Open menu">
   <nav>
-    <a class="nav-logo" href="/"><img src="/ISC.png" alt="ISC Credit"></a>
-    <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"></label>
+    <a class="nav-logo" href="/"><img src="/assets/isc-logo.png" alt="ISC Credit" width="68" height="32"></a>
+    <label for="nav-toggle" class="nav-burger" aria-hidden="true"></label>
     <ul class="nav-links">
       <li class="nav-has-sub"><a href="/products/">Products</a>
         <ul class="nav-sublist">
@@ -2367,6 +2404,7 @@
       <a class="btn-primary" href="/contact/">Get Started</a>
     </div>
   </nav>
+<main id="main">
 
 
 
@@ -2375,58 +2413,59 @@
     <p>Free guides and checklists for supplements, rescores, frozen bureaus, SmartPay, DU/LPA setup, and mortgage credit workflows.</p>
   </header>
 
-  <main class="resources-grid">
+  <h2 class="sr-only">Guides and downloads</h2>
+  <div class="resources-grid">
     
     <!-- Guide 1 -->
     <article class="resource-card">
-      <span class="resource-tag">In-Depth Guide</span>
+      <span class="resource-tag">Step-by-Step</span>
       <h3>How to Order a Supplement</h3>
-      <p>A step-by-step walkthrough on submitting proper documentation for fast, accurate credit supplements. Delivered by email.</p>
+      <p>A step-by-step walkthrough on submitting proper documentation for fast, accurate credit supplements. Instant download after a quick sign-up.</p>
       <a href="/resources/how-to-order-a-supplement/" class="btn-download">Get the Guide &rarr;</a>
     </article>
 
     <!-- Guide 2 -->
     <article class="resource-card">
-      <span class="resource-tag">In-Depth Guide</span>
+      <span class="resource-tag">Checklist</span>
       <h3>Supplement Checklist</h3>
-      <p>Ensure your loan file has all the necessary verified documents before submitting a supplement request to avoid delays. Delivered by email.</p>
+      <p>Ensure your loan file has all the necessary verified documents before submitting a supplement request to avoid delays. Instant download after a quick sign-up.</p>
       <a href="/resources/supplement-checklist/" class="btn-download">Get the Checklist &rarr;</a>
     </article>
 
     <!-- Guide 3 -->
     <article class="resource-card">
-      <span class="resource-tag">In-Depth Guide</span>
+      <span class="resource-tag">Process Guide</span>
       <h3>Rapid Rescore Guide</h3>
-      <p>Learn how to submit verified credit updates for bureau review when proper documentation is available. Delivered by email.</p>
+      <p>Learn how to submit verified credit updates for bureau review when proper documentation is available. Instant download after a quick sign-up.</p>
       <a href="/resources/rapid-rescore-guide/" class="btn-download">Get the Guide &rarr;</a>
     </article>
 
     <!-- Guide 4 -->
     <article class="resource-card">
-      <span class="resource-tag">In-Depth Guide</span>
+      <span class="resource-tag">Troubleshooting</span>
       <h3>Frozen Bureau Pulls Guide</h3>
-      <p>Navigate the process of pulling credit when a borrower has a freeze or lock on one or more of their bureau files. Delivered by email.</p>
+      <p>Navigate the process of pulling credit when a borrower has a freeze or lock on one or more of their bureau files. Instant download after a quick sign-up.</p>
       <a href="/resources/frozen-bureau-pulls-guide/" class="btn-download">Get the Guide &rarr;</a>
     </article>
 
     <!-- Guide 5 -->
     <article class="resource-card">
-      <span class="resource-tag">In-Depth Guide</span>
+      <span class="resource-tag">Setup Guide</span>
       <h3>DU/LPA Technical Setup</h3>
-      <p>Instructions for selecting and configuring your technical provider settings within Fannie Mae DU and Freddie Mac LPA. Delivered by email.</p>
+      <p>Instructions for selecting and configuring your technical provider settings within Fannie Mae DU and Freddie Mac LPA. Instant download after a quick sign-up.</p>
       <a href="/resources/du-lpa-technical-provider-selection-guide/" class="btn-download">Get the Guide &rarr;</a>
     </article>
 
     <!-- Guide 6 -->
     <article class="resource-card">
-      <span class="resource-tag">In-Depth Guide</span>
+      <span class="resource-tag">Product Overview</span>
       <h3>SmartSelect Overview</h3>
-      <p>Understand how our cascading pull technology helps reduce upfront credit report costs on initial pre-qualifications. Delivered by email.</p>
+      <p>Understand how our cascading pull technology helps reduce upfront credit report costs on initial pre-qualifications. Instant download after a quick sign-up.</p>
       <a href="/resources/smartselect-guide/" class="btn-download">Get the Guide &rarr;</a>
     </article>
     <!-- Guide 7 -->
     <article class="resource-card">
-      <span class="resource-tag">Free Download</span>
+      <span class="resource-tag">Instant Download</span>
       <h3>SmartPay Guide</h3>
       <p>Learn how to manage borrower credit card payments and maintain compliance for credit reporting fees.</p>
       <a href="/resources/smartpay-guide/" class="btn-download">Get the Guide &rarr;</a>
@@ -2434,29 +2473,29 @@
 
     <!-- Guide 8 -->
     <article class="resource-card">
-      <span class="resource-tag">In-Depth Guide</span>
-      <h3>PowerProfile Plus</h3>
-      <p>Maximize your credit reporting insights with advanced profile configurations and data breakdowns. Delivered by email.</p>
+      <span class="resource-tag">Product Guide</span>
+      <h3>AUS Soft Pull Guide</h3>
+      <p>How the AUS soft pull works, when it can be reissued to DU or LPA, and when a hard pull is still needed. Instant download after a quick sign-up.</p>
       <a href="/resources/powerprofile-plus-guide/" class="btn-download">Get the Guide &rarr;</a>
     </article>
 
     <!-- Guide 9 -->
     <article class="resource-card">
-      <span class="resource-tag">In-Depth Guide</span>
+      <span class="resource-tag">Industry Update</span>
       <h3>VantageScore Guide</h3>
-      <p>Understand the current VantageScore 4.0 rollout, Classic FICO requirements, FICO 10T planning, and how scoring-model changes may affect mortgage workflows. At ISC, VantageScore 4.0 is opt-in, not included by default, with a VantageScore-only report available where supported. Delivered by email.</p>
+      <p>Understand the current VantageScore 4.0 rollout, Classic FICO requirements, FICO 10T planning, and how scoring-model changes may affect mortgage workflows. At ISC, VantageScore 4.0 is opt-in, not included by default, with a VantageScore-only report available where supported. Instant download after a quick sign-up.</p>
       <a href="/resources/vantagescore-guide/" class="btn-download">Get the Guide &rarr;</a>
     </article>
 
-  </main>
+  </div>
 
   <section class="resources-cta">
     <h2>Need help choosing the right resource?</h2>
     <p style="color: var(--warm); margin-bottom: 2rem;">Contact ISC and we’ll point you in the right direction.</p>
     <a href="/contact/" class="btn-primary" style="padding: 1rem 2rem; font-size: 1rem;">Contact ISC Support</a>
   </section>
-
-    <footer>
+</main>
+  <footer>
     <div class="footer-grid">
       <div>
         <a class="footer-logo" href="/">ISC<span>.</span></a>
@@ -2515,5 +2554,25 @@
   </footer>
 
 
+<script>
+/* ISC analytics events (SEO patch 1): phone and email clicks, guide downloads, lead form starts and submits */
+(function(){
+  function send(n,p){ if(typeof window.gtag==='function'){ window.gtag('event',n,p||{}); } }
+  document.addEventListener('click',function(e){
+    var a=e.target&&e.target.closest?e.target.closest('a[href]'):null; if(!a) return;
+    var h=a.getAttribute('href')||'';
+    if(h.indexOf('tel:')===0) send('phone_click',{link_url:h});
+    else if(h.indexOf('mailto:')===0) send('email_click',{link_url:h});
+    else if(/\.pdf($|[?#])/i.test(h)) send('guide_download',{file_name:h.split('/').pop().split('?')[0]});
+  },true);
+  var started={};
+  function fid(f){ return f.id||f.getAttribute('name')||f.getAttribute('action')||'form'; }
+  document.addEventListener('focusin',function(e){
+    var t=e.target; if(!t||!t.form||!/^(INPUT|SELECT|TEXTAREA)$/.test(t.tagName)) return;
+    var id=fid(t.form); if(started[id]) return; started[id]=1; send('lead_form_start',{form_id:id});
+  });
+  document.addEventListener('submit',function(e){ send('lead_form_submit',{form_id:fid(e.target)}); },true);
+})();
+</script>
 </body>
 </html>

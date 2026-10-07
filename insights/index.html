@@ -16,8 +16,10 @@
 <meta name="twitter:title" content="ISC Insights | Mortgage Credit News &amp; Monthly Benchmark">
 <meta name="twitter:description" content="Mortgage credit news, score model updates, practical guides, and ISC's monthly MeridianLink turnaround benchmark for mortgage professionals.">
 <meta name="twitter:image" content="https://www.isccredit.com/ISC.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -678,13 +680,49 @@ img, video { max-width: 100%; height: auto; }
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>@media (min-width:1025px) and (max-width:1400px){.nav-links{gap:.1rem!important}.nav-links a,.nav-links .nav-parent-label{padding:.45rem .55rem!important}}@media (min-width:1025px) and (max-width:1280px){nav{padding-left:1.25rem!important;padding-right:1.25rem!important}.nav-links a,.nav-links .nav-parent-label{font-size:.76rem!important;padding:.4rem .42rem!important;white-space:nowrap}.nav-right{gap:.6rem!important}.nav-right a{white-space:nowrap;font-size:.74rem!important}.nav-right .btn-primary{padding:.5rem .8rem!important}}@media (min-width:1025px) and (max-width:1100px){nav{padding-left:.9rem!important;padding-right:.9rem!important}.nav-links a,.nav-links .nav-parent-label{font-size:.72rem!important;padding:.35rem .3rem!important}.nav-right{gap:.45rem!important}.nav-right a{font-size:.7rem!important}.nav-right .btn-primary{padding:.45rem .65rem!important}}</style>
+<style id="isc-a11y">
+/* SEO + accessibility patch 1 (shared block, same on every page) */
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.skip-link{position:absolute;left:1rem;top:-200px;z-index:10000;background:#0a1628;color:#fff!important;padding:.65rem 1.1rem;border-radius:6px;font:600 .9rem/1.2 'DM Sans',system-ui,sans-serif;text-decoration:none}
+.skip-link:focus{top:.75rem}
+#nav-toggle{display:none}
+@media (max-width:1024px){#nav-toggle{display:block;position:absolute;top:0;left:0;width:1px;height:1px;margin:0;opacity:0;pointer-events:none}}
+#nav-toggle:focus-visible ~ nav .nav-burger{outline:2px solid #0a1628;outline-offset:2px;border-radius:4px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #0a1628;outline-offset:3px;box-shadow:0 0 0 3px #f0b942}
+footer .footer-contact a,footer .footer-contact span,footer .fc-col a,footer .footer-col a{color:#98a2b3}
+footer .footer-tagline,footer .footer-copy,footer .footer-legal a,footer .fc-title,footer .footer-col-title{color:#8a94a6}
+footer .footer-contact a:hover,footer .fc-col a:hover,footer .footer-col a:hover,footer .footer-legal a:hover{color:var(--gold,#f0b942)}
+.tag-red{color:#b91c1c}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://www.isccredit.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Insights",
+   "item": "https://www.isccredit.com/insights/"
+  }
+ ]
+}
+</script>
+    <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<input type="checkbox" id="nav-toggle" hidden>
+<input type="checkbox" id="nav-toggle" aria-label="Open menu">
   <nav>
-    <a class="nav-logo" href="/"><img src="/ISC.png" alt="ISC Credit"></a>
-    <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"></label>
+    <a class="nav-logo" href="/"><img src="/assets/isc-logo.png" alt="ISC Credit" width="68" height="32"></a>
+    <label for="nav-toggle" class="nav-burger" aria-hidden="true"></label>
     <ul class="nav-links">
       <li class="nav-has-sub"><a href="/products/">Products</a>
         <ul class="nav-sublist">
@@ -713,6 +751,7 @@ img, video { max-width: 100%; height: auto; }
       <a class="btn-primary" href="/contact/">Get Started</a>
     </div>
   </nav>
+<main id="main">
 
 <!-- HERO + SIGNUP -->
 <section style="background:var(--navy);padding:4.5rem 2.5rem 4rem;position:relative;overflow:hidden">
@@ -732,13 +771,18 @@ img, video { max-width: 100%; height: auto; }
       <div class="sc-label">Subscribe to ISC Insights</div>
       <div class="sc-title">Get the monthly benchmark and industry updates in your inbox.</div>
       <div class="sc-sub">Sent from insights@isccredit.com &middot; One email per month &middot; No spam</div>
-      <form class="sc-form">
-        <input class="sc-input" type="text" placeholder="Your name" required>
-        <input class="sc-input" type="email" placeholder="Work email address" required>
-         <div class="cf-turnstile" data-sitekey="0x4AAAAAADio6TUkoqDiiCF-" data-theme="dark" data-size="flexible" style="margin-bottom: 15px;"></div>
+      <form class="sc-form" id="insights-signup-top" action="/api/subscribe" method="POST" data-newsletter-form>
+        <input type="hidden" name="resource_tag" value="Newsletter Signup - Insights">
+        <input type="hidden" name="form_type" value="newsletter">
+        <label class="sr-only" for="insights-top-name">Your name</label>
+        <input class="sc-input" id="insights-top-name" name="FNAME" type="text" placeholder="Your name" autocomplete="name" required>
+        <label class="sr-only" for="insights-top-email">Work email address</label>
+        <input class="sc-input" id="insights-top-email" name="EMAIL" type="email" placeholder="Work email address" autocomplete="email" required>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAADio6TUkoqDiiCF-" data-theme="dark" data-size="flexible" style="margin-bottom: 15px;"></div>
 
         <button class="sc-btn" type="submit">Subscribe to ISC Insights</button>
-<p style="font-size: 0.8rem; color: var(--warm); margin-top: 1rem; line-height: 1.4;">By submitting this form, you consent to receive communications from ISC Credit. Your information is kept secure and never sold. Read our Privacy Policy for more details.</p>
+<p style="font-size: 0.8rem; color: var(--warm); margin-top: 1rem; line-height: 1.4;">By submitting this form, you consent to receive communications from ISC Credit. Your information is kept secure and never sold. Read our <a href="/privacy-policy/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Privacy Policy</a> for more details.</p>
+        <p class="sc-status" role="status" aria-live="polite"></p>
 
         <div class="sc-note">No spam &middot; Unsubscribe anytime &middot; One email per month</div>
       </form>
@@ -753,7 +797,7 @@ img, video { max-width: 100%; height: auto; }
     <h2 class="section-h2">ISC supplement turnaround, updated every month.</h2>
     <p class="section-sub">Every month ISC pulls benchmark data from MeridianLink&rsquo;s Industry Benchmarks Dashboard and publishes it here. Historical entries are maintained for transparency and may be updated only to correct formatting, sourcing, or data-entry errors.</p>
     <div class="bm-table-wrap">
-      <table class="bm-table">
+      <table class="bm-table" tabindex="0" aria-label="MeridianLink supplement turnaround benchmark by month">
         <thead>
           <tr>
             <th>Month</th>
@@ -887,11 +931,17 @@ img, video { max-width: 100%; height: auto; }
         <div style="font-family:var(--fb);font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem">Subscribe to ISC Insights</div>
         <div style="font-family:var(--fd);font-size:1.5rem;color:var(--gold);line-height:1.2;margin-bottom:.5rem">Get the monthly briefing.</div>
         <p style="font-size:.88rem;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:1.25rem;max-width:520px">Industry data, compliance updates, and ISC&rsquo;s MeridianLink benchmark, delivered the first of each month.</p>
-        <form class="sc-form" style="max-width:420px">
-          <input class="sc-input" type="text" placeholder="Your name" required>
-          <input class="sc-input" type="email" placeholder="Work email" required>
+        <form class="sc-form" id="insights-signup-bottom" action="/api/subscribe" method="POST" data-newsletter-form style="max-width:420px">
+        <input type="hidden" name="resource_tag" value="Newsletter Signup - Insights">
+        <input type="hidden" name="form_type" value="newsletter">
+        <label class="sr-only" for="insights-bottom-name">Your name</label>
+        <input class="sc-input" id="insights-bottom-name" name="FNAME" type="text" placeholder="Your name" autocomplete="name" required>
+        <label class="sr-only" for="insights-bottom-email">Work email</label>
+        <input class="sc-input" id="insights-bottom-email" name="EMAIL" type="email" placeholder="Work email" autocomplete="email" required>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAADio6TUkoqDiiCF-" data-theme="dark" data-size="flexible" style="margin-bottom: 15px;"></div>
           <button class="sc-btn" type="submit">Subscribe &rarr;</button>
-<p style="font-size: 0.8rem; color: var(--warm); margin-top: 1rem; line-height: 1.4;">By submitting this form, you consent to receive communications from ISC Credit. Your information is kept secure and never sold. Read our Privacy Policy for more details.</p>
+<p style="font-size: 0.8rem; color: var(--warm); margin-top: 1rem; line-height: 1.4;">By submitting this form, you consent to receive communications from ISC Credit. Your information is kept secure and never sold. Read our <a href="/privacy-policy/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Privacy Policy</a> for more details.</p>
+        <p class="sc-status" role="status" aria-live="polite"></p>
 
         </form>
         <div style="font-size:.72rem;color:rgba(255,255,255,.32);margin-top:.85rem">No spam. Unsubscribe anytime. Read at insights.isccredit.com.</div>
@@ -899,8 +949,8 @@ img, video { max-width: 100%; height: auto; }
     </div>
   </div>
 </section>
-
-<footer>
+</main>
+  <footer>
     <div class="footer-grid">
       <div>
         <a class="footer-logo" href="/">ISC<span>.</span></a>
@@ -1053,6 +1103,65 @@ img, video { max-width: 100%; height: auto; }
   } catch (error) {
     console.error('Benchmark archive error:', error);
   }
+})();
+</script>
+<script>
+/* ISC analytics events (SEO patch 1): phone and email clicks, guide downloads, lead form starts and submits */
+(function(){
+  function send(n,p){ if(typeof window.gtag==='function'){ window.gtag('event',n,p||{}); } }
+  document.addEventListener('click',function(e){
+    var a=e.target&&e.target.closest?e.target.closest('a[href]'):null; if(!a) return;
+    var h=a.getAttribute('href')||'';
+    if(h.indexOf('tel:')===0) send('phone_click',{link_url:h});
+    else if(h.indexOf('mailto:')===0) send('email_click',{link_url:h});
+    else if(/\.pdf($|[?#])/i.test(h)) send('guide_download',{file_name:h.split('/').pop().split('?')[0]});
+  },true);
+  var started={};
+  function fid(f){ return f.id||f.getAttribute('name')||f.getAttribute('action')||'form'; }
+  document.addEventListener('focusin',function(e){
+    var t=e.target; if(!t||!t.form||!/^(INPUT|SELECT|TEXTAREA)$/.test(t.tagName)) return;
+    var id=fid(t.form); if(started[id]) return; started[id]=1; send('lead_form_start',{form_id:id});
+  });
+  document.addEventListener('submit',function(e){ send('lead_form_submit',{form_id:fid(e.target)}); },true);
+})();
+</script>
+<script>
+/* ISC Insights newsletter signup: posts to the existing /api/subscribe (Mailchimp) endpoint */
+(function(){
+  var forms=document.querySelectorAll('form[data-newsletter-form]');
+  Array.prototype.forEach.call(forms,function(form){
+    form.addEventListener('submit',async function(e){
+      e.preventDefault();
+      var btn=form.querySelector('button[type="submit"]'), status=form.querySelector('.sc-status'), label=btn.innerHTML;
+      function say(msg,err){ status.textContent=msg; status.className='sc-status'+(err?' err':''); }
+      function resetCheck(){ var w=form.querySelector('.cf-turnstile'); if(window.turnstile&&w){ try{ window.turnstile.reset(w); }catch(x){} } }
+      if(!form.checkValidity()){ form.reportValidity(); return; }
+      var tok=form.querySelector('[name="cf-turnstile-response"]');
+      if(!tok||!tok.value){ say('Please complete the security check, then subscribe.',true); return; }
+      btn.disabled=true; btn.innerHTML='Subscribing&hellip;'; say('');
+      try{
+        var res=await fetch(form.getAttribute('action'),{method:'POST',body:new FormData(form)});
+        var data=await res.json().catch(function(){return {};});
+        var ev=null;
+        if(res.ok&&data.success&&data.status==='pending'){
+          say('Almost done. Check your inbox for a confirmation email from ISC Credit, then click the link to finish subscribing.');
+          ev='newsletter_signup_pending'; form.reset();
+        } else if(res.ok&&data.success&&data.status==='already_subscribed'){
+          say('You are already subscribed to ISC Insights. Thanks for reading.');
+          ev='newsletter_signup_existing'; form.reset();
+        } else if(res.ok&&data.success){
+          say('Thanks, you are subscribed. The next issue comes from insights@isccredit.com.');
+          ev='newsletter_signup'; form.reset();
+        } else if(data.status==='cannot_subscribe'){
+          say('We could not subscribe this address. Please try a different email, or contact support@isccredit.com.',true);
+        } else { throw new Error('signup failed'); }
+        if(ev&&typeof window.gtag==='function') window.gtag('event',ev,{form_id:form.id});
+      } catch(err){
+        say('Something went wrong. Please try again, or email support@isccredit.com.',true);
+      }
+      btn.disabled=false; btn.innerHTML=label; resetCheck();
+    });
+  });
 })();
 </script>
 </body>

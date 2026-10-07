@@ -1,4 +1,6 @@
+# STAGING ONLY: X-Robots-Tag below is added by the staging build, never in the repo or production
 /*
+  X-Robots-Tag: noindex, nofollow
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
 
@@ -7,3 +9,28 @@
 
 /ISC.png
   Cache-Control: public, max-age=86400
+
+# Gated guide PDFs stay out of search results (SEO patch 1)
+/assets/du-lpa-technical-provider-selection-guide.pdf
+  X-Robots-Tag: noindex
+
+/assets/frozen-bureau-pulls-guide.pdf
+  X-Robots-Tag: noindex
+
+/assets/how-to-order-a-supplement.pdf
+  X-Robots-Tag: noindex
+
+/assets/powerprofile-plus-guide.pdf
+  X-Robots-Tag: noindex
+
+/assets/rapid-rescore-guide.pdf
+  X-Robots-Tag: noindex
+
+/assets/smartselect-guide.pdf
+  X-Robots-Tag: noindex
+
+/assets/supplement-checklist.pdf
+  X-Robots-Tag: noindex
+
+/assets/vantagescore-guide.pdf
+  X-Robots-Tag: noindex
